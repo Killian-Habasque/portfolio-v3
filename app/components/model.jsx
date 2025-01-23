@@ -17,7 +17,6 @@ function Model({ position, initialRotation, url }) {
 
     useFrame(({ mouse }) => {
         if (meshRef.current) {
-            // Gradually increase the scale
             if (scale < 1) {
                 setScale((prevScale) => Math.min(prevScale + 0.02, 0.8));
             }
