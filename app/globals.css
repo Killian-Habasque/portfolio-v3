@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #root {
-  height: 100vh;
+  height: 200vh;
   overflow-x: hidden;
 }
 
@@ -18,7 +18,12 @@ html,
 body {
   background: rgb(10, 10, 10);
 }
-
+.bg-dark {
+  background: rgb(10, 10, 10);
+}
+.model-container {
+  width: 50%!important;
+}
 canvas {
   position: absolute;
   inset: 0;

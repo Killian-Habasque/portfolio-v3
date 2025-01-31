@@ -1,7 +1,7 @@
 
 function classNames(...classes: (string | undefined)[]) {
-    return classes.filter(Boolean).join(' ')
-  }
+  return classes.filter(Boolean).join(' ')
+}
 export function RetroGrid({
   className,
   angle = 65,

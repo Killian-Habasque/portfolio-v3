@@ -18,7 +18,7 @@ function Model({ position, initialRotation, url }) {
     useFrame(({ mouse }) => {
         if (meshRef.current) {
             if (scale < 1) {
-                setScale((prevScale) => Math.min(prevScale + 0.02, 0.8));
+                setScale((prevScale) => Math.min(prevScale + 0.01, 0.8));
             }
             meshRef.current.scale.set(scale, scale, scale);
             //const targetX = mouse.x * 0.5;
@@ -59,14 +59,14 @@ export default function App() {
     const [modelSettings, setModelSettings] = useState({
         x: 0,
         y: 0,
-        z: 1.6,
+        z: 2,
         rotX: -0.25,
         rotY: -0.3,
         rotZ: -0.05,
     });
 
     return (
-        <Canvas>
+        <Canvas className="model-container">
             <directionalLight
                 intensity={lightSettings.intensity}
                 position={[lightSettings.x, lightSettings.y, lightSettings.z]}
