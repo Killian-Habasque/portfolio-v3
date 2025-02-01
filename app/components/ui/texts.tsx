@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { useInView } from "framer-motion"
-import {  VerticalCutReveal, VerticalCutRevealRef } from "./vertical-cut-reaveal"
+import { VerticalCutReveal, VerticalCutRevealRef } from "./letter-vertical-cut-reaveal"
 
 function WelcomeExample() {
   return (
@@ -17,7 +17,7 @@ function WelcomeExample() {
           damping: 21,
         }}
       >
-        {`HI 👋, FRIEND!`}
+        {`Hello !👋 `}
       </VerticalCutReveal>
       <VerticalCutReveal
         splitBy="characters"
@@ -31,7 +31,7 @@ function WelcomeExample() {
           delay: 0.5,
         }}
       >
-        {`🌤️ IT IS NICE ⇗ TO`}
+        {`Bienvenue 🌐 sur`}
       </VerticalCutReveal>
       <VerticalCutReveal
         splitBy="characters"
@@ -44,8 +44,22 @@ function WelcomeExample() {
           delay: 1.1,
         }}
       >
-        {`MEET 😊 YOU.`}
+        {`mon ⇗ Portfolio`}
       </VerticalCutReveal>
+      {/* <VerticalCutReveal
+        splitBy="characters"
+        staggerDuration={0.025}
+        staggerFrom="center"
+        transition={{
+          type: "spring",
+          stiffness: 200,
+          damping: 21,
+          delay: 1.1,
+        }}
+      >
+        {`sur nom ⇗ Portfolio `}
+      </VerticalCutReveal> */}
+
     </div>
   )
 }

@@ -1,7 +1,8 @@
-import { WelcomeExample } from "./components/demo";
+import { WelcomeExample } from "./components/ui/texts";
 import Model from "./components/model";
 import { RetroGrid } from "./components/retro-grid";
-import { NavbarDemo } from "./components/demo2";
+import { NavbarDemo } from "./components/layouts/header";
+import { Feature } from "./components/layouts/feature-section-with-grid";
 
 export default function Home() {
   return (
@@ -18,8 +19,9 @@ export default function Home() {
           <Model />
           <WelcomeExample />
         </div>
+        <Feature />
       </div>
-
+     
     </div>
   );
 }

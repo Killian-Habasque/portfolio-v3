@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-#root {
+/* #root {
   height: 200vh;
   overflow-x: hidden;
-}
+} */
 
 * {
   padding: 0;
