@@ -14,10 +14,10 @@
   box-sizing: border-box;
 }
 
-html,
+/* html,
 body {
   background: rgb(10, 10, 10);
-}
+} */
 .bg-dark {
   background: rgb(10, 10, 10);
 }
@@ -35,7 +35,7 @@ canvas {
 .bg-noise {
   position: fixed;
   inset: 0;
-  z-index: 2;
+  z-index: 100;
   pointer-events: none;
   overflow: hidden;
   transform: scale(1.2);
