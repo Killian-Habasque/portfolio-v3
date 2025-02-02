@@ -2,12 +2,20 @@
 
 import React, { Suspense, useState, useEffect, useRef } from "react";
 import { Canvas, useLoader, useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-function Model({ position, initialRotation, url }) {
+interface ModelProps {
+    position: [number, number, number];
+    initialRotation: { x: number; y: number; z: number };
+    url: string;
+}
+
+const Model: React.FC<ModelProps> = ({ position, initialRotation, url }) => {
     const gltf = useLoader(GLTFLoader, url);
-    const meshRef = useRef();
-    const [scale, setScale] = useState(0);
+    const meshRef = useRef<THREE.Group | null>(null);
+    const [posX, setPosX] = useState(position[0] - 3); 
+    
 
     useEffect(() => {
         if (meshRef.current) {
@@ -17,24 +25,15 @@ function Model({ position, initialRotation, url }) {
 
     useFrame(({ mouse }) => {
         if (meshRef.current) {
-            if (scale < 1) {
-                setScale((prevScale) => Math.min(prevScale + 0.01, 0.8));
-            }
-            meshRef.current.scale.set(scale, scale, scale);
-            //const targetX = mouse.x * 0.5;
-            //const targetY = mouse.y * 1;
-            //const currentRot = meshRef.current.rotation;
+            setPosX((prevX) => prevX + (position[0] - prevX) * 0.05);
+            meshRef.current.position.x = posX;
 
-            //const newRotX = currentRot.x + (targetY - currentRot.x) * 0.01;
-            //const newRotY = currentRot.y + (targetX - currentRot.y) * 0.01;
-            const targetX = mouse.x * 0.1;
-            const targetY = mouse.y * 0.1;
+            const targetX = initialRotation.x + mouse.y * 0.1;
+            const targetY = initialRotation.y + mouse.x * 0.1;
+            const damping = 0.05; 
 
-            const newRotX = initialRotation.x + targetY;
-            const newRotY = initialRotation.y + targetX;
-
-            meshRef.current.rotation.x = newRotX;
-            meshRef.current.rotation.y = newRotY;
+            meshRef.current.rotation.x += (targetX - meshRef.current.rotation.x) * damping;
+            meshRef.current.rotation.y += (targetY - meshRef.current.rotation.y) * damping;
         }
     });
 
@@ -42,21 +41,21 @@ function Model({ position, initialRotation, url }) {
         <primitive
             ref={meshRef}
             object={gltf.scene}
-            scale={[0, 0, 0]}
-            position={position}
+            position={[posX, position[1], position[2]]}
+            scale={[0.8, 0.8, 0.8]}
         />
     );
-}
+};
 
-export default function App() {
-    const [lightSettings, setLightSettings] = useState({
+const App: React.FC = () => {
+    const [lightSettings] = useState({
         intensity: 2,
         x: -3,
         y: 1,
         z: 5,
     });
 
-    const [modelSettings, setModelSettings] = useState({
+    const [modelSettings] = useState({
         x: 0,
         y: 0,
         z: 2,
@@ -70,7 +69,7 @@ export default function App() {
             <directionalLight
                 intensity={lightSettings.intensity}
                 position={[lightSettings.x, lightSettings.y, lightSettings.z]}
-                castShadow={true}
+                castShadow
             />
             <Suspense fallback={null}>
                 <Model
@@ -85,4 +84,6 @@ export default function App() {
             </Suspense>
         </Canvas>
     );
-}
+};
+
+export default App;

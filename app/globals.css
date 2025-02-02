@@ -14,6 +14,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-primary-light: #E1E7FE;
+  --color-primary: #516CF7;
+  --color-primary-dark: #2A337E;
+
+  --color-secondary-light: #D1E7F3;
+  --color-secondary: #A5C4D4;
+  --color-secondary-dark: #8499B1;
+}
+
 /* html,
 body {
   background: rgb(10, 10, 10);
