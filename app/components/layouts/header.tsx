@@ -41,9 +41,9 @@ function Navbar({ className }: { className?: string }) {
           <MenuItem setActive={setActive} active={active} item="Products">
             <div className="  text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Algochurn"
-                href="https://algochurn.com"
-                src="https://assets.aceternity.com/demos/algochurn.webp"
+                title="Yatzee"
+                href="https://yatzee.fr"
+                src="/minia yatzee.png"
                 description="Prepare for tech interviews like never before."
               />
               <ProductItem
