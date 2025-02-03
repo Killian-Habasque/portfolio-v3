@@ -4,18 +4,18 @@ import { ArrowDownIcon } from "@heroicons/react/16/solid";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 
-function Hero() {
+function BlockMediaText() {
     return (
         <div className="w-full  py-20 lg:py-40">
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2">
                     <div className="flex gap-4 flex-col">
                         <div>
-                            <Badge variant="outline">We&apos;re live!</Badge>
+                            <Badge variant="primary">We&apos;re live!</Badge>
                         </div>
                         <div className="flex gap-4 flex-col">
-                            <h1 className="text-5xl md:text-6xl max-w-lg tracking-tighter text-left font-regular">
-                                MON <br /> PARCOURS
+                            <h1 className="text-5xl md:text-7xl max-w-lg tracking-tighter text-left font-regular">
+                                Qui suis-je ?
                             </h1>
                             <p className="text-xl leading-relaxed tracking-tight text-muted-foreground max-w-md text-left">
                                 Salut ! Moi c’est Killian Habasque. Je viens de Quimper dans le Finistère et j’étudie actuellement à Laval. Je suis un étudiant passionné par le design et le développement Web. J’ai eu de nombreuses expériences dans ce domaine dû à mes formations mais également lors de projets personnels. Je possède donc de bonnes compétences en langages de programmation comme le Html, CSS ou Php mais aussi en logiciels comme la suite Adobe ou Affinity.
@@ -28,11 +28,11 @@ function Hero() {
                             </Button>
                         </div>
                     </div>
-                    <div className="bg-muted rounded-xl aspect-square bg-dark"></div>
+                    <div className="bg-muted rounded-xl aspect-square bg-[--color-dark]"></div>
                 </div>
             </div>
         </div>
     );
 }
 
-export { Hero };
+export { BlockMediaText };

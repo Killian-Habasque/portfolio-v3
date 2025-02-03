@@ -37,7 +37,7 @@ export function Card({ title, text, link = "#", imgLink, videoLink, externalLink
             onMouseLeave={handleMouseLeave}
         >
             <Link href={link} className="flex flex-col gap-2">
-                <div className="bg-muted bg-dark rounded-xl aspect-video mb-2 relative overflow-hidden ">
+                <div className="bg-muted bg-[--color-dark] rounded-xl aspect-video mb-2 relative overflow-hidden ">
                     {imgLink && (
                         <Image
                             src={imgLink}

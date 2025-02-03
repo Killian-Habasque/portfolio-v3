@@ -65,7 +65,7 @@ const App: React.FC = () => {
     });
 
     return (
-        <Canvas className="model-container">
+        <Canvas className="!w-full xl:!w-1/2">
             <directionalLight
                 intensity={lightSettings.intensity}
                 position={[lightSettings.x, lightSettings.y, lightSettings.z]}

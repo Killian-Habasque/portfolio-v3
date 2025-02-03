@@ -6,7 +6,7 @@ import { useInView } from "framer-motion";
 import { Card } from "../ui/card";
 import { Badge } from "../ui/badge";
 
-function Feature() {
+function BlockProjectsGrid() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
@@ -76,4 +76,4 @@ function Feature() {
   );
 }
 
-export { Feature };
+export { BlockProjectsGrid };

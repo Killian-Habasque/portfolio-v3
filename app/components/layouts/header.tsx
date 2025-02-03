@@ -29,7 +29,7 @@ function Navbar({ className }: { className?: string }) {
       className={classNames("fixed top-10 w-full max-w-4xl z-50", className)}
     >
       <Menu setActive={setActive}>
-        <div className="relative h-full w-full flex items-center rounded-full border border-transparent bg-dark dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-16 px-8 py-2">
+        <div className="relative h-full w-full flex items-center rounded-full border border-transparent border-white/[0.2] bg-[--color-dark] shadow-input flex justify-center space-x-16 px-8 py-2">
           <MenuItem setActive={setActive} active={active} item="Services">
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="/web-dev">Web Development</HoveredLink>

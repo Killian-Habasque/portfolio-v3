@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* #root {
-  height: 200vh;
-  overflow-x: hidden;
-} */
-
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  box-sizing: border-box;
-}
 
 :root {
   --color-primary-light: #E1E7FE;
@@ -22,93 +11,43 @@
   --color-secondary-light: #D1E7F3;
   --color-secondary: #A5C4D4;
   --color-secondary-dark: #8499B1;
+
+  --color-dark: #0A0A0A;
 }
 
-/* html,
-body {
-  background: rgb(10, 10, 10);
-} */
-.bg-dark {
-  background: rgb(10, 10, 10);
+@layer utilities {
+  .bg-noise {
+    @apply fixed inset-0 z-[100] pointer-events-none overflow-hidden scale-[1.2];
+  }
+
+  .bg-noise::before {
+    content: "";
+    @apply absolute -top-40 -left-40 w-[calc(100%+20rem)] h-[calc(100%+20rem)] -z-10 pointer-events-none;
+    background-image: url('/bg-noise.png');
+    background-position: center;
+    animation: BgNoise 1s steps(2) infinite;
+    opacity: 1;
+  }
+
+  @keyframes BgNoise {
+    0% { transform: translate3d(0, 9rem, 0); }
+    10% { transform: translate3d(-1rem, -4rem, 0); }
+    20% { transform: translate3d(-8rem, 2rem, 0); }
+    30% { transform: translate3d(9rem, -9rem, 0); }
+    40% { transform: translate3d(-2rem, 7rem, 0); }
+    50% { transform: translate3d(-9rem, -4rem, 0); }
+    60% { transform: translate3d(2rem, 6rem, 0); }
+    70% { transform: translate3d(7rem, -8rem, 0); }
+    80% { transform: translate3d(-9rem, 1rem, 0); }
+    90% { transform: translate3d(6rem, -5rem, 0); }
+    100% { transform: translate3d(-7rem, 0, 0); }
+  }
 }
-.model-container {
-  width: 50%!important;
-}
+
 canvas {
   position: absolute;
   inset: 0;
   outline: none;
   /* mix-blend-mode: exclusion; */
   z-index: 1;
-}
-
-.bg-noise {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  pointer-events: none;
-  overflow: hidden;
-  transform: scale(1.2);
-}
-
-.bg-noise:before {
-  position: absolute;
-  content: "";
-  top: -10rem;
-  left: -10rem;
-  width: calc(100% + 20rem);
-  height: calc(100% + 20rem);
-  z-index: -1;
-  pointer-events: none;
-  background-image: url('/bg-noise.png');
-  background-position: 50%;
-  animation: BgNoise 1s steps(2) infinite;
-  opacity: 1;
-}
-
-
-@keyframes BgNoise {
-  0% {
-    transform: translate3d(0, 9rem, 0);
-  }
-
-  10% {
-    transform: translate3d(-1rem, -4rem, 0);
-  }
-
-  20% {
-    transform: translate3d(-8rem, 2rem, 0);
-  }
-
-  30% {
-    transform: translate3d(9rem, -9rem, 0);
-  }
-
-  40% {
-    transform: translate3d(-2rem, 7rem, 0);
-  }
-
-  50% {
-    transform: translate3d(-9rem, -4rem, 0);
-  }
-
-  60% {
-    transform: translate3d(2rem, 6rem, 0);
-  }
-
-  70% {
-    transform: translate3d(7rem, -8rem, 0);
-  }
-
-  80% {
-    transform: translate3d(-9rem, 1rem, 0);
-  }
-
-  90% {
-    transform: translate3d(6rem, -5rem, 0);
-  }
-
-  100% {
-    transform: translate3d(-7rem, 0, 0);
-  }
 }
