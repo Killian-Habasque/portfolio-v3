@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { Card } from "../ui/card";
+import { Badge } from "../ui/badge";
 
 function Feature() {
   const sectionRef = useRef(null);
@@ -44,7 +45,7 @@ function Feature() {
         <div className="flex flex-col gap-10">
           <div className="flex gap-4 flex-col items-start">
             <div>
-              {/* <Badge>Platform</Badge> */}
+              <Badge>Platform</Badge>
             </div>
             <div className="flex gap-2 flex-col">
               <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-regular text-left">

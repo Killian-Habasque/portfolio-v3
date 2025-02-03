@@ -44,22 +44,8 @@ function WelcomeExample() {
           delay: 1.1,
         }}
       >
-        {`mon ⇗ Portfolio`}
+        {`mon Portfolio ⇗`}
       </VerticalCutReveal>
-      {/* <VerticalCutReveal
-        splitBy="characters"
-        staggerDuration={0.025}
-        staggerFrom="center"
-        transition={{
-          type: "spring",
-          stiffness: 200,
-          damping: 21,
-          delay: 1.1,
-        }}
-      >
-        {`sur nom ⇗ Portfolio `}
-      </VerticalCutReveal> */}
-
     </div>
   )
 }
