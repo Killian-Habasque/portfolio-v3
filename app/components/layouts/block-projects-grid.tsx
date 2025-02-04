@@ -32,8 +32,22 @@ function BlockProjectsGrid() {
       videoLink: "/yatzee.mp4",
       imgLink: "/minia yatzee.png",
     },
-    { title: "Projet 2", text: "Description du projet 2...", link: "test" },
-    { title: "Projet 3", text: "Description du projet 3...", link: "test" },
+    {
+      title: "Yatzee",
+      text: "Création d’une web application interactive pour jouer au Yatzee. Technologies : JavaScript, Three.js, Express, Firebase",
+      link: "test",
+      externalLink: "https://yatzee.fr",
+      videoLink: "/yatzee.mp4",
+      imgLink: "/minia yatzee.png",
+    },
+    {
+      title: "Yatzee",
+      text: "Création d’une web application interactive pour jouer au Yatzee. Technologies : JavaScript, Three.js, Express, Firebase",
+      link: "test",
+      externalLink: "https://yatzee.fr",
+      videoLink: "/yatzee.mp4",
+      imgLink: "/minia yatzee.png",
+    },
     { title: "Projet 4", text: "Description du projet 4...", link: "test" },
     { title: "Projet 5", text: "Description du projet 5...", link: "test" },
     { title: "Projet 6", text: "Description du projet 6...", link: "test" },
@@ -51,7 +65,7 @@ function BlockProjectsGrid() {
               <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-regular text-left">
                 EXEMPLES DE 🛠️ PROJETS
               </h2>
-              <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground text-left">
+              <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-neutral-500 text-left">
                 Managing a small business today is already tough.
               </p>
             </div>

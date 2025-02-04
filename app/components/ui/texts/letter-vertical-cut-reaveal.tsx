@@ -10,12 +10,7 @@ import {
   useState,
 } from "react"
 import { AnimationOptions, motion } from "framer-motion"
-// import { cn } from "@/lib/utils"
-
-
-function classNames(...classes: (string | undefined)[]) {
-    return classes.filter(Boolean).join(' ')
-  }
+import { classNames } from "@/app/lib/utils"
 
 interface TextProps {
   children: React.ReactNode

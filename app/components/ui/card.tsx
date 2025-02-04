@@ -32,12 +32,12 @@ export function Card({ title, text, link = "#", imgLink, videoLink, externalLink
 
     return (
         <div
-            className="flex flex-col gap-2 transform transition-all duration-300 hover:scale-105 group"
+            className="flex flex-col gap-2 transform transition-all duration-300 hover:scale-110 group"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
             <Link href={link} className="flex flex-col gap-2">
-                <div className="bg-muted bg-[--color-dark] rounded-xl aspect-video mb-2 relative overflow-hidden ">
+                <div className="bg-[--color-dark] rounded-xl aspect-video mb-2 relative overflow-hidden ">
                     {imgLink && (
                         <Image
                             src={imgLink}
@@ -61,7 +61,7 @@ export function Card({ title, text, link = "#", imgLink, videoLink, externalLink
                     )}
                 </div>
                 {title && <h3 className="text-xl tracking-tight">{title}</h3>}
-                {text && <p className="text-muted-foreground text-base">{text}</p>}
+                {text && <p className="text-neutral-500 text-base">{text}</p>}
             </Link>
             {externalLink && (
                 <a

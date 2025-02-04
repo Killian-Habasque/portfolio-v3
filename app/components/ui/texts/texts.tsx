@@ -6,7 +6,7 @@ import { VerticalCutReveal, VerticalCutRevealRef } from "./letter-vertical-cut-r
 
 function WelcomeExample() {
   return (
-    <div className="absolute right-0 xs:text-2xl text-2xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl flex flex-col items-start justify-center font-overusedGrotesk p-10 md:p-16 lg:p-24 text-[#ffffdd] tracking-wide uppercase">
+    <div className="absolute right-0 xs:text-2xl text-2xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl flex flex-col items-start justify-center font-overusedGrotesk p-10 md:p-16 lg:p-24 text-[#ffffdd] tracking-wide uppercase">
       <VerticalCutReveal
         splitBy="characters"
         staggerDuration={0.025}
@@ -16,6 +16,7 @@ function WelcomeExample() {
           stiffness: 200,
           damping: 21,
         }}
+        className="text-8xl"
       >
         {`Hello !👋 `}
       </VerticalCutReveal>

@@ -1,22 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/menubar";
+import { classNames } from "@/app/lib/utils";
+import Image from "next/image";
 
-function classNames(...classes: (string | undefined)[]) {
-  return classes.filter(Boolean).join(' ')
-}
-
-export function NavbarDemo() {
+export function Header() {
   return (
     <div className="relative w-full flex items-center">
-      <div className="fixed h-16 left-8 top-2 z-50">
-        <svg className="h-full p-1" width="35" height="55" viewBox="0 0 35 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.000142134 51.2864L0.000142134 8.75965C0.000142134 6.43646 0.923029 4.20841 2.56578 2.56566C4.20852 0.922915 6.43657 2.44879e-05 8.75977 2.44879e-05L8.75977 42.5268C8.75977 44.85 7.83688 47.0781 6.19413 48.7208C4.55138 50.3636 2.32334 51.2864 0.000142134 51.2864Z" fill="#363636" />
-          <path d="M9.07813 35.1875C10.7209 33.5448 12.9489 32.6219 15.2721 32.6219C17.5953 32.6219 19.8234 33.5448 21.4661 35.1875L34.9999 48.7213C34.1863 49.5349 33.2204 50.1802 32.1574 50.6204C31.0944 51.0606 29.955 51.2871 28.8044 51.2869C27.6539 51.2867 26.5146 51.0599 25.4517 50.6193C24.3888 50.1787 23.4232 49.5331 22.6099 48.7192L9.07813 35.1875Z" fill="#363636" />
-          <path d="M23.0995 27.527C26.1354 27.527 28.5964 25.0659 28.5964 22.03C28.5964 18.9941 26.1354 16.5331 23.0995 16.5331C20.0636 16.5331 17.6025 18.9941 17.6025 22.03C17.6025 25.0659 20.0636 27.527 23.0995 27.527Z" fill="#363636" />
-        </svg>
+      <div className="fixed flex items-center h-16 left-8 top-2 z-50">
+        <Image width={25} height={40} alt=""  src="/logo.svg"/>
       </div>
-
       <Navbar className="h-16 top-2 right-2" />
     </div>
   );

@@ -1,6 +1,4 @@
-// import { MoveRight, PhoneCall } from "lucide-react";
-// import { Button } from "@/components/ui/button";
-import { ArrowDownIcon } from "@heroicons/react/16/solid";
+import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 
@@ -17,14 +15,14 @@ function BlockMediaText() {
                             <h1 className="text-5xl md:text-7xl max-w-lg tracking-tighter text-left font-regular">
                                 Qui suis-je ?
                             </h1>
-                            <p className="text-xl leading-relaxed tracking-tight text-muted-foreground max-w-md text-left">
+                            <p className="text-xl leading-relaxed tracking-tight text-neutral-500 max-w-md text-left">
                                 Salut ! Moi c’est Killian Habasque. Je viens de Quimper dans le Finistère et j’étudie actuellement à Laval. Je suis un étudiant passionné par le design et le développement Web. J’ai eu de nombreuses expériences dans ce domaine dû à mes formations mais également lors de projets personnels. Je possède donc de bonnes compétences en langages de programmation comme le Html, CSS ou Php mais aussi en logiciels comme la suite Adobe ou Affinity.
                             </p>
                         </div>
                         <div className="flex flex-row gap-4">
-                            <Button variant="default">
+                            <Button variant="primary" link="/test">
                                 Bouton par défaut 
-                                <ArrowDownIcon />
+                                <ArrowRightIcon />
                             </Button>
                         </div>
                     </div>
