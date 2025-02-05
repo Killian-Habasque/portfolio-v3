@@ -27,30 +27,26 @@ function BlockProjectsGrid() {
     {
       title: "Yatzee",
       text: "Création d’une web application interactive pour jouer au Yatzee. Technologies : JavaScript, Three.js, Express, Firebase",
-      link: "test",
+      link: "/projets/projet-1",
       externalLink: "https://yatzee.fr",
       videoLink: "/yatzee.mp4",
-      imgLink: "/minia yatzee.png",
+      imgLink: "/projects/yatzee.png",
     },
     {
       title: "Yatzee",
       text: "Création d’une web application interactive pour jouer au Yatzee. Technologies : JavaScript, Three.js, Express, Firebase",
       link: "test",
-      externalLink: "https://yatzee.fr",
-      videoLink: "/yatzee.mp4",
-      imgLink: "/minia yatzee.png",
+      imgLink: "/projects/doo-erp.png",
     },
     {
       title: "Yatzee",
       text: "Création d’une web application interactive pour jouer au Yatzee. Technologies : JavaScript, Three.js, Express, Firebase",
       link: "test",
-      externalLink: "https://yatzee.fr",
-      videoLink: "/yatzee.mp4",
-      imgLink: "/minia yatzee.png",
+      imgLink: "/projects/suboptimize.png",
     },
-    { title: "Projet 4", text: "Description du projet 4...", link: "test" },
-    { title: "Projet 5", text: "Description du projet 5...", link: "test" },
-    { title: "Projet 6", text: "Description du projet 6...", link: "test" },
+    { title: "Projet 4", text: "Description du projet 4...", link: "test", externalLink: "https://siege-ergonomique.com", imgLink: "/projects/siege-ergonomique.png" },
+    { title: "Projet 5", text: "Description du projet 5...", link: "test", externalLink: "https://lapetiteproduction.com",  imgLink: "/projects/lapetiteproduction.png" },
+    { title: "Projet 6", text: "Description du projet 6...", link: "test", imgLink: "/projects/balado.png" },
   ];
 
   return (

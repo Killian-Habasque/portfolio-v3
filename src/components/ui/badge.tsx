@@ -2,7 +2,7 @@ import { classNames } from "@/lib/utils";
 
 const badgeVariantClasses = {
   primary: "border-[0.5px] border-primary bg-primary-light text-primary",
-  secondary: "border-[0.5px] border-secondary bg-secondary-light text-secondary",
+  secondary: "border-[0.5px] border-secondary bg-secondary-light text-dark",
   destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
   outline: "text-foreground",
   dark: "bg-[--color-dark] text-white",
