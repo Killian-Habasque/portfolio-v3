@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { BgNoise } from "../components/ui/bg-noise";
+import { Header } from "@/components/layouts/header";
 
 export const metadata: Metadata = {
   title: "Killian HABASQUE | Portfolio",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="fr">
       <body>
         <BgNoise />
+        <Header />
         {children}
       </body>
     </html>

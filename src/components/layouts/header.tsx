@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/menubar";
 import { classNames } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Header() {
   return (
     <div className="relative w-full flex items-center">
-      <div className="fixed flex items-center h-16 left-8 top-2 z-50">
+      <Link href="/" className="fixed flex items-center h-16 left-8 top-2 z-50">
         <Image width={25} height={40} alt=""  src="/logo.svg"/>
-      </div>
+      </Link>
       <Navbar className="h-16 top-2 right-2" />
     </div>
   );
