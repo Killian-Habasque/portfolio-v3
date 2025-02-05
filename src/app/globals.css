@@ -10,7 +10,7 @@
 
   --color-secondary-light: #D1E7F3;
   --color-secondary: #A5C4D4;
-  --color-secondary-dark: #8499B1;
+  --color-secondary-dark: #566a81;
 
   --color-dark: #0A0A0A;
 }
@@ -26,7 +26,7 @@
     background-image: url('/bg-noise.png');
     background-position: center;
     animation: BgNoise 1s steps(2) infinite;
-    opacity: 1;
+    opacity: .5;
   }
 
   @keyframes BgNoise {

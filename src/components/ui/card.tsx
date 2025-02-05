@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Icon } from "./icon";
 import { useState, useRef } from "react";
+import ExternalLink from "./externalLink";
 
 type CardProps = {
     title?: string;
@@ -37,20 +37,19 @@ export function Card({ title, text, link = "#", imgLink, videoLink, externalLink
             onMouseLeave={handleMouseLeave}
         >
             <Link href={link} className="flex flex-col gap-2">
-                <div className="bg-[--color-dark] rounded-xl aspect-video mb-2 relative overflow-hidden ">
+                <div className="aspect-video mb-2 relative overflow-hidden rounded-xl border-2">
                     {imgLink && (
                         <Image
                             src={imgLink}
                             alt={title || "Image"}
                             layout="fill"
                             objectFit="cover"
-                            className="rounded-xl"
                         />
                     )}
                     {videoLink && (
                         <video
                             ref={videoRef} 
-                            className="absolute inset-0 w-full h-full object-cover rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                             loop
                             muted
                             playsInline
@@ -64,15 +63,7 @@ export function Card({ title, text, link = "#", imgLink, videoLink, externalLink
                 {text && <p className="text-neutral-500 text-base">{text}</p>}
             </Link>
             {externalLink && (
-                <a
-                    target="_blank"
-                    href={externalLink}
-                    rel="noopener noreferrer"
-                    className="flex gap-2 items-center text-indigo-600 underline"
-                >
-                    <Icon label="link" />
-                    {externalLink}
-                </a>
+                <ExternalLink url={externalLink}/>
             )}
         </div>
     );
