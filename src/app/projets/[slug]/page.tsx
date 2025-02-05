@@ -2,11 +2,10 @@ import { notFound } from 'next/navigation'
 import projectsData from '@/data/projects.json'
 import Image from 'next/image'
 import Date from '@/components/ui/date'
-import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import ExternalLink from '@/components/ui/externalLink'
-import { ArrowLeftEndOnRectangleIcon } from '@heroicons/react/24/outline'
-
+import { HeroVideoDialog } from '@/components/layouts/hero-video-dialog'
+import Breadcrumb from '@/components/ui/breadcrumb'
 
 interface project {
   id: number
@@ -45,15 +44,18 @@ export default async function Page({ params }: { params: { slug: string } }) {
   if (!project) {
     notFound()
   }
-
+  const breadcrumbs = [
+    { id: 1, name: 'Accueil', href: '/' },
+    { id: 2, name: 'Projets', href: '/projets' },
+    { id: 3, name: project.title, href: "" }
+  ];
   return (
     <div className="container mx-auto px-5">
+      <Breadcrumb breadcrumbs={breadcrumbs} />
 
-      <section className="block hero_bg_image">
-        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <div className="flex gap-2 items-center mb-6">
-            <Link href="/" className="flex gap-2 text-1xl items-center"><ArrowLeftEndOnRectangleIcon className="w-6 h-6" />RETOUR</Link>
-          </div>
+      <section>
+        <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 lg:max-w-7xl lg:px-8">
+
           <div className="flex justify-center flex-col items-center mb-6">
             <div className='flex gap-2 items-center'>
               Année de réalisation : <Date dateString={project.date} />
@@ -68,15 +70,26 @@ export default async function Page({ params }: { params: { slug: string } }) {
             </div>
           </div>
 
-
-          <div className="relative overflow-hidden rounded-2xl aspect-[21/9] border-2">
-              <Image
-                src={`/projects/${project.imgLink}`}
-                alt={`Cover Image for ${project.title}`}
-                fill
-                className="object-cover"
-                priority
+          <div className="relative">
+            {project.videoLink ? (
+              <HeroVideoDialog
+                className="block"
+                animationStyle="from-center"
+                videoSrc={`/${project.videoLink}`}
+                thumbnailSrc={`/projects/${project.imgLink}`}
+                thumbnailAlt={`Cover Image for ${project.title}`}
               />
+            ) : (
+              <div className="relative overflow-hidden rounded-2xl aspect-[16/9] border-2">
+                <Image
+                  src={`/projects/${project.imgLink}`}
+                  alt={`Cover Image for ${project.title}`}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            )}
           </div>
           <div className="mb-6">
             <nav className="flex flex-wrap gap-2 mt-4">
