@@ -1,4 +1,4 @@
-import { classNames } from "@/app/lib/utils";
+import { classNames } from "@/lib/utils";
 
 const badgeVariantClasses = {
   primary: "border-[0.5px] border-primary bg-primary-light text-primary",

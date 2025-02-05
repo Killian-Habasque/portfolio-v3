@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { BgNoise } from "./components/ui/bg-noise";
+import { BgNoise } from "../components/ui/bg-noise";
 
 export const metadata: Metadata = {
   title: "Killian HABASQUE | Portfolio",

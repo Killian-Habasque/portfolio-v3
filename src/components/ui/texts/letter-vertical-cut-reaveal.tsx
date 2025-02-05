@@ -10,7 +10,7 @@ import {
   useState,
 } from "react"
 import { AnimationOptions, motion } from "framer-motion"
-import { classNames } from "@/app/lib/utils"
+import { classNames } from "@/lib/utils"
 
 interface TextProps {
   children: React.ReactNode

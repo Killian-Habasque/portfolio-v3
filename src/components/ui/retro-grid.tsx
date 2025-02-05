@@ -1,4 +1,4 @@
-import { classNames } from "@/app/lib/utils";
+import { classNames } from "@/lib/utils";
 
 export function RetroGrid({
   className,
