@@ -11,9 +11,11 @@ export default function TransitionLayout({
 }) {
   const pathname = usePathname()
   const [isReverse, setIsReverse] = useState(false)
+  const [isFirstMount, setIsFirstMount] = useState(true)
 
   useEffect(() => {
     setIsReverse(prev => !prev)
+    setIsFirstMount(false)
   }, [pathname])
 
   const variants = {
@@ -36,7 +38,7 @@ export default function TransitionLayout({
 
   return (
     <>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={!isFirstMount}>
         {children}
         <motion.div
           key={pathname}

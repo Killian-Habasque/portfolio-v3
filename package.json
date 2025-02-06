@@ -8,9 +8,13 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "@prisma/client": "^6.3.1",
     "@react-three/fiber": "^9.0.0-alpha.8",
     "@types/three": "^0.172.0",
     "date-fns": "^4.1.0",
@@ -28,7 +32,9 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.5",
     "postcss": "^8",
+    "prisma": "^6.3.1",
     "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
