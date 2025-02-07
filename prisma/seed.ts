@@ -1,37 +1,57 @@
 import { PrismaClient, BlockType } from '@prisma/client';
+import { v4 as uuidv4 } from 'uuid';
+import seedData from './seed-data.json';
 
 const prisma = new PrismaClient();
 
 async function main() {
-  const project = await prisma.project.create({
-    data: {
-      id: 'some-uuid',
-      name: 'Project Name',
-      title: 'Project Title',
-      slug: 'project-slug',
-      text: 'Some project text',
-      date: new Date(),
-      type: 'web',
-      imgLink: null,
-      videoLink: null,
-      externalLink: null,
-      order: 1,
-      technologies: {
-        create: [{ id: 'tech-uuid', name: 'React', slug: 'react' }],
-      },
-      blocks: {
-        create: [
-          {
-            id: 'block-uuid',
-            type: BlockType.TEXT,
-            content: { text: 'Some content' },
-          },
-        ],
-      },
-    },
-  });
+  await prisma.block.deleteMany();
+  await prisma.project.deleteMany();
+  await prisma.technology.deleteMany();
 
-  console.log('Seed completed:', project);
+  const technologies = await Promise.all(
+    seedData.technologies.map(tech =>
+      prisma.technology.create({
+        data: {
+          id: uuidv4(),
+          name: tech.name,
+          slug: tech.slug,
+        },
+      })
+    )
+  );
+
+  for (const projectData of seedData.projects) {
+    await prisma.project.create({
+      data: {
+        id: uuidv4(),
+        name: projectData.name,
+        title: projectData.title,
+        slug: projectData.slug,
+        text: projectData.text,
+        date: new Date(),
+        type: projectData.type,
+        imgLink: null,
+        videoLink: null,
+        externalLink: null,
+        order: projectData.order,
+        technology: {
+          connect: projectData.technologies.map(techSlug => ({
+            slug: techSlug,
+          })),
+        },
+        blocks: {
+          create: projectData.blocks.map(block => ({
+            id: uuidv4(),
+            type: block.type as BlockType,
+            content: block.content,
+          })),
+        },
+      },
+    });
+  }
+
+  console.log('Seed completed successfully.');
 }
 
 main()

@@ -1,0 +1,64 @@
+{
+    "technologies": [
+        {
+            "name": "React",
+            "slug": "react"
+        },
+        {
+            "name": "Next.js",
+            "slug": "nextjs"
+        },
+        {
+            "name": "Laravel",
+            "slug": "laravel"
+        }
+    ],
+    "projects": [
+        {
+            "name": "First Project",
+            "title": "First Project",
+            "slug": "project-one",
+            "text": "Some text for project one",
+            "type": "web",
+            "order": 1,
+            "technologies": [
+                "react",
+                "nextjs"
+            ],
+            "blocks": [
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "text": "Text exemple block 1 - project 1"
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "text": "Text exemple block 2 - project 1"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Second Project",
+            "title": "Second Project",
+            "slug": "project-two",
+            "text": "Some text for project two",
+            "type": "web",
+            "order": 2,
+            "technologies": [
+                "laravel",
+                "react"
+            ],
+            "blocks": [
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "text": "Some content"
+                    }
+                }
+            ]
+        }
+    ]
+}

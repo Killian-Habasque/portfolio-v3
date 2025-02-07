@@ -22,14 +22,14 @@ model Project {
   videoLink     String?
   externalLink  String?
   order         Int
-  technologies  Technologies[]
+  technology   Technology[]
   blocks        Block[]
 }
 
-model Technologies {
-  id    String @id @default(uuid())
-  name  String
-  slug  String @unique
+model Technology { 
+  id       String    @id @default(uuid())
+  name     String
+  slug     String    @unique
   projects Project[]
 }
 
