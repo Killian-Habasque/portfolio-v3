@@ -1,7 +1,12 @@
-import prisma from '../../../../prisma/db'
+import prisma from '../../../../prisma/db';
 
 export default async function Home() {
-  const recipes = await prisma.recipe.findMany()
+  const projects = await prisma.project.findMany({
+    include: {
+      technologies: true,
+      blocks: true,
+    },
+  });
 
-  return <pre>{JSON.stringify(recipes, null, 2)}</pre>
+  return <pre>{JSON.stringify(projects, null, 2)}</pre>;
 }
