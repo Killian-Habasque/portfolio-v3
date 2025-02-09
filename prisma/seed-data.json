@@ -17,10 +17,14 @@
         {
             "name": "First Project",
             "title": "First Project",
-            "slug": "project-one",
+            "slug": "project-1",
             "text": "Some text for project one",
-            "type": "web",
+            "type": "Projet scolaire",
+            "date": "2024",
             "order": 1,
+            "imgLink": "yatzee.png",
+            "videoLink": "yatzee.mp4",
+            "externalLink": "https://yatzee.fr",
             "technologies": [
                 "react",
                 "nextjs"
@@ -46,6 +50,7 @@
             "slug": "project-two",
             "text": "Some text for project two",
             "type": "web",
+            "date": "2024",
             "order": 2,
             "technologies": [
                 "laravel",

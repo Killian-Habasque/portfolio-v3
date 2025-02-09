@@ -38,9 +38,9 @@ export default function TransitionLayout({
 
   return (
     <>
-      {/* <AnimatePresence mode="wait" initial={!isFirstMount}> */}
+      <AnimatePresence mode="wait" initial={!isFirstMount}>
         {children}
-        {/* <motion.div
+        <motion.div
           key={pathname}
           className="fixed inset-0 z-50 bg-black pointer-events-none"
           variants={variants}
@@ -52,7 +52,7 @@ export default function TransitionLayout({
             ease: [0.22, 1, 0.36, 1]
           }}
         />
-      </AnimatePresence> */}
+      </AnimatePresence>
     </>
   )
 }

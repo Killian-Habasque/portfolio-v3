@@ -9,7 +9,7 @@ async function main() {
   await prisma.project.deleteMany();
   await prisma.technology.deleteMany();
 
-  const technologies = await Promise.all(
+  await Promise.all(
     seedData.technologies.map(tech =>
       prisma.technology.create({
         data: {
@@ -29,13 +29,13 @@ async function main() {
         title: projectData.title,
         slug: projectData.slug,
         text: projectData.text,
-        date: new Date(),
+        date: projectData.date,
         type: projectData.type,
-        imgLink: null,
-        videoLink: null,
-        externalLink: null,
+        imgLink: projectData.imgLink,
+        videoLink: projectData.videoLink,
+        externalLink: projectData.externalLink,
         order: projectData.order,
-        technology: {
+        technologies: {
           connect: projectData.technologies.map(techSlug => ({
             slug: techSlug,
           })),

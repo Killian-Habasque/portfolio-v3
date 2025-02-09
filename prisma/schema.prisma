@@ -16,13 +16,13 @@ model Project {
   title         String
   slug          String        @unique
   text          String
-  date          DateTime
+  date          String
   type          String
   imgLink       String?
   videoLink     String?
   externalLink  String?
   order         Int
-  technology   Technology[]
+  technologies   Technology[]
   blocks        Block[]
 }
 
