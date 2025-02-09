@@ -20,8 +20,8 @@ model Project {
   imgLink       String?
   videoLink     String?
   externalLink  String?
-  order         Int
-  technologies   Technology[]
+  order         Int?
+  technologies  Technology[]
   blocks        Block[]
 }
 

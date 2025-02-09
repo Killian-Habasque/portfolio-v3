@@ -10,23 +10,28 @@ import prisma from '@/lib/db';
 export default async function Home() {
   const projects = await prisma.project.findMany({
     take: 6,
+    where: {
+      order: {
+        not: null,
+      },
+    },
     orderBy: {
-        order: 'asc',
+      order: 'asc',
     },
     select: {
-        id: true,
-        title: true,
-        slug: true,
-        imgLink: true,
-        externalLink: true,
-        videoLink: true,
-        text: true,
-        technologies: {
-            select: { name: true },
-        },
+      id: true,
+      title: true,
+      slug: true,
+      imgLink: true,
+      externalLink: true,
+      videoLink: true,
+      text: true,
+      technologies: {
+        select: { name: true },
+      },
     },
   });
-
+  console.log(projects)
   return (
     <div id="root">
       <HeroFrontpage>
@@ -34,7 +39,7 @@ export default async function Home() {
         <Model3DLogo />
         <WelcomeExample />
       </HeroFrontpage>
-      <BlockProjectsGrid items={projects}/>
+      <BlockProjectsGrid items={projects} />
       <BlockMediaText />
       <BlockTimeline />
     </div>

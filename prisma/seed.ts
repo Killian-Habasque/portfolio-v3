@@ -5,12 +5,14 @@ import seedData from './seed-data.json';
 const prisma = new PrismaClient();
 
 async function main() {
+  console.log('Seeding database...');
+
   await prisma.block.deleteMany();
   await prisma.project.deleteMany();
   await prisma.technology.deleteMany();
 
   await Promise.all(
-    seedData.technologies.map(tech =>
+    seedData.technologies.map(async (tech) =>
       prisma.technology.create({
         data: {
           id: uuidv4(),
@@ -21,41 +23,46 @@ async function main() {
     )
   );
 
-  for (const projectData of seedData.projects) {
-    await prisma.project.create({
-      data: {
-        id: uuidv4(),
-        title: projectData.title,
-        slug: projectData.slug,
-        text: projectData.text,
-        date: projectData.date,
-        type: projectData.type,
-        imgLink: projectData.imgLink,
-        videoLink: projectData.videoLink,
-        externalLink: projectData.externalLink,
-        order: projectData.order,
-        technologies: {
-          connect: projectData.technologies.map(techSlug => ({
-            slug: techSlug,
-          })),
-        },
-        blocks: {
-          create: projectData.blocks.map(block => ({
+  await Promise.all(
+    seedData.projects.map(async (projectData) => {
+      try {
+        await prisma.project.create({
+          data: {
             id: uuidv4(),
-            type: block.type as BlockType,
-            content: block.content,
-          })),
-        },
-      },
-    });
-  }
+            title: projectData.title,
+            slug: projectData.slug,
+            text: projectData.text,
+            date: projectData.date,
+            type: projectData.type,
+            imgLink: projectData.imgLink ?? null,
+            videoLink: projectData.videoLink ?? null,
+            externalLink: projectData.externalLink ?? null,
+            order: projectData.order ?? null,
+            technologies: {
+              connect: projectData.technologies
+                ?.map((techSlug: string) => ({ slug: techSlug })) || [],
+            },
+            blocks: {
+              create: projectData.blocks?.map((block) => ({
+                id: uuidv4(),
+                type: block.type as BlockType,
+                content: block.content,
+              })) || [],
+            },
+          },
+        });
+      } catch (error) {
+        console.error(`Erreur lors de l'ajout du projet ${projectData.title}:`, error);
+      }
+    })
+  );
 
   console.log('Seed completed successfully.');
 }
 
 main()
   .catch((e) => {
-    console.error(e);
+    console.error('Seeding failed:', e);
     process.exit(1);
   })
   .finally(async () => {
