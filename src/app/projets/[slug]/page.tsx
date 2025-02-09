@@ -1,4 +1,4 @@
-import prisma from '../../../../prisma/db';
+import prisma from '@/lib/db';
 import { notFound } from 'next/navigation';
 import { BlockType } from '@prisma/client';
 import Breadcrumb from '@/components/ui/breadcrumb';
@@ -63,18 +63,24 @@ export default async function ProjectPage({ params }: PageProps) {
 
             <div className="flex justify-center flex-col items-center mb-6">
               <div className='flex gap-2 items-center'>
-                {formattedProject.date ?? (
-                  'Année de réalisation : ' + <Date dateString={formattedProject.date} />
-                )}
-                •
-                <Badge>{formattedProject.type}</Badge>
+                {formattedProject.date ? (
+                  <>
+                    Année de réalisation :  <Date dateString={formattedProject.date} />
+                    •
+                  </>
+                ) : ''}
+                {formattedProject.type ? (
+                  <Badge>{formattedProject.type}</Badge>
+                ) : ''}
               </div>
               <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-none md:leading-none mb-3 text-center md:text-left font-bold tracking-tight text-gray-900">
                 {formattedProject.title}
               </h1>
-              <div className="mb-2">
-                <ExternalLink url={formattedProject.externalLink} />
-              </div>
+              {formattedProject.externalLink ? (
+                <div className="mb-2">
+                  <ExternalLink url={formattedProject.externalLink} />
+                </div>
+              ) : ''}
             </div>
 
             <div className="relative">
@@ -111,20 +117,12 @@ export default async function ProjectPage({ params }: PageProps) {
               className="text-lg leading-relaxed mb-4"
               dangerouslySetInnerHTML={{ __html: formattedProject.text }}
             />
-            {formattedProject.date ?? (
-              <div className="max-w-2xl mx-auto">
-                <div className="block md:hidden mb-6">
-                  Année du projet :  <Date dateString={formattedProject.date} />
-                </div>
-              </div>
-            )}
-
           </div>
-        </section>
+        </section >
         {formattedProject.blocks && formattedProject.blocks.map(block => (
           <BlockAdapter key={block.id} type={block.type} content={block.content} />
         ))}
-      </div>
+      </div >
     </>
   );
 }

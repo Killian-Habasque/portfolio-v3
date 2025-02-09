@@ -15,13 +15,12 @@
     ],
     "projects": [
         {
-            "name": "First Project",
             "title": "First Project",
             "slug": "project-1",
             "text": "Some text for project one",
             "type": "Projet scolaire",
             "date": "2024",
-            "order": 1,
+            "order": 4,
             "imgLink": "yatzee.png",
             "videoLink": "yatzee.mp4",
             "externalLink": "https://yatzee.fr",
@@ -45,13 +44,12 @@
             ]
         },
         {
-            "name": "Second Project",
             "title": "Second Project",
             "slug": "project-two",
             "text": "Some text for project two",
             "type": "web",
             "date": "2024",
-            "order": 2,
+            "order": 3,
             "technologies": [
                 "laravel",
                 "react"
@@ -61,6 +59,46 @@
                     "type": "TEXT",
                     "content": {
                         "text": "Some content"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Siege ergonomique",
+            "slug": "siege-ergonomique",
+            "text": "Blog générer SSR",
+            "type": "Projet perosnnel",
+            "date": "2024",
+            "order": 2,
+            "technologies": [
+                "laravel",
+                "react"
+            ],
+            "blocks": [
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "yatzee.png"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Siege ergonomique 2",
+            "slug": "siege-ergonomique-2",
+            "text": "Blog générer SSR",
+            "type": "Projet perosnnel",
+            "date": "2024",
+            "order": 1,
+            "technologies": [
+                "laravel",
+                "react"
+            ],
+            "blocks": [
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "yatzee.png"
                     }
                 }
             ]

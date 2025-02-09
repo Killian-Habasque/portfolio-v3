@@ -1,7 +1,7 @@
-import BlockText from "./block-text";
+import { BlockText, BlockTextProps } from "../layouts/block-text";
 
 interface BlockAdapterProps {
-    content: any;
+    content: BlockTextProps;
     type: string;
 }
 

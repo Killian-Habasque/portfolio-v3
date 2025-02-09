@@ -25,7 +25,6 @@ async function main() {
     await prisma.project.create({
       data: {
         id: uuidv4(),
-        name: projectData.name,
         title: projectData.title,
         slug: projectData.slug,
         text: projectData.text,
