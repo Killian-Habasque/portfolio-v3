@@ -4,12 +4,12 @@ import { useState, useRef } from "react";
 import ExternalLink from "./externalLink";
 
 type CardProps = {
-    title?: string;
-    text?: string;
-    slug?: string;
-    imgLink?: string;
-    videoLink?: string;
-    externalLink?: string;
+    title: string;
+    slug: string;
+    text: string;
+    imgLink?: string | null;
+    videoLink?: string | null;
+    externalLink?: string | null;
 };
 
 export function Card({ title, text, slug = "#", imgLink, videoLink, externalLink }: CardProps) {

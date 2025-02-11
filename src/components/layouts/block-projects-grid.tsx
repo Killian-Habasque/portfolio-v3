@@ -6,7 +6,21 @@ import { useInView } from "framer-motion";
 import { Card } from "../ui/card";
 import { Badge } from "../ui/badge";
 
-function BlockProjectsGrid({items}) {
+interface BlockProjectsGridProps {
+  items: ProjectPreview[];
+}
+interface ProjectPreview {
+  id: string;
+  title: string;
+  slug: string;
+  text: string;
+  imgLink?: string | null;
+  videoLink?: string | null;
+  externalLink?: string | null;
+  technologies: { name: string }[];
+}
+
+function BlockProjectsGrid({items} : BlockProjectsGridProps) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 

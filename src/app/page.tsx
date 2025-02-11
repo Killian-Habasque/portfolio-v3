@@ -30,8 +30,7 @@ export default async function Home() {
         select: { name: true },
       },
     },
-  });
-  console.log(projects)
+  });  
   return (
     <div id="root">
       <HeroFrontpage>

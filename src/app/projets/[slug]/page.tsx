@@ -8,11 +8,12 @@ import { HeroVideoDialog } from '@/components/layouts/hero-video-dialog';
 import Image from 'next/image';
 import ExternalLink from '@/components/ui/externalLink';
 import BlockAdapter from '@/components/adapters/blockAdapter';
+import { BlockTextProps } from '@/components/layouts/block-text';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default async function ProjectPage({ params }: PageProps) {
@@ -45,14 +46,12 @@ export default async function ProjectPage({ params }: PageProps) {
     })),
   };
 
-
   const breadcrumbs = [
     { id: 1, name: 'Accueil', href: '/' },
     { id: 2, name: 'Projets', href: '/projets' },
     { id: 3, name: formattedProject.title, href: "" }
   ];
 
-  // console.log(formattedProject)
   return (
     <>
       <div className="container mx-auto px-5">
@@ -119,9 +118,10 @@ export default async function ProjectPage({ params }: PageProps) {
             />
           </div>
         </section >
-        {formattedProject.blocks && formattedProject.blocks.map(block => (
-          <BlockAdapter key={block.id} type={block.type} content={block.content} />
-        ))}
+        {formattedProject.blocks && formattedProject.blocks.map(block => {
+          const blockContent = block.content as BlockTextProps | null; 
+          return <BlockAdapter key={block.id} type={block.type} content={blockContent} />;
+        })}
       </div >
     </>
   );

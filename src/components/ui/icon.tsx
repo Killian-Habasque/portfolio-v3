@@ -1,3 +1,6 @@
+import React from 'react';
+import Image from 'next/image';
+
 type IconProps = {
     label?: string;
 };
@@ -5,7 +8,12 @@ type IconProps = {
 export function Icon({ label = "default" }: IconProps) {
     return (
         <div className="w-8 h-8 rounded-full bg-primary-light p-2">
-            <img className="w-full h-full" src={`/icons/${label}.svg`} alt={label} />
+            <Image
+                src={`/icons/${label}.svg`}
+                alt={label}
+                width={24}
+                height={24}
+            />
         </div>
     );
 }
