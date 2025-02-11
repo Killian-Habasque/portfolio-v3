@@ -42,8 +42,8 @@ export function Card({ title, text, slug = "#", imgLink, videoLink, externalLink
                         <Image
                             src={`/projects/${imgLink}`}
                             alt={`Cover Image for ${title}`}
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            className="object-cover"
                         />
                     )}
                     {videoLink && (

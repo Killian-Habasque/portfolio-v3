@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { BgNoise } from "../components/ui/bg-noise";
 import { Header } from "@/components/layouts/header";
-// import TransitionLayout from "./transition-layout";
+import TransitionLayout from "./transition-layout";
 
 export const metadata: Metadata = {
   title: "Killian HABASQUE | Portfolio",
@@ -19,10 +19,9 @@ export default function RootLayout({
       <body>
         <BgNoise />
         <Header />
-        {/* <TransitionLayout>
+        <TransitionLayout>
           {children}
-        </TransitionLayout> */}
-        {children}
+        </TransitionLayout>
       </body>
     </html>
   );
