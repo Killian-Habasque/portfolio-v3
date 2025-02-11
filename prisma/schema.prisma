@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id            String        @id @default(uuid())
+  title         String
+  slug          String        @unique
+  text          String
+  date          String
+  type          String
+  imgLink       String?
+  videoLink     String?
+  externalLink  String?
+  order         Int?
+  technologies  Technology[]
+  blocks        Block[]
+}
+
+model Technology { 
+  id       String    @id @default(uuid())
+  name     String
+  slug     String    @unique
+  projects Project[]
+}
+
+model Block {
+  id        String    @id @default(uuid())
+  type      BlockType
+  content   Json
+  projectId String
+  project   Project   @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+enum BlockType {
+  TEXT
+  IMAGE
+  VIDEO
+  CODE
+}

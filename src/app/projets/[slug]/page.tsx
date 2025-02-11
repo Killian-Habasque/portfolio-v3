@@ -1,54 +1,57 @@
-import { notFound } from 'next/navigation'
-import projectsData from '@/data/projects.json'
-import Image from 'next/image'
-import Date from '@/components/ui/date'
-import { Badge } from '@/components/ui/badge'
-import ExternalLink from '@/components/ui/externalLink'
-import { HeroVideoDialog } from '@/components/layouts/hero-video-dialog'
-import Breadcrumb from '@/components/ui/breadcrumb'
+import prisma from '@/lib/db';
+import { notFound } from 'next/navigation';
+import { BlockType } from '@prisma/client';
+import Breadcrumb from '@/components/ui/breadcrumb';
+import { Badge } from '@/components/ui/badge';
+import Date from '@/components/ui/date';
+import { HeroVideoDialog } from '@/components/layouts/hero-video-dialog';
+import Image from 'next/image';
+import ExternalLink from '@/components/ui/externalLink';
+import BlockAdapter from '@/components/adapters/blockAdapter';
+import { BlockTextProps } from '@/components/layouts/block-text';
 
-interface project {
-  id: number
-  slug: string
-  title: string
-  text: string
-  date: string,
-  type: string,
-  technologies: Array<string>,
-  imgLink: string,
-  videoLink: string,
-  externalLink: string
+interface PageProps {
+  params: Promise<{
+    slug: string;
+  }>;
 }
 
-async function getProjects() {
-  return projectsData.projects
-}
-
-export async function generateStaticParams() {
-  const projects = await getProjects()
-  return projects.map((project: project) => ({
-    slug: project.slug,
-  }))
-}
-
-async function getProject(slug: string) {
-  const projects = await getProjects()
-  return projects.find((p: project) => p.slug === slug)
-}
-
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = await params
-  const project = await getProject(slug)
+export default async function ProjectPage({ params }: PageProps) {
+  const { slug } = await params;
+  const project = await prisma.project.findUnique({
+    where: {
+      slug: slug,
+    },
+    include: {
+      technologies: true,
+      blocks: {
+        select: {
+          id: true,
+          type: true,
+          content: true,
+        },
+      },
+    },
+  });
 
   if (!project) {
-    notFound()
+    notFound();
   }
+
+  const formattedProject = {
+    ...project,
+    blocks: project.blocks.map(block => ({
+      ...block,
+      type: BlockType[block.type as keyof typeof BlockType],
+    })),
+  };
+
   const breadcrumbs = [
     { id: 1, name: 'Accueil', href: '/' },
     { id: 2, name: 'Projets', href: '/projets' },
-    { id: 3, name: project.title, href: "" }
+    { id: 3, name: formattedProject.title, href: "" }
   ];
-  
+
   return (
     <>
       <div className="container mx-auto px-5">
@@ -59,32 +62,40 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
             <div className="flex justify-center flex-col items-center mb-6">
               <div className='flex gap-2 items-center'>
-                Année de réalisation : <Date dateString={project.date} />
-                •
-                <Badge>{project.type}</Badge>
+                {formattedProject.date ? (
+                  <>
+                    Année de réalisation :  <Date dateString={formattedProject.date} />
+                    •
+                  </>
+                ) : ''}
+                {formattedProject.type ? (
+                  <Badge>{formattedProject.type}</Badge>
+                ) : ''}
               </div>
               <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-none md:leading-none mb-3 text-center md:text-left font-bold tracking-tight text-gray-900">
-                {project.title}
+                {formattedProject.title}
               </h1>
-              <div className="mb-2">
-                <ExternalLink url={project.externalLink} />
-              </div>
+              {formattedProject.externalLink ? (
+                <div className="mb-2">
+                  <ExternalLink url={formattedProject.externalLink} />
+                </div>
+              ) : ''}
             </div>
 
             <div className="relative">
-              {project.videoLink ? (
+              {formattedProject.videoLink ? (
                 <HeroVideoDialog
                   className="block"
                   animationStyle="from-center"
-                  videoSrc={`/${project.videoLink}`}
-                  thumbnailSrc={`/projects/${project.imgLink}`}
-                  thumbnailAlt={`Cover Image for ${project.title}`}
+                  videoSrc={`/${formattedProject.videoLink}`}
+                  thumbnailSrc={`/projects/${formattedProject.imgLink}`}
+                  thumbnailAlt={`Cover Image for ${formattedProject.title}`}
                 />
               ) : (
                 <div className="relative overflow-hidden rounded-2xl aspect-[16/9] border-2">
                   <Image
-                    src={`/projects/${project.imgLink}`}
-                    alt={`Cover Image for ${project.title}`}
+                    src={`/projects/${formattedProject.imgLink}`}
+                    alt={`Cover Image for ${formattedProject.title}`}
                     fill
                     className="object-cover"
                     priority
@@ -94,29 +105,36 @@ export default async function Page({ params }: { params: { slug: string } }) {
             </div>
             <div className="mb-6">
               <nav className="flex flex-wrap gap-2 mt-4">
-                {project.technologies && project.technologies.map((category, index) => {
-                  return (
-                    <span key={index}>
-                      <Badge variant='secondary'> {category}</Badge>
-                    </span>
-                  );
-                })}
+                {formattedProject.technologies && formattedProject.technologies.map(tech => (
+                  <span key={tech.id}>
+                    <Badge variant='secondary'>{tech.name}</Badge>
+                  </span>
+                ))}
               </nav>
             </div>
             <div
               className="text-lg leading-relaxed mb-4"
-              dangerouslySetInnerHTML={{ __html: project.text }}
+              dangerouslySetInnerHTML={{ __html: formattedProject.text }}
             />
-            <div className="max-w-2xl mx-auto">
-              <div className="block md:hidden mb-6">
-                Année du projet :  <Date dateString={project.date} />
-              </div>
-            </div>
           </div>
-        </section>
-
-
-      </div>
+        </section >
+        {formattedProject.blocks && formattedProject.blocks.map(block => {
+          const blockContent = block.content as BlockTextProps | null; 
+          return <BlockAdapter key={block.id} type={block.type} content={blockContent} />;
+        })}
+      </div >
     </>
-  )
+  );
+}
+
+export async function generateStaticParams() {
+  const projects = await prisma.project.findMany({
+    select: {
+      slug: true,
+    },
+  });
+
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
 }

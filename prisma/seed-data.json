@@ -1,0 +1,130 @@
+{
+    "technologies": [
+        {
+            "name": "React",
+            "slug": "react"
+        },
+        {
+            "name": "Next.js",
+            "slug": "nextjs"
+        },
+        {
+            "name": "Laravel",
+            "slug": "laravel"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Yatzee",
+            "slug": "yatzee",
+            "text": "Some text for project one",
+            "type": "Projet scolaire",
+            "date": "2024",
+            "order": 1,
+            "imgLink": "yatzee.png",
+            "videoLink": "yatzee.mp4",
+            "externalLink": "https://yatzee.fr",
+            "technologies": [
+                "react",
+                "nextjs"
+            ],
+            "blocks": [
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "text": "Text exemple block 1 - project 1"
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "text": "Text exemple block 2 - project 1"
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "Text exemple block 2 - project 1"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Sub'optimize",
+            "slug": "suboptimize",
+            "text": "Some text for project two",
+            "type": "Projet scolaire",
+            "order": 3,
+            "date": "2025",
+            "imgLink": "suboptimize.png"
+        },
+        {
+            "title": "Siège ergonomique",
+            "slug": "siege-ergonomique",
+            "text": "Some text for project two",
+            "type": "Projet personnel",
+            "order": 4,
+            "date": "2024",
+            "imgLink": "siege-ergonomique.png"
+        },
+        {
+            "title": "Doo ERP",
+            "slug": "doo-erp",
+            "text": "Some text for project two",
+            "type": "Projet professionnel",
+            "order": 2,
+            "date": "2023",
+            "imgLink": "doo-erp.png"
+        },
+        {
+            "title": "Blog de doowup",
+            "slug": "blog-doowup",
+            "text": "Some text for project two",
+            "type": "Projet professionnel",
+            "order": 6,
+            "date": "2023",
+            "imgLink": "blog-doowup.png"
+        },
+        {
+            "title": "La petite production",
+            "slug": "la-petite-production",
+            "text": "Some text for project two",
+            "type": "Projet professionnel",
+            "order": 5,
+            "date": "2023",
+            "imgLink": "lapetiteproduction.png"
+        },
+        {
+            "title": "Portfolio v2",
+            "slug": "portfolio-v2",
+            "text": "Some text for project two",
+            "type": "Projet personnel",
+            "date": "2022",
+            "imgLink": "portfolio-v2.png"
+        },
+        {
+            "title": "Porsche kar",
+            "slug": "porsche-kar",
+            "text": "Some text for project two",
+            "type": "Projet personnel",
+            "date": "2022",
+            "imgLink": "porsche-kar.png"
+        },
+        {
+            "title": "Monders",
+            "slug": "monders",
+            "text": "Some text for project two",
+            "type": "Projet scolaire",
+            "date": "2021",
+            "imgLink": "monders.png"
+        },
+        {
+            "title": "Balado",
+            "slug": "balado",
+            "text": "Some text for project two",
+            "type": "Projet scolaire",
+            "date": "2021",
+            "imgLink": "balado.png"
+        }
+    ]
+}

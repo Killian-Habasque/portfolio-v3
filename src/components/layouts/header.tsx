@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/menubar";
+import { Menu, MenuItem, ProductItem } from "../ui/menubar";
 import { classNames } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,10 +26,10 @@ function Navbar({ className }: { className?: string }) {
         <div className="relative h-full w-full flex items-center rounded-full border border-transparent border-white/[0.2] bg-[--color-dark] shadow-input flex justify-center space-x-16 px-8 py-2">
           <MenuItem setActive={setActive} active={active} item="Présentation">
             <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/web-dev">Web Development</HoveredLink>
-              <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-              <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-              <HoveredLink href="/branding">Branding</HoveredLink>
+              <Link href="/web-dev">Web Development</Link>
+              <Link href="/interface-design">Interface Design</Link>
+              <Link href="/seo">Search Engine Optimization</Link>
+              <Link href="/branding">Branding</Link>
             </div>
           </MenuItem>
           <MenuItem setActive={setActive} active={active} item="Projets">
@@ -62,10 +62,10 @@ function Navbar({ className }: { className?: string }) {
           </MenuItem>
           <MenuItem setActive={setActive} active={active} item="Mon parcours">
             <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/hobby">Hobby</HoveredLink>
-              <HoveredLink href="/individual">Individual</HoveredLink>
-              <HoveredLink href="/team">Team</HoveredLink>
-              <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+              <Link href="/hobby">Hobby</Link>
+              <Link href="/individual">Individual</Link>
+              <Link href="/team">Team</Link>
+              <Link href="/enterprise">Enterprise</Link>
             </div>
           </MenuItem>
         </div>

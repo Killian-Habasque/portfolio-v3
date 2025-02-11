@@ -6,7 +6,21 @@ import { useInView } from "framer-motion";
 import { Card } from "../ui/card";
 import { Badge } from "../ui/badge";
 
-function BlockProjectsGrid() {
+interface BlockProjectsGridProps {
+  items: ProjectPreview[];
+}
+interface ProjectPreview {
+  id: string;
+  title: string;
+  slug: string;
+  text: string;
+  imgLink?: string | null;
+  videoLink?: string | null;
+  externalLink?: string | null;
+  technologies: { name: string }[];
+}
+
+function BlockProjectsGrid({items} : BlockProjectsGridProps) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
@@ -22,32 +36,6 @@ function BlockProjectsGrid() {
       },
     }),
   };
-
-  const cards = [
-    {
-      title: "Yatzee",
-      text: "Création d’une web application interactive pour jouer au Yatzee. Technologies : JavaScript, Three.js, Express, Firebase",
-      link: "/projets/projet-1",
-      externalLink: "https://yatzee.fr",
-      videoLink: "/yatzee.mp4",
-      imgLink: "/projects/yatzee.png",
-    },
-    {
-      title: "Yatzee",
-      text: "Création d’une web application interactive pour jouer au Yatzee. Technologies : JavaScript, Three.js, Express, Firebase",
-      link: "test",
-      imgLink: "/projects/doo-erp.png",
-    },
-    {
-      title: "Yatzee",
-      text: "Création d’une web application interactive pour jouer au Yatzee. Technologies : JavaScript, Three.js, Express, Firebase",
-      link: "test",
-      imgLink: "/projects/suboptimize.png",
-    },
-    { title: "Projet 4", text: "Description du projet 4...", link: "test", externalLink: "https://siege-ergonomique.com", imgLink: "/projects/siege-ergonomique.png" },
-    { title: "Projet 5", text: "Description du projet 5...", link: "test", externalLink: "https://lapetiteproduction.com",  imgLink: "/projects/lapetiteproduction.png" },
-    { title: "Projet 6", text: "Description du projet 6...", link: "test", imgLink: "/projects/balado.png" },
-  ];
 
   return (
     <div ref={sectionRef} className="w-full py-20 lg:py-40">
@@ -74,7 +62,7 @@ function BlockProjectsGrid() {
               visible: { transition: { staggerChildren: 0.2 } },
             }}
           >
-            {cards.map((card, index) => (
+            {items.map((card, index) => (
               <motion.div key={index} custom={index} variants={cardVariants}>
                 <Card {...card} />
               </motion.div>

@@ -4,29 +4,29 @@ import { useState, useRef } from "react";
 import ExternalLink from "./externalLink";
 
 type CardProps = {
-    title?: string;
-    text?: string;
-    link?: string;
-    imgLink?: string;
-    videoLink?: string; 
-    externalLink?: string;
+    title: string;
+    slug: string;
+    text: string;
+    imgLink?: string | null;
+    videoLink?: string | null;
+    externalLink?: string | null;
 };
 
-export function Card({ title, text, link = "#", imgLink, videoLink, externalLink }: CardProps) {
+export function Card({ title, text, slug = "#", imgLink, videoLink, externalLink }: CardProps) {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const [, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
         setIsHovered(true);
         if (videoRef.current) {
-            videoRef.current.play(); 
+            videoRef.current.play();
         }
     };
 
     const handleMouseLeave = () => {
         setIsHovered(false);
         if (videoRef.current) {
-            videoRef.current.pause(); 
+            videoRef.current.pause();
         }
     };
 
@@ -36,19 +36,19 @@ export function Card({ title, text, link = "#", imgLink, videoLink, externalLink
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <Link href={link} className="flex flex-col gap-2">
+            <Link href={`/projets/${slug}`} className="flex flex-col gap-2">
                 <div className="aspect-video mb-2 relative overflow-hidden rounded-xl border-2">
                     {imgLink && (
                         <Image
-                            src={imgLink}
-                            alt={title || "Image"}
-                            layout="fill"
-                            objectFit="cover"
+                            src={`/projects/${imgLink}`}
+                            alt={`Cover Image for ${title}`}
+                            fill
+                            className="object-cover"
                         />
                     )}
                     {videoLink && (
                         <video
-                            ref={videoRef} 
+                            ref={videoRef}
                             className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                             loop
                             muted
@@ -63,7 +63,7 @@ export function Card({ title, text, link = "#", imgLink, videoLink, externalLink
                 {text && <p className="text-neutral-500 text-base">{text}</p>}
             </Link>
             {externalLink && (
-                <ExternalLink url={externalLink}/>
+                <ExternalLink url={externalLink} />
             )}
         </div>
     );

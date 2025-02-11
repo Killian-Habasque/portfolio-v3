@@ -1,8 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from "react"
-import { useInView } from "framer-motion"
-import { VerticalCutReveal, VerticalCutRevealRef } from "./letter-vertical-cut-reaveal"
+import { VerticalCutReveal } from "./letter-vertical-cut-reaveal"
 
 function WelcomeExample() {
   return (
