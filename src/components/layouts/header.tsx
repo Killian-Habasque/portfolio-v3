@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Menu, MenuItem, ProductItem } from "../ui/menubar";
+import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/menubar";
 import { classNames } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,9 +9,9 @@ export function Header() {
   return (
     <div className="relative w-full flex items-center">
       <Link href="/" className="fixed flex items-center h-16 left-8 top-2 z-50">
-        <Image width={25} height={40} alt=""  src="/logo.svg"/>
+        <Image width={25} height={40} alt="" src="/logo.svg" />
       </Link>
-      <Navbar className="h-16 top-2 right-2" />
+      <Navbar className="h-16 top-2 right-4" />
     </div>
   );
 }
@@ -26,10 +26,10 @@ function Navbar({ className }: { className?: string }) {
         <div className="relative h-full w-full flex items-center rounded-full border border-transparent border-white/[0.2] bg-[--color-dark] shadow-input flex justify-center space-x-16 px-8 py-2">
           <MenuItem setActive={setActive} active={active} item="Présentation">
             <div className="flex flex-col space-y-4 text-sm">
-              <Link href="/web-dev">Web Development</Link>
-              <Link href="/interface-design">Interface Design</Link>
-              <Link href="/seo">Search Engine Optimization</Link>
-              <Link href="/branding">Branding</Link>
+              <HoveredLink href="/web-dev">Web Development</HoveredLink>
+              <HoveredLink href="/interface-design">Interface Design</HoveredLink>
+              <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+              <HoveredLink href="/branding">Branding</HoveredLink>
             </div>
           </MenuItem>
           <MenuItem setActive={setActive} active={active} item="Projets">
@@ -62,10 +62,10 @@ function Navbar({ className }: { className?: string }) {
           </MenuItem>
           <MenuItem setActive={setActive} active={active} item="Mon parcours">
             <div className="flex flex-col space-y-4 text-sm">
-              <Link href="/hobby">Hobby</Link>
-              <Link href="/individual">Individual</Link>
-              <Link href="/team">Team</Link>
-              <Link href="/enterprise">Enterprise</Link>
+              <HoveredLink href="/hobby">Hobby</HoveredLink>
+              <HoveredLink href="/individual">Individual</HoveredLink>
+              <HoveredLink href="/team">Team</HoveredLink>
+              <HoveredLink href="/enterprise">Enterprise</HoveredLink>
             </div>
           </MenuItem>
         </div>

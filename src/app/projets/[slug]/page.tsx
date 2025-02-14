@@ -116,12 +116,14 @@ export default async function ProjectPage({ params }: PageProps) {
               className="text-lg leading-relaxed mb-4"
               dangerouslySetInnerHTML={{ __html: formattedProject.text }}
             />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              {formattedProject.blocks && formattedProject.blocks.map(block => {
+                const blockContent = block.content as BlockTextProps | null;
+                return <BlockAdapter key={block.id} type={block.type} content={blockContent} />;
+              })}
+            </div>
           </div>
         </section >
-        {formattedProject.blocks && formattedProject.blocks.map(block => {
-          const blockContent = block.content as BlockTextProps | null; 
-          return <BlockAdapter key={block.id} type={block.type} content={blockContent} />;
-        })}
       </div >
     </>
   );

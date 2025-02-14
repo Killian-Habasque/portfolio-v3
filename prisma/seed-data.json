@@ -44,7 +44,21 @@
                 {
                     "type": "IMAGE",
                     "content": {
-                        "image": "Text exemple block 2 - project 1"
+                        "image": "/20221231_143144.jpg"
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/20221231_143144.jpg",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "text": "Text exemple block 2 - project 1",
+                        "colspan": 1
                     }
                 }
             ]

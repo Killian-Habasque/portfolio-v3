@@ -1,6 +1,7 @@
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 function BlockMediaText() {
     return (
@@ -21,12 +22,19 @@ function BlockMediaText() {
                         </div>
                         <div className="flex flex-row gap-4">
                             <Button variant="primary" link="/test">
-                                Bouton par défaut 
+                                Bouton par défaut
                                 <ArrowRightIcon />
                             </Button>
                         </div>
                     </div>
-                    <div className="bg-muted rounded-xl aspect-square bg-[--color-dark]"></div>
+                    <div className="bg-muted rounded-xl aspect-square bg-[--color-dark] relative overflow-hidden">
+                        <Image
+                            src={`/20221231_143144.jpg`}
+                            alt=""
+                            fill
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
