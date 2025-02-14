@@ -1,6 +1,6 @@
 export interface BlockTextProps {
     text: string;
-    colspan?: 1 | 2;  // Restreindre les valeurs possibles à 1 ou 2
+    colspan?: 1 | 2; 
 }
 
 export const BlockText: React.FC<BlockTextProps> = ({ text, colspan = 2 }) => {
