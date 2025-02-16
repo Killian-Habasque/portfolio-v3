@@ -1,11 +1,7 @@
-// import Model3DLogo from "../components/ui/model";
-// import { WelcomeExample } from "../components/ui/texts/texts";
-// import { RetroGrid } from "../components/ui/retro-grid";
 import { BlockProjectsGrid } from "../components/layouts/block-projects-grid";
 import { BlockMediaText } from "../components/layouts/block-media-text";
 import { BlockTimeline } from "../components/layouts/block-timeline";
-// import HeroFrontpage from "../components/layouts/hero-frontpage";
-import HeroFrontpage from "../components/layouts/hero-frontpage copy";
+import HeroFrontpage from "../components/layouts/hero-frontpage";
 import prisma from '@/lib/db';
 
 export default async function Home() {
@@ -31,16 +27,10 @@ export default async function Home() {
         select: { name: true },
       },
     },
-  });  
+  });
   return (
     <div id="root">
-      {/* <HeroFrontpage>
-        <RetroGrid />
-        <Model3DLogo />
-        <WelcomeExample />
-      </HeroFrontpage> */}
-<HeroFrontpage />
-
+      <HeroFrontpage />
       <BlockProjectsGrid items={projects} />
       <BlockMediaText />
       <BlockTimeline />

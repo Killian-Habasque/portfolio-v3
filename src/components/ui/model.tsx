@@ -15,12 +15,12 @@ interface ModelProps {
 const Model: React.FC<ModelProps> = ({ position, initialRotation, url, mousePosition }) => {
     const gltf = useLoader(GLTFLoader, url);
     const meshRef = useRef<THREE.Group>(null);
-    const posXRef = useRef(position[0] - 3);
+    const posXRef = useRef(position[0] - 5);
 
     useFrame(() => {
         if (!meshRef.current) return;
 
-        posXRef.current += (position[0] - posXRef.current) * 0.05;
+        posXRef.current += (position[0] - posXRef.current) * 0.025;
         meshRef.current.position.x = posXRef.current;
 
         const rotationSpeed = 0.05;
@@ -47,7 +47,7 @@ interface AppProps {
 
 const App: React.FC<AppProps> = ({ mousePosition }) => {
     return (
-        <Canvas className="w-full">
+        <Canvas className="w-full transition-transform duration-300 ease-in-out group-hover:scale-110">
             <directionalLight
                 intensity={1.3}
                 position={[-3, 1, 7]}
