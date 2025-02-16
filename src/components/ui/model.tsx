@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useState, useEffect, useRef } from "react";
+import React, { Suspense, useRef } from "react";
 import { Canvas, useLoader, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -9,77 +9,60 @@ interface ModelProps {
     position: [number, number, number];
     initialRotation: { x: number; y: number; z: number };
     url: string;
+    mousePosition: { x: number; y: number };
 }
 
-const Model: React.FC<ModelProps> = ({ position, initialRotation, url }) => {
+const Model: React.FC<ModelProps> = ({ position, initialRotation, url, mousePosition }) => {
     const gltf = useLoader(GLTFLoader, url);
-    const meshRef = useRef<THREE.Group | null>(null);
-    const [posX, setPosX] = useState(position[0] - 3); 
-    
+    const meshRef = useRef<THREE.Group>(null);
+    const posXRef = useRef(position[0] - 5);
 
-    useEffect(() => {
-        if (meshRef.current) {
-            meshRef.current.rotation.set(initialRotation.x, initialRotation.y, initialRotation.z);
-        }
-    }, [initialRotation]);
+    useFrame(() => {
+        if (!meshRef.current) return;
 
-    useFrame(({ mouse }) => {
-        if (meshRef.current) {
-            setPosX((prevX) => prevX + (position[0] - prevX) * 0.05);
-            meshRef.current.position.x = posX;
+        posXRef.current += (position[0] - posXRef.current) * 0.025;
+        meshRef.current.position.x = posXRef.current;
 
-            const targetX = initialRotation.x + mouse.y * 0.1;
-            const targetY = initialRotation.y + mouse.x * 0.1;
-            const damping = 0.05; 
+        const rotationSpeed = 0.05;
+        const targetRotationX = initialRotation.x + mousePosition.y * 0.2;
+        const targetRotationY = initialRotation.y + mousePosition.x * 0.2;
 
-            meshRef.current.rotation.x += (targetX - meshRef.current.rotation.x) * damping;
-            meshRef.current.rotation.y += (targetY - meshRef.current.rotation.y) * damping;
-        }
+        meshRef.current.rotation.x += (targetRotationX - meshRef.current.rotation.x) * rotationSpeed;
+        meshRef.current.rotation.y += (targetRotationY - meshRef.current.rotation.y) * rotationSpeed;
     });
 
     return (
         <primitive
             ref={meshRef}
             object={gltf.scene}
-            position={[posX, position[1], position[2]]}
+            position={position}
             scale={[0.8, 0.8, 0.8]}
         />
     );
 };
 
-const App: React.FC = () => {
-    const [lightSettings] = useState({
-        intensity: 2,
-        x: -3,
-        y: 1,
-        z: 5,
-    });
+interface AppProps {
+    mousePosition: { x: number; y: number };
+}
 
-    const [modelSettings] = useState({
-        x: 0,
-        y: 0,
-        z: 2,
-        rotX: -0.25,
-        rotY: -0.3,
-        rotZ: -0.05,
-    });
-
+const App: React.FC<AppProps> = ({ mousePosition }) => {
     return (
-        <Canvas className="!w-full xl:!w-1/2">
+        <Canvas className="w-full transition-transform duration-300 ease-in-out group-hover:scale-110">
             <directionalLight
-                intensity={lightSettings.intensity}
-                position={[lightSettings.x, lightSettings.y, lightSettings.z]}
+                intensity={1.3}
+                position={[-3, 1, 7]}
                 castShadow
             />
             <Suspense fallback={null}>
                 <Model
                     url="./logotest.glb"
-                    position={[modelSettings.x, modelSettings.y, modelSettings.z]}
+                    position={[-0.4, 0.1, 1]}
                     initialRotation={{
-                        x: modelSettings.rotX,
-                        y: modelSettings.rotY,
-                        z: modelSettings.rotZ,
+                        x: -0.25,
+                        y: -0.3,
+                        z: -0.05,
                     }}
+                    mousePosition={mousePosition}
                 />
             </Suspense>
         </Canvas>

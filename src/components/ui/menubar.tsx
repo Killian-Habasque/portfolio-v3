@@ -109,13 +109,16 @@ export const ProductItem = ({
   );
 };
 
-// export const HoveredLink = ({ children, ...rest }: any) => {
-//   return (
-//     <Link
-//       {...rest}
-//       className="text-neutral-200 hover:text-neutral-400"
-//     >
-//       {children}
-//     </Link>
-//   );
-// };
+export const HoveredLink = ({
+  children,
+  ...rest
+}: React.ComponentProps<typeof Link>) => {
+  return (
+    <Link
+      {...rest}
+      className="text-neutral-200 hover:text-neutral-400"
+    >
+      {children}
+    </Link>
+  );
+};

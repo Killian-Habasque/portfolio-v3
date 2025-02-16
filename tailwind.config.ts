@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'grandslang': ['GrandSlang', 'serif'],
+        'outfit': ['Outfit', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

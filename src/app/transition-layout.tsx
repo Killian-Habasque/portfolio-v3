@@ -17,32 +17,42 @@ export default function TransitionLayout({
   }, [pathname])
 
   const variants = {
+    initial: {
+      width: '100%',
+      left: isReverse ? 'auto' : 0,
+      right: isReverse ? 0 : 'auto',
+    },
     animate: {
       width: 0,
       left: isReverse ? 'auto' : 0,
       right: isReverse ? 0 : 'auto',
+      transition: {
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      }
     },
     exit: {
       width: '100%',
       left: isReverse ? 'auto' : 0,
       right: isReverse ? 0 : 'auto',
+      transition: {
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      }
     }
   }
 
   return (
     <>
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="wait" initial={true}>
         {children}
         <motion.div
           key={pathname}
           className="fixed inset-0 z-50 bg-black pointer-events-none"
-          variants={variants}
+          initial="initial"
           animate="animate"
           exit="exit"
-          transition={{
-            duration: 0.5,
-            ease: [0.22, 1, 0.36, 1],
-          }}
+          variants={variants}
         />
       </AnimatePresence>
     </>
