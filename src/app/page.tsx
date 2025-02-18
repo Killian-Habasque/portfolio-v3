@@ -4,6 +4,7 @@ import { BlockTimeline } from "../components/layouts/block-timeline";
 import HeroFrontpage from "../components/layouts/hero-frontpage";
 import prisma from '@/lib/db';
 import { BlockIntro } from "../components/layouts/block-intro";
+import { BlockEducation } from "../components/layouts/block-education";
 
 export default async function Home() {
   const projects = await prisma.project.findMany({
@@ -35,6 +36,7 @@ export default async function Home() {
       <BlockIntro />
       <BlockProjectsGrid items={projects} />
       <BlockMediaText />
+      <BlockEducation />
       <BlockTimeline />
     </div>
   );

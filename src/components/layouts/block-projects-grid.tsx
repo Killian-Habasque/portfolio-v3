@@ -34,12 +34,15 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
         delay: i * 0.25,
         duration: 0.6,
         ease: "easeOut",
+        type: "spring",
+        bounce: 0.5,
+        damping: 7,
       },
     }),
   };
 
   return (
-    <div ref={sectionRef} className="w-full container mx-auto">
+    <div className="w-full container mx-auto">
       <div className="flex flex-col gap-10">
         <div className="flex gap-4 flex-col items-start">
           <div className="flex gap-2 flex-col">
@@ -59,6 +62,7 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
           </div>
         </div>
         <motion.div
+          ref={sectionRef}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}

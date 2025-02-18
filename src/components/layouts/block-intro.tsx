@@ -43,7 +43,7 @@ export const BlockIntro = () => {
     };
 
     return (
-        <div ref={ref} id="more" className="w-full flex justify-end py-20 lg:py-60">
+        <div ref={ref} id="more" className="w-full flex justify-end py-20 lg:py-40">
             <motion.div 
                 className="flex flex-col px-8 max-w-4xl gap-8"
                 variants={containerVariants}
