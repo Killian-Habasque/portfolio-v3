@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 function WelcomeExample() {
   return (
     <div className="flex flex-col">
-      <div className="left-0 xs:text-2xl text-2xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-8xl flex flex-col items-start justify-center font-outfit tracking-wide">
+      <div className="text-secondary-dark left-0 xs:text-2xl text-2xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-8xl flex flex-col items-start justify-center font-outfit tracking-wide text-secondary-dark">
         <VerticalCutReveal
           splitBy="characters"
           staggerDuration={0.025}
@@ -19,7 +19,7 @@ function WelcomeExample() {
             delay: 0.5,
           }}
         >
-          {`Killian `}
+          {`Killian`}
         </VerticalCutReveal>
         <VerticalCutReveal
           splitBy="characters"
@@ -37,7 +37,7 @@ function WelcomeExample() {
         </VerticalCutReveal>
       </div>
 
-      <div className="flex justify-between w-full items-center gap-2 px-[8px]">
+      <div className="flex justify-between w-full items-center gap-2 px-[8px] font-outfit text-secondary">
         <VerticalCutReveal
           splitBy="words"
           staggerDuration={0.1}
@@ -49,13 +49,13 @@ function WelcomeExample() {
             damping: 30,
             delay: 1.5,
           }}
-          className="whitespace-nowrap"
+          className="flex whitespace-nowrap gap-1"
         >
           {`Développeur web`}
         </VerticalCutReveal>
 
         <motion.span 
-          className="w-full h-[1px] bg-black"
+          className="w-full h-[1px] bg-secondary"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{
@@ -78,7 +78,7 @@ function WelcomeExample() {
             damping: 30,
             delay: 2.5,
           }}
-          className="whitespace-nowrap"
+          className="flex whitespace-nowrap gap-1"
         >
           {`Portfolio 2025`}
         </VerticalCutReveal>

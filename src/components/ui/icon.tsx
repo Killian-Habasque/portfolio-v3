@@ -7,7 +7,7 @@ type IconProps = {
 
 export function Icon({ label = "default" }: IconProps) {
     return (
-        <div className="w-8 h-8 rounded-full bg-primary-light p-2">
+        <div className="w-8 h-8 rounded-full bg-indigo-100 p-2">
             <Image
                 src={`/icons/${label}.svg`}
                 alt={label}

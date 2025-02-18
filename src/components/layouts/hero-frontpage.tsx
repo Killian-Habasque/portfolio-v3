@@ -6,6 +6,7 @@ import { useCallback, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { WelcomeExample } from "../ui/texts/texts";
+import { Button } from "../ui/button";
 
 type Props = {
     children?: React.ReactNode;
@@ -15,8 +16,8 @@ const HeroFrontpage: React.FC<Props> = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const { scrollY } = useScroll();
 
-    const portraitY = useTransform(scrollY, [0, 1000], [0, -300]);
-    const modelY = useTransform(scrollY, [0, 1000], [0, -100]);
+    const portraitY = useTransform(scrollY, [0, 1000], [0, 100]);
+    const modelY = useTransform(scrollY, [0, 1000], [0, 50]);
 
     const handleMouseMove = useCallback((e: React.MouseEvent) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -72,9 +73,9 @@ const HeroFrontpage: React.FC<Props> = () => {
     };
 
     return (
-        <div className="p-2 bg-[--background] h-[100vh] pt-20">
+        <div className="p-2 h-[100vh] pt-20">
             <div
-                className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-2xl p-8"
+                className="relative flex h-full w-full flex-col justify-center rounded-2xl p-8"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
             >
@@ -110,6 +111,14 @@ const HeroFrontpage: React.FC<Props> = () => {
                             <Model3DLogo mousePosition={mousePosition} />
                         </motion.div>
                     </motion.div>
+                </div>
+                <div className="fixed bottom-4 left-8 flex z-50">
+                    <a href="" className="px-4 py-2 bg-primary-dark hover:bg-primary h-full rounded-full flex gap-1 justify-center items-center font-outfit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        Haut de page
+                    </a>
                 </div>
             </div>
         </div>

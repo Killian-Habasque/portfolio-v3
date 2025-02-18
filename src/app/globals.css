@@ -5,12 +5,12 @@
 
 :root {
   --color-primary-light: #FFFEDA;
-  --color-primary: #FEFCBF;
-  --color-primary-dark: #F4CE10;
+  --color-primary: #eacd3f;
+  --color-primary-dark: #c0ac49;
 
-  --color-secondary-light: #D1E7F3;
-  --color-secondary: #A5C4D4;
-  --color-secondary-dark: #566a81;
+  --color-secondary-light: #79819A;
+  --color-secondary: #47516B;
+  --color-secondary-dark: #170F2E;
 
   --background: #FAFCF7;
   --color-dark: #0A0A0A;

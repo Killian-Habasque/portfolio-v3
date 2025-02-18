@@ -3,6 +3,7 @@ import { BlockMediaText } from "../components/layouts/block-media-text";
 import { BlockTimeline } from "../components/layouts/block-timeline";
 import HeroFrontpage from "../components/layouts/hero-frontpage";
 import prisma from '@/lib/db';
+import { BlockIntro } from "../components/layouts/block-intro";
 
 export default async function Home() {
   const projects = await prisma.project.findMany({
@@ -29,8 +30,9 @@ export default async function Home() {
     },
   });
   return (
-    <div id="root">
+    <div id="root" className="overflow-hidden">
       <HeroFrontpage />
+      <BlockIntro />
       <BlockProjectsGrid items={projects} />
       <BlockMediaText />
       <BlockTimeline />

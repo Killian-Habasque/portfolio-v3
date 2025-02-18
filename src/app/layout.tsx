@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body>
+      <body className="bg-[--background]">
         <BgNoise />
         <Header />
         <TransitionLayout>

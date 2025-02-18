@@ -106,7 +106,8 @@
             "type": "Projet professionnel",
             "order": 5,
             "date": "2023",
-            "imgLink": "lapetiteproduction.png"
+            "imgLink": "lapetiteproduction.png",
+            "videoLink": "lapetiteproduction.mp4"
         },
         {
             "title": "Portfolio v2",

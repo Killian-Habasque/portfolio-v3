@@ -10,7 +10,7 @@ export default function ExternalLink({ url }: ExternalLinkProps) {
       target="_blank"
       href={url}
       rel="noopener noreferrer"
-      className="flex gap-2 items-center text-indigo-600 underline"
+      className="font-outfit flex gap-2 items-center text-indigo-600 underline"
     >
       <Icon label="link" />
       {url}

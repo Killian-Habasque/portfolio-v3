@@ -4,13 +4,29 @@ import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/menubar";
 import { classNames } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export function Header() {
   return (
     <div className="relative w-full flex items-center">
-      <Link href="/" className="fixed flex items-center h-16 left-8 top-2 z-50">
-        <Image width={25} height={40} alt="" src="/logo.svg" />
-      </Link>
+      <div className="fixed left-8 top-2 z-50">
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+            delay: 0.6,
+            type: "spring",
+            bounce: 0.4,
+            damping: 10,
+          }}
+        >
+          <Link href="/" className="flex items-center h-16">
+            <Image width={25} height={40} alt="" src="/logo.svg" />
+          </Link>
+        </motion.div>
+      </div>
       <Navbar className="h-16 top-2 right-4" />
     </div>
   );
@@ -19,11 +35,21 @@ export function Header() {
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 1,
+        ease: "easeOut",
+        delay: 0.2,
+        type: "spring",
+        bounce: 0.4,
+        damping: 10,
+      }}
       className={classNames("fixed top-10 w-full max-w-4xl z-50", className)}
     >
       <Menu setActive={setActive}>
-        <div className="relative h-full w-full flex items-center rounded-full border border-transparent border-white/[0.2] bg-[--color-dark] shadow-input flex justify-center space-x-16 px-8 py-2">
+        <div className="relative h-full w-full flex items-center rounded-full border border-transparent border-white/[0.2] bg-[--color-dark] shadow-input flex justify-center space-x-16 px-8 py-2 font-outfit">
           <MenuItem setActive={setActive} active={active} item="Présentation">
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="/web-dev">Web Development</HoveredLink>
@@ -70,13 +96,13 @@ function Navbar({ className }: { className?: string }) {
           </MenuItem>
         </div>
 
-        <a href="" className="px-6 bg-primary-light hover:bg-primary h-full rounded-full flex gap-1 justify-center items-center ">
+        <a href="" className="px-6 bg-primary-light hover:bg-primary h-full rounded-full flex gap-1 justify-center items-center font-outfit">
           Contact
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.5 1.5C12.5 0.947715 12.0523 0.5 11.5 0.5H2.5C1.94772 0.5 1.5 0.947715 1.5 1.5C1.5 2.05228 1.94772 2.5 2.5 2.5H10.5V10.5C10.5 11.0523 10.9477 11.5 11.5 11.5C12.0523 11.5 12.5 11.0523 12.5 10.5V1.5ZM2.20711 12.2071L12.2071 2.20711L10.7929 0.792893L0.792893 10.7929L2.20711 12.2071Z" fill="black" />
           </svg>
         </a>
       </Menu>
-    </div>
+    </motion.div>
   );
 }
