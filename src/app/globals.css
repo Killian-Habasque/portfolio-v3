@@ -27,7 +27,7 @@
     background-image: url('/bg-noise.png');
     background-position: center;
     animation: BgNoise 1s steps(2) infinite;
-    opacity: .5;
+    opacity: .75;
   }
 
   @keyframes BgNoise {

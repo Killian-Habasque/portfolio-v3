@@ -5,6 +5,7 @@ import Model3DLogo from "@/components/ui/model";
 import { useCallback, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { WelcomeExample } from "../ui/texts/texts";
 
 type Props = {
     children?: React.ReactNode;
@@ -14,7 +15,7 @@ const HeroFrontpage: React.FC<Props> = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const { scrollY } = useScroll();
 
-    const portraitY = useTransform(scrollY, [0, 1000], [0, -200]);
+    const portraitY = useTransform(scrollY, [0, 1000], [0, -300]);
     const modelY = useTransform(scrollY, [0, 1000], [0, -100]);
 
     const handleMouseMove = useCallback((e: React.MouseEvent) => {
@@ -79,30 +80,28 @@ const HeroFrontpage: React.FC<Props> = () => {
             >
                 <div className="flex justify-between h-full">
                     <div className="flex items-center h-full">
-                        <h1 className="text-8xl font-outfit font-normal">Killian <br />
-                            <span className="font-grandslang ml-[7px]">Habasque</span>
-                        </h1>
+                        <WelcomeExample />
                     </div>
-                    <motion.div 
+                    <motion.div
                         className="h-full grid grid-cols-1 md:grid-cols-2 gap-6 h-full w-full max-w-4xl"
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
                     >
-                        <motion.div 
+                        <motion.div
                             className="group relative h-full w-full rounded-full ml-16 relative overflow-hidden z-10 bg-[--color-dark]"
                             variants={itemVariants}
                             style={{ y: portraitY }}
                         >
                             <Image
-                                src={`/portrait.png`}
+                                src={`/20221231_143144.jpg`}
                                 alt={`Cover Image`}
                                 fill
-                                className="h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+                                className="sepia-[.50] h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                                 priority
                             />
                         </motion.div>
-                        <motion.div 
+                        <motion.div
                             className="group relative h-full w-full rounded-full overflow-hidden bg-[--color-dark]"
                             variants={itemVariants2}
                             style={{ y: modelY }}

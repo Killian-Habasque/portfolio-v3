@@ -47,7 +47,7 @@ interface AppProps {
 
 const App: React.FC<AppProps> = ({ mousePosition }) => {
     return (
-        <Canvas className="w-full transition-transform duration-300 ease-in-out group-hover:scale-110">
+        <Canvas className="sepia-[.50] w-full transition-transform duration-300 ease-in-out group-hover:scale-110">
             <directionalLight
                 intensity={1.3}
                 position={[-3, 1, 7]}
