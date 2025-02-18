@@ -42,17 +42,19 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
     <div ref={sectionRef} className="w-full container mx-auto">
       <div className="flex flex-col gap-10">
         <div className="flex gap-4 flex-col items-start">
-          <div>
-            <Badge>Platform</Badge>
-          </div>
           <div className="flex gap-2 flex-col">
             <h2 className="text-5xl md:text-8xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium">
               Exemple <br></br>
               of
               <span className="font-grandslang pl-4">projects</span>
             </h2>
+            <div className="flex gap-2 pt-4">
+              <Badge>Projet personnel</Badge>
+              <Badge>Projet professionnel</Badge>
+              <Badge>Projet scolaire</Badge>
+            </div>
             <p className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide">
-              Managing a small business today is already tough.
+              Managing a small business today is already tough. sdggdgds gs dsg d gddsds
             </p>
           </div>
         </div>

@@ -60,6 +60,8 @@ export function Card({ title, text, slug = "#", imgLink, videoLink, externalLink
                                 loop
                                 muted
                                 playsInline
+                                disablePictureInPicture
+                                controlsList="nodownload nofullscreen noremoteplayback"
                             >
                                 <source src={videoLink} type="video/mp4" />
                                 Votre navigateur ne prend pas en charge la vidéo.
