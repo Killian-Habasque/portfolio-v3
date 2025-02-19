@@ -1,12 +1,12 @@
-// import { Hexagon, Github, Twitter } from "lucide-react"
-import { Footer } from "@/components/ui/footer"
+
+import { Footerbar } from "@/components/ui/footerbar"
 import Image from "next/image"
 
-function Demo() {
+function Footer() {
     return (
         <div className="w-full">
-            <Footer
-                logo={<img className="w-6 h-6" src="/logo.svg" />}
+            <Footerbar
+                logo={<Image width={20} height={20} className="w-6 h-6" src="/logo.svg" alt="logo killian habasque" />}
                 brandName="Killian Habasque"
                 socialLinks={[
                     {
@@ -51,14 +51,14 @@ function Demo() {
                     },
                 ]}
                 mainLinks={[
-                    { href: "/products", label: "Products" },
-                    { href: "/about", label: "About" },
-                    { href: "/blog", label: "Blog" },
+                    { href: "/projets", label: "Projets" },
+                    { href: "/about", label: "À propos" },
+                    { href: "/blog", label: "Réseaux" },
                     { href: "/contact", label: "Contact" },
                 ]}
                 legalLinks={[
-                    { href: "/privacy", label: "Privacy" },
-                    { href: "/terms", label: "Terms" },
+                    { href: "/privacy", label: "killian.habasque.pro@gmail.com" },
+                    { href: "/terms", label: "CV" },
                 ]}
                 copyright={{
                     text: "© Killian Habasque",
@@ -69,4 +69,4 @@ function Demo() {
     )
 }
 
-export { Demo }
+export { Footer }

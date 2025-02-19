@@ -1,14 +1,12 @@
-import { BlockProjectsGrid } from "../components/layouts/block-projects-grid";
-import { BlockMediaText } from "../components/layouts/block-media-text";
-import { BlockTimeline } from "../components/layouts/block-timeline";
-import HeroFrontpage from "../components/layouts/hero-frontpage";
+import { BlockProjectsGrid } from "../components/layouts/homepage/block-projects-grid";
+import { BlockMediaText } from "../components/layouts/homepage/block-media-text";
+import HeroFrontpage from "../components/layouts/homepage/hero-frontpage";
 import prisma from '@/lib/db';
-import { BlockIntro } from "../components/layouts/block-intro";
-import { BlockEducation } from "../components/layouts/block-educations";
-import { MarqueeDemo } from "@/components/layouts/demo";
-import { BlockExperience } from "@/components/layouts/block-experiences";
-import { Cta11Demo } from "@/components/layouts/demo-contact";
-import { Demo } from "@/components/layouts/demo-footer";
+import { BlockIntro } from "../components/layouts/homepage/block-intro";
+import { BlockEducation } from "../components/layouts/homepage/block-educations";
+import { BlockMarquee } from "@/components/layouts/homepage/block-technologies";
+import { BlockExperience } from "@/components/layouts/homepage/block-experiences";
+import { BlockContact } from "@/components/layouts/homepage/block-contact";
 
 export default async function Home() {
   const projects = await prisma.project.findMany({
@@ -41,11 +39,9 @@ export default async function Home() {
       <BlockProjectsGrid items={projects} />
       <BlockMediaText />
       <BlockEducation />
-      {/* <BlockTimeline /> */}
-      <MarqueeDemo />
+      <BlockMarquee />
       <BlockExperience />
-      <Cta11Demo />
-      <Demo />
+      <BlockContact />
     </div>
   );
 }

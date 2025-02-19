@@ -55,7 +55,7 @@ const App: React.FC<AppProps> = ({ mousePosition }) => {
             />
             <Suspense fallback={null}>
                 <Model
-                    url="./logotest.glb"
+                    url="./model/logo.glb"
                     position={[-0.4, 0.1, 1]}
                     initialRotation={{
                         x: -0.25,

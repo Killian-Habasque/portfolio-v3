@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface Education {
   logo: string;
@@ -99,7 +100,7 @@ export function BlockEducation() {
   };
 
   return (
-    <section className="py-40 bg-white">
+    <section id="educations" className="py-40 bg-white">
       <div className="container mx-auto px-4 flex justify-center flex-col">
         <motion.div
           className="mx-auto pb-20 max-w-4xl w-full"
@@ -114,8 +115,8 @@ export function BlockEducation() {
           >
             {/* Mes <br></br> */}
             {/* <span className="font-grandslang"> */}
-              Formations
-              {/* </span> */}
+            Formations
+            {/* </span> */}
           </motion.h2>
           <motion.p
             className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide max-w-sm pt-4 pl-[8px]"
@@ -146,9 +147,11 @@ export function BlockEducation() {
               <div className="absolute left-[-32px] top-4 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white bg-primary-dark z-10 " />
 
               <div className="w-14 h-14 flex-shrink-0 shadow-md rounded-xl bg-white transition-transform duration-300 group-hover:scale-110">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={education.logo}
-                  alt={`Logo ${education.school}`}bg-white 
+                  alt={`Logo ${education.school}`}
                   className="w-full h-full object-contain p-2"
                 />
               </div>

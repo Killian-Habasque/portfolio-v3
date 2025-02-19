@@ -1,4 +1,4 @@
-import { Cta11 } from "@/components/ui/contact"
+import { Contact } from "@/components/ui/contact"
 
 const demoData = {
   heading: "Ready to Get Started?",
@@ -16,8 +16,8 @@ const demoData = {
   },
 };
 
-function Cta11Demo() {
-  return <Cta11 {...demoData} />;
+function BlockContact() {
+  return <Contact {...demoData} />;
 }
 
-export { Cta11Demo };
+export { BlockContact };

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-interface Cta11Props {
+interface ContactProps {
     heading: string;
     description: string;
     buttons?: {
@@ -15,7 +15,7 @@ interface Cta11Props {
     };
 }
 
-const Cta11 = ({
+const Contact = ({
     heading = "Ready to Get Started?",
     description = "Join thousands of satisfied customers using our platform to build amazing websites.",
     buttons = {
@@ -28,11 +28,11 @@ const Cta11 = ({
             url: "https://www.shadcnblocks.com",
         },
     },
-}: Cta11Props) => {
+}: ContactProps) => {
     return (
-        <section className="py-40 flex items-center justify-center">
+        <section id="contact" className="py-40 flex items-center justify-center">
             <div className="container flex items-center justify-center">
-                <div className="flex flex-col items-center rounded-lg bg-accent w-full p-8 text-center md:rounded-2xl lg:p-16 bg-[--color-dark]">
+                <div className="flex flex-col items-center rounded-lg bg-accent w-full p-8 text-center md:rounded-2xl lg:p-16 bg-secondary-dark">
                     <h3 className="mb-3 max-w-3xl text-2xl font-semibold md:mb-4 md:text-7xl lg:mb-6 text-white font-outfit">
                         {heading}
                     </h3>
@@ -57,4 +57,4 @@ const Cta11 = ({
     );
 };
 
-export { Cta11 };
+export { Contact };

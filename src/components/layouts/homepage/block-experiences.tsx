@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Badge } from "../ui/badge";
+import { Badge } from "../../ui/badge";
+import Image from "next/image";
 
 interface Experience {
   logo: string;
@@ -92,7 +93,7 @@ export function BlockExperience() {
   };
 
   return (
-    <section className="py-40">
+    <section id="experiences" className="py-40">
       <div className="container mx-auto px-4 flex justify-center flex-col">
         <motion.div
           className="mx-auto pb-20 max-w-4xl w-full"
@@ -140,14 +141,16 @@ export function BlockExperience() {
                 <div className="flex gap-4 font-outfit">
                   <Badge>{experience.type}</Badge>
                   <span className="font-bold text-secondary-dark tracking-wide">{experience.time}</span>
-                  • 
-                 <span className="text-secondary-light">{experience.period}</span> 
+                  •
+                  <span className="text-secondary-light">{experience.period}</span>
                 </div>
                 <div className="flex gap-4">
                   <div className="w-16 h-16 flex-shrink-0 shadow-md rounded-xl bg-white transition-transform duration-300 group-hover:scale-110">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src={experience.logo}
-                      alt={`Logo ${experience.school}`} bg-white
+                      alt={`Logo ${experience.company}`}
                       className="w-full h-full object-cover rounded-xl"
                     />
                   </div>

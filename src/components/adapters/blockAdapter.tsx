@@ -1,5 +1,5 @@
-import { BlockText, BlockTextProps } from "../layouts/block-text";
-import { BlockImage, BlockImageProps } from "../layouts/block-image";
+import { BlockText, BlockTextProps } from "../layouts/project/block-text";
+import { BlockImage, BlockImageProps } from "../layouts/project/block-image";
 
 interface BlockAdapterProps {
     content: BlockTextProps | BlockImageProps | null;

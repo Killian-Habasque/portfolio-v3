@@ -41,14 +41,14 @@ function ButtonScrollTop() {
                     duration: 0.3,
                     ease: "easeInOut"
                 }}
-                className="fixed bottom-4 left-8 flex z-50"
+                className="fixed bottom-6 left-8 flex z-50"
             >
                 <motion.a
                     href={isAtTop ? "#more" : "#top"}
                     onClick={handleClick}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-4 py-2 bg-primary-dark hover:bg-primary h-full rounded-full flex gap-1 justify-center items-center font-outfit"
+                    className="px-6 py-4 bg-primary-dark hover:bg-primary h-full rounded-full flex gap-1 justify-center items-center font-outfit"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

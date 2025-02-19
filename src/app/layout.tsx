@@ -3,6 +3,7 @@ import "./globals.css";
 import { BgNoise } from "../components/ui/bg-noise";
 import { Header } from "@/components/layouts/header";
 import TransitionLayout from "./transition-layout";
+import { Footer } from "@/components/layouts/footer";
 
 export const metadata: Metadata = {
   title: "Killian HABASQUE | Portfolio",
@@ -17,10 +18,13 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="bg-[--background]">
-        <BgNoise />
-        <Header />
         <TransitionLayout>
-          {children}
+          <main key="app">
+            <BgNoise />
+            <Header />
+            {children}
+            <Footer />
+          </main>
         </TransitionLayout>
       </body>
     </html>

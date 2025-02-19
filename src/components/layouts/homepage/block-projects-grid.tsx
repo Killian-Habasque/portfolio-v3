@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { Card } from "../ui/card";
-import { Badge } from "../ui/badge";
+import { Card } from "../../ui/card";
+import { Badge } from "../../ui/badge";
 import Link from "next/link";
 
 interface BlockProjectsGridProps {

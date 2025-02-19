@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
@@ -72,7 +72,7 @@ function BlockMediaText() {
     };
 
     return (
-        <div ref={ref} className="w-full py-40">
+        <section ref={ref} id="presentation" className="w-full py-40">
             <div className="container mx-auto">
                 <motion.div 
                     className="grid grid-cols-1 gap-16 items-center lg:grid-cols-5"
@@ -105,8 +105,8 @@ function BlockMediaText() {
                             className="flex flex-row gap-4"
                             variants={textVariants}
                         >
-                            <Button variant="primary" link="/test">
-                                Bouton par défaut
+                            <Button variant="primary" link="/projets">
+                                Voir tout les projets
                                 <ArrowRightIcon />
                             </Button>
                         </motion.div>
@@ -118,7 +118,7 @@ function BlockMediaText() {
                             style={{ y: animationComplete ? y1 : 0 }}
                         >
                             <Image
-                                src={`/20250215_1443121.jpg`}
+                                src={`/about/photo_face.jpg`}
                                 alt=""
                                 fill
                                 className="sepia-[.50] w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
@@ -130,7 +130,7 @@ function BlockMediaText() {
                             style={{ y: animationComplete ? y2 : 0 }}
                         >
                             <Image
-                                src={`/about-image1.jpg`}
+                                src={`/about/photo_paysage_dos.jpg`}
                                 alt=""
                                 fill
                                 className="sepia-[.25] w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
@@ -139,7 +139,7 @@ function BlockMediaText() {
                     </div>
                 </motion.div>
             </div>
-        </div>
+        </section>
     );
 }
 

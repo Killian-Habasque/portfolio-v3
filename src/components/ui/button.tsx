@@ -3,7 +3,7 @@ import { classNames } from "@/lib/utils";
 const buttonVariantClasses = {
   primary: "bg-primary-dark text-black hover:bg-primary hover",
   secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-  dark: "bg-[--color-dark] text-white",
+  dark: "bg-secondary-dark text-white",
   outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
 };
 
@@ -11,6 +11,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLAnchorElemen
   variant?: keyof typeof buttonVariantClasses;
   children?: React.ReactNode;
   link?: string;
+  target?: string;
 }
 
 function Button({ className, link, variant = "primary", children, ...props }: ButtonProps) {
@@ -24,7 +25,7 @@ function Button({ className, link, variant = "primary", children, ...props }: Bu
       )}
       {...props}
     >
-      <span className="flex items-center gap-2 [&>svg]:w-6 [&>svg]:h-6">
+      <span className="flex items-center gap-2 [&>svg]:w-4 [&>svg]:h-4">
         {children}
       </span>
     </a>

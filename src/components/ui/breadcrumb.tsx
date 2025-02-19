@@ -18,18 +18,18 @@ export default function Breadcrumb({ breadcrumbs }: BreadcrumbProps) {
   const router = useRouter();
 
   return (
-    <nav aria-label="Breadcrumb" className="flex gap-4 mb-6 pt-24">
+    <nav aria-label="Breadcrumb" className="flex gap-4 mb-6 pt-24 font-outfit">
       <button onClick={() => router.back()} className="flex gap-2 items-center text-sm cursor-pointer">
         <Badge variant="outline"><ArrowLeftEndOnRectangleIcon className="w-4 h-4" />RETOUR</Badge>
       </button>
 
-      <ol role="list" className="flex gap-2 items-center">
+      <ol role="list" className="flex gap-2 items-center tracking-wide">
         {breadcrumbs.map((breadcrumb, index) => (
           <li key={breadcrumb.id}>
             <div className="flex items-center">
               <Link
                 href={breadcrumb.href ?? null}
-                className={`mr-4 text-sm font-medium ${index === breadcrumbs.length - 1 ? "text-gray-500" : "text-gray-900"
+                className={`mr-4 text-sm font-medium ${index === breadcrumbs.length - 1 ? "text-secondary-light" : "text-secondary"
                   }`}
               >
                 {breadcrumb.name}

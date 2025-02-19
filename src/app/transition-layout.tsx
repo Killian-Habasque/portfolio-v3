@@ -53,7 +53,8 @@ export default function TransitionLayout({
           animate="animate"
           exit="exit"
           variants={variants}
-        />
+        >
+        </motion.div>
       </AnimatePresence>
     </>
   )

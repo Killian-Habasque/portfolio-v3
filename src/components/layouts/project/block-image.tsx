@@ -53,7 +53,7 @@ export const BlockImage: React.FC<BlockImageProps> = ({ image, colspan = 2 }) =>
                                     className="absolute top-4 right-4 z-10 text-white text-xl bg-neutral-900/50 ring-1 backdrop-blur-md rounded-full p-2 transition-opacity duration-200"
                                     onClick={() => setIsImageOpen(false)}
                                 >
-                                    <XCircleIcon className="size-5" />
+                                    <XCircleIcon className="size-5 fill-primary-light" />
                                 </motion.button>
                                 <Image
                                     src={image}

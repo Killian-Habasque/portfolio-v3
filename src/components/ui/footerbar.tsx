@@ -23,7 +23,7 @@ interface FooterProps {
   }
 }
 
-export function Footer({
+export function Footerbar({
   logo,
   brandName,
   socialLinks,
@@ -64,7 +64,7 @@ export function Footer({
                 <li key={i} className="my-1 mx-2 shrink-0">
                   <a
                     href={link.href}
-                    className="text-sm text-primary underline-offset-4 hover:underline"
+                    className="text-sm text-primary-dark underline-offset-4 hover:underline"
                   >
                     {link.label}
                   </a>

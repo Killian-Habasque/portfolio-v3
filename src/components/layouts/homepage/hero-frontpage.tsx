@@ -5,8 +5,8 @@ import Model3DLogo from "@/components/ui/model";
 import { useCallback, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { WelcomeExample } from "../ui/texts/texts";
-import { ButtonScrollTop } from "../ui/button-scroll-top";
+import { WelcomeExample } from "../../ui/texts/texts";
+import { ButtonScrollTop } from "../../ui/button-scroll-top";
 
 type Props = {
     children?: React.ReactNode;
@@ -90,12 +90,12 @@ const HeroFrontpage: React.FC<Props> = () => {
                         animate="visible"
                     >
                         <motion.div
-                            className="group relative h-full w-full rounded-full ml-16 relative overflow-hidden z-10 bg-[--color-dark]"
+                            className="group relative h-full w-full rounded-full ml-16 relative overflow-hidden z-10 bg-secondary-dark"
                             variants={itemVariants}
                             style={{ y: portraitY }}
                         >
                             <Image
-                                src={`/20221231_143144.jpg`}
+                                src={`/about/photo_3-4_face.jpg`}
                                 alt={`Cover Image`}
                                 fill
                                 className="sepia-[.25] h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
@@ -103,7 +103,7 @@ const HeroFrontpage: React.FC<Props> = () => {
                             />
                         </motion.div>
                         <motion.div
-                            className="group relative h-full w-full rounded-full overflow-hidden bg-[--color-dark]"
+                            className="group relative h-full w-full rounded-full overflow-hidden bg-secondary-dark"
                             variants={itemVariants2}
                             style={{ y: modelY }}
                         >
