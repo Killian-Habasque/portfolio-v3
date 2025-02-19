@@ -1,51 +1,90 @@
 'use client'
 
 import { VerticalCutReveal } from "./letter-vertical-cut-reaveal"
+import { motion } from "framer-motion"
 
 function WelcomeExample() {
   return (
-    <div className="absolute right-0 xs:text-2xl text-2xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl flex flex-col items-start justify-center font-overusedGrotesk p-10 md:p-16 lg:p-24 text-[#ffffdd] tracking-wide uppercase">
-      <VerticalCutReveal
-        splitBy="characters"
-        staggerDuration={0.025}
-        staggerFrom="first"
-        transition={{
-          type: "spring",
-          stiffness: 200,
-          damping: 21,
-        }}
-        className="text-8xl"
-      >
-        {`Hello !👋 `}
-      </VerticalCutReveal>
-      <VerticalCutReveal
-        splitBy="characters"
-        staggerDuration={0.025}
-        staggerFrom="last"
-        reverse={true}
-        transition={{
-          type: "spring",
-          stiffness: 200,
-          damping: 21,
-          delay: 0.5,
-        }}
-      >
-        {`Bienvenue 🌐 sur`}
-      </VerticalCutReveal>
-      <VerticalCutReveal
-        splitBy="characters"
-        staggerDuration={0.025}
-        staggerFrom="center"
-        transition={{
-          type: "spring",
-          stiffness: 200,
-          damping: 21,
-          delay: 1.1,
-        }}
-      >
-        {`mon Portfolio ⇗`}
-      </VerticalCutReveal>
+    <div className="flex flex-col">
+      <div className="text-secondary-dark left-0 xs:text-2xl text-2xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-8xl flex flex-col items-start justify-center font-outfit tracking-wide text-secondary-dark">
+        <VerticalCutReveal
+          splitBy="characters"
+          staggerDuration={0.025}
+          staggerFrom="first"
+          reverse={true}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 21,
+            delay: 0.5,
+          }}
+        >
+          {`Killian`}
+        </VerticalCutReveal>
+        <VerticalCutReveal
+          splitBy="characters"
+          staggerDuration={0.025}
+          staggerFrom="last"
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 21,
+            delay: 1,
+          }}
+          className="pl-[8px] font-grandslang"
+        >
+          {`Habasque`}
+        </VerticalCutReveal>
+      </div>
+
+      <div className="flex justify-between w-full items-center gap-2 px-[8px] font-outfit text-secondary">
+        <VerticalCutReveal
+          splitBy="words"
+          staggerDuration={0.1}
+          staggerFrom="first"
+          reverse={true}
+          transition={{
+            type: "spring",
+            stiffness: 250,
+            damping: 30,
+            delay: 1.5,
+          }}
+          className="flex whitespace-nowrap gap-1"
+        >
+          {`Développeur web`}
+        </VerticalCutReveal>
+
+        <motion.span 
+          className="w-full h-[1px] bg-secondary"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 250,
+            damping: 30,
+            delay: 2
+          }}
+          style={{ transformOrigin: "left" }}
+        />
+
+        <VerticalCutReveal
+          splitBy="words"
+          staggerDuration={0.1}
+          staggerFrom="last"
+          reverse={true}
+          transition={{
+            type: "spring",
+            stiffness: 250,
+            damping: 30,
+            delay: 2.5,
+          }}
+          className="flex whitespace-nowrap gap-1"
+        >
+          {`Portfolio 2025`}
+        </VerticalCutReveal>
+      </div>
     </div>
+
   )
 }
 

@@ -4,11 +4,11 @@ import { BlockType } from '@prisma/client';
 import Breadcrumb from '@/components/ui/breadcrumb';
 import { Badge } from '@/components/ui/badge';
 import Date from '@/components/ui/date';
-import { HeroVideoDialog } from '@/components/layouts/hero-video-dialog';
+import { HeroVideoDialog } from '@/components/layouts/project/hero-video-dialog';
 import Image from 'next/image';
 import ExternalLink from '@/components/ui/externalLink';
 import BlockAdapter from '@/components/adapters/blockAdapter';
-import { BlockTextProps } from '@/components/layouts/block-text';
+import { BlockTextProps } from '@/components/layouts/project/block-text';
 
 interface PageProps {
   params: Promise<{
@@ -60,11 +60,11 @@ export default async function ProjectPage({ params }: PageProps) {
         <section>
           <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 lg:max-w-7xl lg:px-8">
 
-            <div className="flex justify-center flex-col items-center mb-6">
-              <div className='flex gap-2 items-center'>
+            <div className="flex justify-center flex-col items-center mb-6 font-outfit">
+              <div className='flex gap-2 items-center text-secondary-dark'>
                 {formattedProject.date ? (
                   <>
-                    Année de réalisation :  <Date dateString={formattedProject.date} />
+                    Année de réalisation :  <span className='font-semibold'><Date dateString={formattedProject.date} /></span>
                     •
                   </>
                 ) : ''}
@@ -72,7 +72,7 @@ export default async function ProjectPage({ params }: PageProps) {
                   <Badge>{formattedProject.type}</Badge>
                 ) : ''}
               </div>
-              <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-none md:leading-none mb-3 text-center md:text-left font-bold tracking-tight text-gray-900">
+              <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-none md:leading-none mb-3 text-center md:text-left font-bold tracking-tight text-secondary-dark">
                 {formattedProject.title}
               </h1>
               {formattedProject.externalLink ? (
@@ -87,7 +87,7 @@ export default async function ProjectPage({ params }: PageProps) {
                 <HeroVideoDialog
                   className="block"
                   animationStyle="from-center"
-                  videoSrc={`/${formattedProject.videoLink}`}
+                  videoSrc={`/projects/${formattedProject.videoLink}`}
                   thumbnailSrc={`/projects/${formattedProject.imgLink}`}
                   thumbnailAlt={`Cover Image for ${formattedProject.title}`}
                 />
@@ -113,7 +113,7 @@ export default async function ProjectPage({ params }: PageProps) {
               </nav>
             </div>
             <div
-              className="text-lg leading-relaxed mb-4"
+              className="text-lg leading-relaxed mb-4 font-outfit text-secondary-dark"
               dangerouslySetInnerHTML={{ __html: formattedProject.text }}
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
