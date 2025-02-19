@@ -47,7 +47,7 @@ export function Footerbar({
               <li key={i}>
                 <Button
                   variant="dark"
-                  className="h-10 w-10 rounded-full"
+                  className="rounded-full !px-4 !py-4"
                   link={link.href} 
                   target="_blank"
                 >
