@@ -32,7 +32,7 @@ export function Card({ title, text, slug = "#", imgLink, videoLink, externalLink
 
     return (
         <div
-            className="flex flex-col gap-2 transform transition-all duration-300 hover:scale-105 group bg-white rounded-2xl p-2 pb-4 h-full"
+            className="flex flex-col gap-2 transform transition-all shadow-sm duration-300 hover:scale-105 group bg-white rounded-2xl p-2 pb-4 h-full"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >

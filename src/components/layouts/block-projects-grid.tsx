@@ -48,8 +48,8 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
           <div className="flex gap-2 flex-col">
             <h2 className="text-5xl md:text-8xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium">
               Exemple <br></br>
-              of
-              <span className="font-grandslang pl-4">projects</span>
+              de
+              <span className="font-grandslang pl-4">projets</span>
             </h2>
             <div className="flex gap-2 pt-4">
               <Badge>Projet personnel</Badge>

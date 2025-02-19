@@ -4,7 +4,11 @@ import { BlockTimeline } from "../components/layouts/block-timeline";
 import HeroFrontpage from "../components/layouts/hero-frontpage";
 import prisma from '@/lib/db';
 import { BlockIntro } from "../components/layouts/block-intro";
-import { BlockEducation } from "../components/layouts/block-education";
+import { BlockEducation } from "../components/layouts/block-educations";
+import { MarqueeDemo } from "@/components/layouts/demo";
+import { BlockExperience } from "@/components/layouts/block-experiences";
+import { Cta11Demo } from "@/components/layouts/demo-contact";
+import { Demo } from "@/components/layouts/demo-footer";
 
 export default async function Home() {
   const projects = await prisma.project.findMany({
@@ -37,7 +41,11 @@ export default async function Home() {
       <BlockProjectsGrid items={projects} />
       <BlockMediaText />
       <BlockEducation />
-      <BlockTimeline />
+      {/* <BlockTimeline /> */}
+      <MarqueeDemo />
+      <BlockExperience />
+      <Cta11Demo />
+      <Demo />
     </div>
   );
 }

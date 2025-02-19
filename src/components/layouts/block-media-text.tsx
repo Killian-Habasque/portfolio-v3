@@ -72,7 +72,7 @@ function BlockMediaText() {
     };
 
     return (
-        <div ref={ref} className="w-full py-20 lg:py-40">
+        <div ref={ref} className="w-full py-40">
             <div className="container mx-auto">
                 <motion.div 
                     className="grid grid-cols-1 gap-16 items-center lg:grid-cols-5"
@@ -97,7 +97,7 @@ function BlockMediaText() {
                                 className="font-outfit text-secondary-light leading-[2] font-light text-md tracking-wide"
                                 variants={textVariants}
                             >
-                                Salut ! Moi c&apos;est Killian Habasque. Je viens de Quimper dans le Finistère et j&apos;étudie actuellement à Laval. Je suis un étudiant passionné par le design et le développement Web. J'ai eu de nombreuses expériences dans ce domaine dû à mes formations mais également lors de projets personnels. Je possède donc de bonnes compétences en langages de programmation comme le Html, CSS ou Php mais aussi en logiciels comme la suite Adobe ou Affinity.
+                                Salut ! Moi c&apos;est Killian Habasque. Je viens de Quimper dans le Finistère et j&apos;étudie actuellement à Laval. Je suis un étudiant passionné par le design et le développement Web. J&apos;ai eu de nombreuses expériences dans ce domaine dû à mes formations mais également lors de projets personnels. Je possède donc de bonnes compétences en langages de programmation comme le Html, CSS ou Php mais aussi en logiciels comme la suite Adobe ou Affinity.
                             </motion.p>
                         </div>
 

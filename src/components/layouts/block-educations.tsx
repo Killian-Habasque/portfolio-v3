@@ -59,7 +59,7 @@ export function BlockEducation() {
       transition: {
         duration: 0.8,
         ease: "easeOut",
-        staggerChildren: 0.2,
+        staggerChildren: 0.4,
       },
     },
   };
@@ -67,11 +67,11 @@ export function BlockEducation() {
   const titleVariants = {
     hidden: {
       opacity: 0,
-      y: -50,
+      x: -50,
     },
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
       transition: {
         type: "spring",
         duration: 1,
@@ -99,24 +99,26 @@ export function BlockEducation() {
   };
 
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4 pt-20">
-        <motion.div 
-          className="max-w-7xl mx-auto pb-20 "
+    <section className="py-40 bg-white">
+      <div className="container mx-auto px-4 flex justify-center flex-col">
+        <motion.div
+          className="mx-auto pb-20 max-w-4xl w-full"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.h2 
-            className="text-5xl md:text-8xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium max-w-4xl"
+          <motion.h2
+            className="text-5xl md:text-7xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium max-w-4xl"
             variants={titleVariants}
           >
-            Mes <br></br>
-            <span className="font-grandslang">formations</span>
+            {/* Mes <br></br> */}
+            {/* <span className="font-grandslang"> */}
+              Formations
+              {/* </span> */}
           </motion.h2>
-          <motion.p 
-            className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide max-w-sm"
+          <motion.p
+            className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide max-w-sm pt-4 pl-[8px]"
             variants={titleVariants}
           >
             I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
@@ -124,8 +126,8 @@ export function BlockEducation() {
           </motion.p>
         </motion.div>
 
-        <motion.div 
-          className="relative space-y-6 ml-16"
+        <motion.div
+          className="relative space-y-6 max-w-4xl w-full mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -135,22 +137,22 @@ export function BlockEducation() {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="relative flex items-start gap-6 p-6 bg-white rounded-lg shadow-sm"
+              className="relative flex items-start gap-6 p-6 bg-[--background] rounded-2xl shadow-sm group"
             >
               {index !== educationData.length - 1 && (
                 <div className="absolute left-[-33px] top-4 w-[2px] h-[calc(100%+24px)] bg-primary" />
               )}
 
-              <div className="absolute left-[-32px] top-4 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-[--background] bg-primary z-10" />
+              <div className="absolute left-[-32px] top-4 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white bg-primary-dark z-10 " />
 
-              <div className="w-14 h-14 flex-shrink-0 shadow-md rounded-lg">
+              <div className="w-14 h-14 flex-shrink-0 shadow-md rounded-xl bg-white transition-transform duration-300 group-hover:scale-110">
                 <img
                   src={education.logo}
-                  alt={`Logo ${education.school}`}
+                  alt={`Logo ${education.school}`}bg-white 
                   className="w-full h-full object-contain p-2"
                 />
               </div>
-              <div className="flex-grow">
+              <div className="flex-grow ">
                 <h3 className="text-xl text-secondary-dark tracking-wide font-outfit">{education.title}</h3>
                 <p className="text-primary-dark mt-1 font-outfit">{education.school}</p>
                 {education.details && (
