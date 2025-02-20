@@ -11,6 +11,14 @@
         {
             "name": "Laravel",
             "slug": "laravel"
+        },
+        {
+            "name": "PHP",
+            "slug": "php"
+        },
+        {
+            "name": "Javascript",
+            "slug": "javascript"
         }
     ],
     "projects": [
@@ -123,7 +131,8 @@
             "text": "Some text for project two",
             "type": "Projet personnel",
             "date": "2022",
-            "imgLink": "porsche-kar.png"
+            "imgLink": "porsche-kar.png",
+            "videoLink": "porsche-kar.mp4"
         },
         {
             "title": "Monders",
@@ -131,15 +140,75 @@
             "text": "Some text for project two",
             "type": "Projet scolaire",
             "date": "2021",
-            "imgLink": "monders.png"
+            "imgLink": "monders.png",
+            "videoLink": "monders.mp4",
+            "technologies": [
+                "php",
+                "javascript"
+            ]
         },
         {
             "title": "Balado",
             "slug": "balado",
-            "text": "Some text for project two",
+            "text": "La plateforme des 7 arts en podcast",
             "type": "Projet scolaire",
             "date": "2021",
-            "imgLink": "balado.png"
+            "imgLink": "balado.png",
+            "videoLink": "balado.mp4",
+            "technologies": [
+                "php",
+                "javascript"
+            ],
+            "blocks": [
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "Balado a été réalisé dans le cadre de notre projet tuteuré en première année de DUT MMI. Ce projet académique, mené en équipe de six personnes, visait à concevoir une plateforme dédiée aux podcasts sur les sept arts. L'équipe était composée de profils complémentaires, dont deux développeurs en charge de la mise en œuvre technique. La gestion du projet s'est déroulée sur une courte période de deux sprints d'une semaine chacun, imposant une organisation rigoureuse et une approche agile pour assurer une livraison fonctionnelle dans les délais impartis."
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Présentation du projet",
+                        "text": "Balado est une plateforme innovante qui centralise et met en avant des podcasts dédiés aux sept arts : l'architecture, la sculpture, les arts visuels, la musique, la littérature, les arts de la scène et le cinéma. Chaque jour, un art est mis à l'honneur à travers un podcast sélectionné, permettant aux utilisateurs de découvrir et d’approfondir leurs connaissances dans ces domaines."
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Technologies utilisées",
+                        "text": "L’objectif principal du projet était de découvrir le développement natif sans framework avancé. Nous avons donc principalement utilisé PHP pour la gestion des données et la logique serveur, tandis que le JavaScript a été employé pour les animations et les interactions dynamiques du site. L’intégration a été réalisée en HTML/CSS, en respectant les principes d’accessibilité et d’ergonomie pour garantir une expérience utilisateur fluide et intuitive."
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Objectif",
+                        "text": "Dans un monde où l'accès à la culture est souvent éclaté entre différentes plateformes, Balado offre une expérience unifiée et interactive. L'objectif est de rendre l’art plus accessible en s’appuyant sur un média moderne et engageant : le podcast. La plateforme s’adresse aussi bien aux amateurs qu’aux passionnés d’art, leur offrant un espace de découverte, d’apprentissage et d’échange."
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Fonctionnalités clés",
+                        "items": [
+                            "Un podcast quotidien mis en avant selon l’art du jour.",
+                            "Une bibliothèque organisée par catégorie pour explorer librement les différents épisodes.",
+                            "Un système interactif avec commentaires, favoris et notation des podcasts.",
+                            "Une accessibilité optimisée pour tous, incluant une navigation intuitive et un design épuré.",
+                            "Une approche participative permettant aux créateurs de partager leurs propres podcasts sur la plateforme."
+                        ]
+                    }
+                },                
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Positionnement et valeur ajoutée",
+                        "text": "Balado se distingue par son approche immersive et éducative. Contrairement aux plateformes généralistes comme France Culture ou Spotify, Balado se spécialise exclusivement dans les arts et propose une interaction forte avec la communauté. Grâce à une interface soignée et une ligne éditoriale claire, elle vise à devenir une référence pour les curieux et les passionnés."
+                    }
+                }
+            ]
         }
     ]
 }

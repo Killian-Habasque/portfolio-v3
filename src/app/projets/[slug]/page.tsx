@@ -9,6 +9,8 @@ import Image from 'next/image';
 import ExternalLink from '@/components/ui/externalLink';
 import BlockAdapter from '@/components/adapters/blockAdapter';
 import { BlockTextProps } from '@/components/layouts/project/block-text';
+import { BlockListProps } from '@/components/layouts/project/block-list';
+import { BlockImageProps } from '@/components/layouts/project/block-image';
 
 interface PageProps {
   params: Promise<{
@@ -118,7 +120,7 @@ export default async function ProjectPage({ params }: PageProps) {
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               {formattedProject.blocks && formattedProject.blocks.map(block => {
-                const blockContent = block.content as BlockTextProps | null;
+                const blockContent = block.content as BlockTextProps | BlockImageProps | BlockListProps | null;
                 return <BlockAdapter key={block.id} type={block.type} content={blockContent} />;
               })}
             </div>
