@@ -23,7 +23,7 @@ const HeroFrontpage: React.FC<Props> = () => {
         const rect = e.currentTarget.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width;
         const y = (e.clientY - rect.top) / rect.height;
-        setMousePosition({ x: x, y: y });
+        setMousePosition({ x: x * 2, y: y * 1.5});
     }, []);
 
     const itemVariants = {

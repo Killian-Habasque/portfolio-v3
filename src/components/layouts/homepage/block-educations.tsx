@@ -122,8 +122,7 @@ export function BlockEducation() {
             className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide max-w-sm pt-4 pl-[8px]"
             variants={titleVariants}
           >
-            I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-            a timeline of my journey.
+            Voici une chronologie de mes différentes formations.
           </motion.p>
         </motion.div>
 

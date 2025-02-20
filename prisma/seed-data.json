@@ -29,8 +29,8 @@
             "type": "Projet scolaire",
             "date": "2024",
             "order": 1,
-            "imgLink": "yatzee.png",
-            "videoLink": "yatzee.mp4",
+            "imgLink": "/projects/yatzee/yatzee.png",
+            "videoLink": "/projects/yatzee/yatzee.mp4",
             "externalLink": "https://yatzee.fr",
             "technologies": [
                 "react",
@@ -52,13 +52,13 @@
                 {
                     "type": "IMAGE",
                     "content": {
-                        "image": "/20221231_143144.jpg"
+                        "image": "/projects/yatzee/yatzee.png"
                     }
                 },
                 {
                     "type": "IMAGE",
                     "content": {
-                        "image": "/projects/porsche-kar.png",
+                        "image": "/projects/yatzee/yatzee.png",
                         "colspan": 1
                     }
                 },
@@ -78,7 +78,7 @@
             "type": "Projet scolaire",
             "order": 3,
             "date": "2025",
-            "imgLink": "suboptimize.png"
+            "imgLink": "/projects/suboptimize/suboptimize.png"
         },
         {
             "title": "Siège ergonomique",
@@ -87,7 +87,8 @@
             "type": "Projet personnel",
             "order": 4,
             "date": "2024",
-            "imgLink": "siege-ergonomique.png"
+            "imgLink": "/projects/siege-ergonomique/siege-ergonomique.png",
+            "externalLink": "https://siege-ergonomique.com"
         },
         {
             "title": "Doo ERP",
@@ -96,7 +97,7 @@
             "type": "Projet professionnel",
             "order": 2,
             "date": "2023",
-            "imgLink": "doo-erp.png"
+            "imgLink": "/projects/doo-erp/doo-erp.png"
         },
         {
             "title": "Blog de doowup",
@@ -105,7 +106,8 @@
             "type": "Projet professionnel",
             "order": 6,
             "date": "2023",
-            "imgLink": "blog-doowup.png"
+            "imgLink": "/projects/blog-doowup/blog-doowup.png",
+            "externalLink": "https://doowup.fr/blog"
         },
         {
             "title": "La petite production",
@@ -114,8 +116,9 @@
             "type": "Projet professionnel",
             "order": 5,
             "date": "2023",
-            "imgLink": "lapetiteproduction.png",
-            "videoLink": "lapetiteproduction.mp4"
+            "imgLink": "/projects/lapetiteproduction/lapetiteproduction.png",
+            "videoLink": "/projects/lapetiteproduction/lapetiteproduction.mp4",
+            "externalLink": "https://lapetiteproduction.com"
         },
         {
             "title": "Portfolio v2",
@@ -123,7 +126,8 @@
             "text": "Some text for project two",
             "type": "Projet personnel",
             "date": "2022",
-            "imgLink": "portfolio-v2.png"
+            "imgLink": "/projects/portfolio-v2/portfolio-v2.png",
+            "externalLink": "https://killian-habasque.fr"
         },
         {
             "title": "Porsche kar",
@@ -131,8 +135,9 @@
             "text": "Some text for project two",
             "type": "Projet personnel",
             "date": "2022",
-            "imgLink": "porsche-kar.png",
-            "videoLink": "porsche-kar.mp4"
+            "imgLink": "/projects/porsche-kar/porsche-kar.png",
+            "videoLink": "/projects/porsche-kar/porsche-kar.mp4",
+            "externalLink": "https://killian-habasque-porschekar.netlify.app/"
         },
         {
             "title": "Monders",
@@ -140,8 +145,8 @@
             "text": "Some text for project two",
             "type": "Projet scolaire",
             "date": "2021",
-            "imgLink": "monders.png",
-            "videoLink": "monders.mp4",
+            "imgLink": "/projects/monders/monders.png",
+            "videoLink": "/projects/monders/monders.mp4",
             "technologies": [
                 "php",
                 "javascript"
@@ -153,8 +158,8 @@
             "text": "La plateforme des 7 arts en podcast",
             "type": "Projet scolaire",
             "date": "2021",
-            "imgLink": "balado.png",
-            "videoLink": "balado.mp4",
+            "imgLink": "/projects/balado/balado.png",
+            "videoLink": "/projects/balado/balado.mp4",
             "technologies": [
                 "php",
                 "javascript"
@@ -170,8 +175,36 @@
                 {
                     "type": "TEXT",
                     "content": {
+                        "title": "Contexte du projet",
+                        "text": "Balado a été réalisé dans le cadre de notre projet tuteuré en première année de DUT MMI. Ce projet académique, mené en équipe de six personnes, visait à concevoir une plateforme dédiée aux podcasts sur les sept arts. L'équipe était composée de profils complémentaires, dont deux développeurs en charge de la mise en œuvre technique. La gestion du projet s'est déroulée sur une courte période de deux sprints d'une semaine chacun, imposant une organisation rigoureuse et une approche agile pour assurer une livraison fonctionnelle dans les délais impartis."
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
                         "title": "Présentation du projet",
                         "text": "Balado est une plateforme innovante qui centralise et met en avant des podcasts dédiés aux sept arts : l'architecture, la sculpture, les arts visuels, la musique, la littérature, les arts de la scène et le cinéma. Chaque jour, un art est mis à l'honneur à travers un podcast sélectionné, permettant aux utilisateurs de découvrir et d’approfondir leurs connaissances dans ces domaines."
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/balado/balado-1.png",
+                        "colspan": 2
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/balado/balado-2.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/balado/balado-3.png",
+                        "colspan": 1
                     }
                 },
                 {
@@ -179,6 +212,20 @@
                     "content": {
                         "title": "Technologies utilisées",
                         "text": "L’objectif principal du projet était de découvrir le développement natif sans framework avancé. Nous avons donc principalement utilisé PHP pour la gestion des données et la logique serveur, tandis que le JavaScript a été employé pour les animations et les interactions dynamiques du site. L’intégration a été réalisée en HTML/CSS, en respectant les principes d’accessibilité et d’ergonomie pour garantir une expérience utilisateur fluide et intuitive."
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/balado/balado-4.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/balado/balado-5.png",
+                        "colspan": 1
                     }
                 },
                 {

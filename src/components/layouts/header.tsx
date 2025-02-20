@@ -55,25 +55,25 @@ function Navbar({ className }: { className?: string }) {
               <ProductItem
                 title="Yatzee"
                 href="/projets/yatzee"
-                src="/projects/yatzee.png"
+                src="/projects/yatzee/yatzee.png"
                 description="Prepare for tech interviews like never before."
               />
               <ProductItem
                 title="Doo erp"
                 href="/projets/doo-erp"
-                src="/projects/doo-erp.png"
+                src="/projects/doo-erp/doo-erp.png"
                 description="Production ready Tailwind css components for your next project"
               />
               <ProductItem
                 title="Suboptimize"
                 href="/projets/suboptimize"
-                src="/projects/suboptimize.png"
+                src="/projects/suboptimize/suboptimize.png"
                 description="Never write from scratch again. Go from idea to blog in minutes."
               />
               <ProductItem
                 title="Sière ergonomique"
                 href="/projets/siege-ergonomique"
-                src="/projects/siege-ergonomique.png"
+                src="/projects/siege-ergonomique/siege-ergonomique.png"
                 description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
               />
             </div>
@@ -144,7 +144,7 @@ function Navbar({ className }: { className?: string }) {
           </MenuItem>
         </div>
 
-        <a href="" className="px-6 bg-primary-light hover:bg-primary h-full rounded-full flex gap-1 justify-center items-center font-outfit">
+        <a href="/about/CV_Killian_Habasque.pdf" target="_blank" className="px-6 bg-primary-light hover:bg-primary h-full rounded-full flex gap-1 justify-center items-center font-outfit">
           CV
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.5 1.5C12.5 0.947715 12.0523 0.5 11.5 0.5H2.5C1.94772 0.5 1.5 0.947715 1.5 1.5C1.5 2.05228 1.94772 2.5 2.5 2.5H10.5V10.5C10.5 11.0523 10.9477 11.5 11.5 11.5C12.0523 11.5 12.5 11.0523 12.5 10.5V1.5ZM2.20711 12.2071L12.2071 2.20711L10.7929 0.792893L0.792893 10.7929L2.20711 12.2071Z" fill="black" />

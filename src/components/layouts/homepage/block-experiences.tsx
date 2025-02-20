@@ -109,11 +109,10 @@ export function BlockExperience() {
             Expériences
           </motion.h2>
           <motion.p
-            className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide max-w-sm pt-4 pl-[8px]"
+            className="font-outfit text-secondary-light font-light text-lg tracking-wide max-w-2xl pt-4 pl-[8px]"
             variants={titleVariants}
           >
-            I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-            a timeline of my journey.
+            Retrouvez ci-dessous mes différentes expériences en développement web, allant de la création d&apos;ERP et de sites e-commerce à l&apos;optimisation SEO et l&apos;administration de serveurs.
           </motion.p>
         </motion.div>
 

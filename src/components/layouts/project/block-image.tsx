@@ -62,6 +62,7 @@ export const BlockImage: React.FC<BlockImageProps> = ({ image, colspan = 2 }) =>
                                     width={1920}
                                     height={1080}
                                     priority
+                                    unoptimized
                                     style={{ objectFit: 'contain' }}
                                 />
                             </div>

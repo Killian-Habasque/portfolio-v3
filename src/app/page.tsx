@@ -41,6 +41,7 @@ export default async function Home() {
       <BlockEducation />
       <BlockMarquee />
       <BlockExperience />
+      {/* <BlockIntro /> */}
       <BlockContact />
     </div>
   );

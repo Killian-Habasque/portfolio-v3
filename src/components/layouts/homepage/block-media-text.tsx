@@ -97,7 +97,7 @@ function BlockMediaText() {
                                 className="font-outfit text-secondary-light leading-[2] font-light text-md tracking-wide"
                                 variants={textVariants}
                             >
-                                Salut ! Moi c&apos;est Killian Habasque. Je viens de Quimper dans le Finistère et j&apos;étudie actuellement à Laval. Je suis un étudiant passionné par le design et le développement Web. J&apos;ai eu de nombreuses expériences dans ce domaine dû à mes formations mais également lors de projets personnels. Je possède donc de bonnes compétences en langages de programmation comme le Html, CSS ou Php mais aussi en logiciels comme la suite Adobe ou Affinity.
+                                Développeur web passionné, je conçois des solutions sur mesure en fullstack, en alliant performance, design et expérience utilisateur. Fort de plusieurs années d&apos;alternance chez Doowup, j&apos;ai développé des ERP, des sites e-commerce et vitrines en exploitant des technologies comme React, Laravel, GraphQL et Docker. Spécialisé aussi dans WordPress et Strapi, j&apos;adapte et personnalise des CMS pour répondre aux besoins spécifiques des clients. Curieux et rigoureux, j&apos;accorde une importance particulière à l&apos;optimisation, la sécurité et la scalabilité des projets que je réalise.
                             </motion.p>
                         </div>
 

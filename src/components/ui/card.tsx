@@ -41,7 +41,7 @@ export function Card({ title, text, slug = "#", imgLink, videoLink, externalLink
 
                     {imgLink && (
                         <Image
-                            src={`/projects/${imgLink}`}
+                            src={`${imgLink}`}
                             alt={`Cover Image for ${title}`}
                             fill
                             className="object-cover"
@@ -63,7 +63,7 @@ export function Card({ title, text, slug = "#", imgLink, videoLink, externalLink
                                 disablePictureInPicture
                                 controlsList="nodownload nofullscreen noremoteplayback"
                             >
-                                <source src={`/projects/${videoLink}`} type="video/mp4" />
+                                <source src={`${videoLink}`} type="video/mp4" />
                                 Votre navigateur ne prend pas en charge la vidéo.
                             </video>
                         </>

@@ -89,14 +89,14 @@ export default async function ProjectPage({ params }: PageProps) {
                 <HeroVideoDialog
                   className="block"
                   animationStyle="from-center"
-                  videoSrc={`/projects/${formattedProject.videoLink}`}
-                  thumbnailSrc={`/projects/${formattedProject.imgLink}`}
+                  videoSrc={`${formattedProject.videoLink}`}
+                  thumbnailSrc={`${formattedProject.imgLink}`}
                   thumbnailAlt={`Cover Image for ${formattedProject.title}`}
                 />
               ) : (
                 <div className="relative overflow-hidden rounded-2xl aspect-[16/9] border-2">
                   <Image
-                    src={`/projects/${formattedProject.imgLink}`}
+                    src={`${formattedProject.imgLink}`}
                     alt={`Cover Image for ${formattedProject.title}`}
                     fill
                     className="object-cover"
