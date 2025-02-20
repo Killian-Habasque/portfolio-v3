@@ -71,8 +71,8 @@ export function Card({ title, text, slug = "#", imgLink, videoLink, externalLink
                 </div>
                 <div className="flex px-4 items-center">
                     <div className="w-full">
-                        {title && <h3 className="font-outfit text-xl text-secondary-dark">{title}</h3>}
-                        {text && <p className="font-outfit text-secondary-light leading-[2] font-light text-md tracking-wide">{text}</p>}
+                        {title && <h3 className="font-outfit text-xl text-secondary-dark pb-2">{title}</h3>}
+                        {text && <p className="font-outfit text-secondary-light font-light text-md tracking-wide pr-4">{text}</p>}
                     </div>
                     <svg className="size-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" >
                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />

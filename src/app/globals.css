@@ -24,7 +24,7 @@ html {
 
 @layer utilities {
   .bg-noise {
-    @apply fixed inset-0 z-[100] pointer-events-none overflow-hidden scale-[1.2];
+    @apply fixed inset-0 z-[10] pointer-events-none overflow-hidden scale-[1.2];
   }
 
   .bg-noise::before {

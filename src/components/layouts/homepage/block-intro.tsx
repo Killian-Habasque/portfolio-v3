@@ -45,7 +45,7 @@ export const BlockIntro = () => {
     return (
         <div ref={ref} id="more" className="w-full flex justify-end py-40 lg:py-60">
             <motion.div
-                className="flex flex-col px-8 max-w-4xl gap-8"
+                className="flex flex-col px-16 max-w-4xl gap-8"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -53,13 +53,13 @@ export const BlockIntro = () => {
                 style={{ y }}
             >
                 <motion.p
-                    className="font-outfit text-2xl text-secondary-dark"
+                    className="font-outfit text-2xl text-secondary-dark text-justify"
                     variants={itemVariants}
                 >
                     Bienvenue sur mon portfolio ! Vous trouverez ici un aperçu de mon parcours et de mes réalisations en développement web.
                 </motion.p>
                 <motion.p
-                    className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide"
+                    className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide text-justify"
                     variants={itemVariants}
                 >
                     Spécialisé en fullstack, j’interviens sur la création d’applications, l’optimisation de sites e-commerce et la personnalisation de CMS comme WordPress. Toujours en quête d’innovation, j’aime relever de nouveaux défis pour développer des projets modernes et évolutifs.

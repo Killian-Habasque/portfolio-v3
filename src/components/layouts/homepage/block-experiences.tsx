@@ -96,20 +96,20 @@ export function BlockExperience() {
     <section id="experiences" className="py-40">
       <div className="container mx-auto px-4 flex justify-center flex-col">
         <motion.div
-          className="mx-auto pb-20 max-w-4xl w-full"
+          className="mx-auto pb-16 max-w-4xl w-full"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-5xl md:text-7xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium max-w-4xl"
+            className="text-5xl md:text-6xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium max-w-4xl"
             variants={titleVariants}
           >
             Expériences
           </motion.h2>
           <motion.p
-            className="font-outfit text-secondary-light font-light text-lg tracking-wide max-w-2xl pt-4 pl-[8px]"
+            className="font-outfit text-secondary-light font-light text-lg tracking-wide max-w-2xl pt-4"
             variants={titleVariants}
           >
             Retrouvez ci-dessous mes différentes expériences en développement web, allant de la création d&apos;ERP et de sites e-commerce à l&apos;optimisation SEO et l&apos;administration de serveurs.

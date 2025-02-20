@@ -94,7 +94,7 @@ function BlockMediaText() {
                                 <span className="font-grandslang ">suis</span>-je ?
                             </motion.h1>
                             <motion.p 
-                                className="font-outfit text-secondary-light leading-[2] font-light text-md tracking-wide"
+                                className="font-outfit text-secondary-light leading-[2] font-light text-md tracking-wide text-justify pt-4"
                                 variants={textVariants}
                             >
                                 Développeur web passionné, je conçois des solutions sur mesure en fullstack, en alliant performance, design et expérience utilisateur. Fort de plusieurs années d&apos;alternance chez Doowup, j&apos;ai développé des ERP, des sites e-commerce et vitrines en exploitant des technologies comme React, Laravel, GraphQL et Docker. Spécialisé aussi dans WordPress et Strapi, j&apos;adapte et personnalise des CMS pour répondre aux besoins spécifiques des clients. Curieux et rigoureux, j&apos;accorde une importance particulière à l&apos;optimisation, la sécurité et la scalabilité des projets que je réalise.

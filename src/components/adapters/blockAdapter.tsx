@@ -16,7 +16,7 @@ export default function BlockAdapter({ content, type }: BlockAdapterProps) {
         case 'IMAGE':
             return <BlockImage image={(content as BlockImageProps).image} colspan={(content as BlockImageProps).colspan} />;
         case 'LIST':
-            return <BlockList title={(content as BlockListProps).title} items={(content as BlockListProps).items} colspan={(content as BlockListProps).colspan} />;
+            return <BlockList title={(content as BlockListProps).title} items={(content as BlockListProps).items}  text={(content as BlockTextProps).text}  colspan={(content as BlockListProps).colspan} />;
         default:
             return null;
     }

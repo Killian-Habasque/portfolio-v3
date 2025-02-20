@@ -19,13 +19,25 @@
         {
             "name": "Javascript",
             "slug": "javascript"
+        },
+        {
+            "name": "Three js",
+            "slug": "threejs"
+        },
+        {
+            "name": "Express",
+            "slug": "express"
+        },
+        {
+            "name": "Firebase",
+            "slug": "firebase"
         }
     ],
     "projects": [
         {
             "title": "Yatzee",
             "slug": "yatzee",
-            "text": "Some text for project one",
+            "text": "Création d’une web application interactive pour jouer au jeu Yatzee",
             "type": "Projet scolaire",
             "date": "2024",
             "order": 1,
@@ -33,40 +45,112 @@
             "videoLink": "/projects/yatzee/yatzee.mp4",
             "externalLink": "https://yatzee.fr",
             "technologies": [
+                "javascript",
                 "react",
-                "nextjs"
+                "threejs",
+                "express",
+                "firebase"
             ],
             "blocks": [
                 {
-                    "type": "TEXT",
-                    "content": {
-                        "text": "Text exemple block 1 - project 1"
-                    }
-                },
-                {
-                    "type": "TEXT",
-                    "content": {
-                        "text": "Text exemple block 2 - project 1"
-                    }
-                },
-                {
                     "type": "IMAGE",
                     "content": {
-                        "image": "/projects/yatzee/yatzee.png"
-                    }
-                },
-                {
-                    "type": "IMAGE",
-                    "content": {
-                        "image": "/projects/yatzee/yatzee.png",
+                        "image": "/projects/yatzee/yatzee-1.png",
                         "colspan": 1
                     }
                 },
                 {
                     "type": "TEXT",
                     "content": {
-                        "text": "Text exemple block 2 - project 1",
+                        "titre": "Contexte du projet",
+                        "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide.",
                         "colspan": 1
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Technologies utilisées",
+                        "items": [
+                            "JavaScript : Gère toute la logique du jeu, des règles aux interactions utilisateur.",
+                            "Three.js : Utilisé pour la modélisation et l’animation 3D des dés et du plateau.",
+                            "Cannon.js : Permet la gestion des collisions et de la physique des dés (gravité, rebonds, interactions).",
+                            "Tween.js / GSAP : Appliqués pour animer les modèles 3D et améliorer l’expérience utilisateur.",
+                            "Express.js : Utilisé pour gérer le serveur backend et les interactions avec les données utilisateur.",
+                            "Firebase : Assure l’authentification des utilisateurs et le stockage des scores des parties.",
+                            "Vercel : Permet le déploiement et l’hébergement du projet."
+                        ]
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/yatzee/yatzee-2.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/yatzee/yatzee-3.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Fonctionnalités principales",
+                        "items": [
+                            "🎲 Gestion des dés et des lancers : Trois lancers maximum par tour pour former des combinaisons.",
+                            "📝 Choix des combinaisons : Les joueurs doivent sélectionner la meilleure combinaison possible après leurs lancers.",
+                            "👤 Authentification des utilisateurs : Inscription et connexion via Firebase.",
+                            "📊 Gestion des scores : Sauvegarde et consultation des scores des parties.",
+                            "🎨 Expérience visuelle immersive : Animations et rendu 3D en temps réel pour une immersion optimale."
+                        ]
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/yatzee/yatzee-4.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/yatzee/yatzee-5.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/yatzee/yatzee-6.png"
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "titre": "Règles du jeu",
+                        "text": "Le Yatzee repose sur des combinaisons spécifiques permettant de marquer des points :",
+                        "items": [
+                            "Total des chiffres (1 à 6) : Somme des dés du chiffre choisi.",
+                            "Bonus : 35 points supplémentaires si la somme des dés atteint 63 points ou plus.",
+                            "Chance : Additionne tous les dés sans restriction.",
+                            "Petite suite : 4 dés consécutifs (30 points).",
+                            "Grande suite : 5 dés consécutifs (40 points).",
+                            "Full : Trois dés identiques + deux dés identiques (25 points).",
+                            "Carré : Quatre dés identiques (somme des 5 dés).",
+                            "Yatzee : Cinq dés identiques (50 points)."
+                        ]
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "titre": "Optimisation et axes d’amélioration",
+                        "text": "Ce projet a été développé en JavaScript natif, ce qui a permis une meilleure compréhension des concepts fondamentaux, mais présente certaines limites en termes d’optimisation et d’architecture. L’utilisation de React pour la gestion de l’état et des composants interactifs aurait amélioré la structure et la scalabilité de l’application."
                     }
                 }
             ]
@@ -74,7 +158,7 @@
         {
             "title": "Sub'optimize",
             "slug": "suboptimize",
-            "text": "Some text for project two",
+            "text": "Application web de gestion d'abonnement",
             "type": "Projet scolaire",
             "order": 3,
             "date": "2025",
@@ -83,7 +167,7 @@
         {
             "title": "Siège ergonomique",
             "slug": "siege-ergonomique",
-            "text": "Some text for project two",
+            "text": "Réalisation d'un blog optimisé en Nextjs/ Wordpress graphql",
             "type": "Projet personnel",
             "order": 4,
             "date": "2024",
@@ -93,7 +177,7 @@
         {
             "title": "Doo ERP",
             "slug": "doo-erp",
-            "text": "Some text for project two",
+            "text": "Développement d’un ERP personnalisé pour la gestion interne",
             "type": "Projet professionnel",
             "order": 2,
             "date": "2023",
@@ -102,7 +186,7 @@
         {
             "title": "Blog de doowup",
             "slug": "blog-doowup",
-            "text": "Some text for project two",
+            "text": "Réalisation d'un blog optimisé en Nextjs/ strapi",
             "type": "Projet professionnel",
             "order": 6,
             "date": "2023",
@@ -112,7 +196,7 @@
         {
             "title": "La petite production",
             "slug": "la-petite-production",
-            "text": "Some text for project two",
+            "text": "Site web d'une agence de production",
             "type": "Projet professionnel",
             "order": 5,
             "date": "2023",
@@ -123,26 +207,26 @@
         {
             "title": "Portfolio v2",
             "slug": "portfolio-v2",
-            "text": "Some text for project two",
+            "text": "Verion 2 de mon portfolio",
             "type": "Projet personnel",
-            "date": "2022",
+            "date": "2019",
             "imgLink": "/projects/portfolio-v2/portfolio-v2.png",
             "externalLink": "https://killian-habasque.fr"
         },
         {
             "title": "Porsche kar",
             "slug": "porsche-kar",
-            "text": "Some text for project two",
+            "text": "Site web qui a pour but de faire découvrir la porsche 968 l’art de l’automobile.",
             "type": "Projet personnel",
             "date": "2022",
             "imgLink": "/projects/porsche-kar/porsche-kar.png",
             "videoLink": "/projects/porsche-kar/porsche-kar.mp4",
-            "externalLink": "https://killian-habasque-porschekar.netlify.app/"
+            "externalLink": "https://porsche-kar.vercel.app"
         },
         {
             "title": "Monders",
             "slug": "monders",
-            "text": "Some text for project two",
+            "text": "Expérience web qui présente les différentes merveilles du monde",
             "type": "Projet scolaire",
             "date": "2021",
             "imgLink": "/projects/monders/monders.png",
@@ -165,13 +249,6 @@
                 "javascript"
             ],
             "blocks": [
-                {
-                    "type": "TEXT",
-                    "content": {
-                        "title": "Contexte du projet",
-                        "text": "Balado a été réalisé dans le cadre de notre projet tuteuré en première année de DUT MMI. Ce projet académique, mené en équipe de six personnes, visait à concevoir une plateforme dédiée aux podcasts sur les sept arts. L'équipe était composée de profils complémentaires, dont deux développeurs en charge de la mise en œuvre technique. La gestion du projet s'est déroulée sur une courte période de deux sprints d'une semaine chacun, imposant une organisation rigoureuse et une approche agile pour assurer une livraison fonctionnelle dans les délais impartis."
-                    }
-                },
                 {
                     "type": "TEXT",
                     "content": {
@@ -247,7 +324,7 @@
                             "Une approche participative permettant aux créateurs de partager leurs propres podcasts sur la plateforme."
                         ]
                     }
-                },                
+                },
                 {
                     "type": "TEXT",
                     "content": {
