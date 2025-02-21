@@ -90,7 +90,7 @@ function WelcomeExample() {
 
 function LinesSplitExample() {
   return (
-    <div className="w-full h-full text md:text-2xl lg:text-4xl flex flex-col items-start justify-center font-azeretMono p-6 md:p-16 lg:p-20 xl:p-24 text-[#0015ff] tracking-wide">
+    <div className="w-full h-full text md:text-2xl lg:text-4xl flex flex-col items-start justify-center font-azeretMono p-4 md:p-16 lg:p-20 xl:p-24 text-[#0015ff] tracking-wide">
       <div className="flex flex-col justify-center w-full items-start space-y-4">
         <VerticalCutReveal
           splitBy="lines"

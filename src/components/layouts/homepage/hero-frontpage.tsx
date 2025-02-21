@@ -76,16 +76,16 @@ const HeroFrontpage: React.FC<Props> = () => {
     return (
         <div className="p-4 h-[100vh] pt-20">
             <div
-                className="relative flex h-full w-full flex-col justify-center rounded-2xl p-0 lg:p-8"
+                className="relative flex h-full w-full flex-col justify-center rounded-2xl p-0 lg:p-8 items-center"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
             >
-                <div className="flex flex-col-reverse justify-between h-full lg:flex-row">
+                <div className="flex flex-col-reverse justify-between h-full lg:flex-row max-w-md lg:max-w-full w-full lg:auto">
                     <div className="flex items-center pb-32 lg:pb-16 lg:h-full">
                         <WelcomeExample />
                     </div>
                     <motion.div
-                        className="w-full-8 lg:w-full -mx-8 lg:-mx-0 h-full grid grid-cols-2 gap-2 lg:gap-6 py-16 lg:py-0 h-full max-w-4xl"
+                        className="w-full-8 lg:w-full -mx-8 lg:-mx-0 h-full grid grid-cols-2 gap-2 lg:gap-6 py-16 lg:py-0 h-full lg:max-w-4xl"
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
@@ -106,7 +106,7 @@ const HeroFrontpage: React.FC<Props> = () => {
                                 }}
                                 className="absolute h-full w-full z-10 hidden lg:block"
                             >
-                                <CurvedText text="Ouvert aux opportunités !" className="absolute -bottom-8" radius={175} />
+                                <CurvedText text="#OpenToWork" className="absolute -bottom-10" radius={175} />
                             </motion.div>
                             <Image
                                 src={`/about/photo_3-4_face.jpg`}

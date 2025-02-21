@@ -51,7 +51,7 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
               de
               <span className="font-grandslang pl-4">projets</span>
             </h2>
-            <div className="flex flex-col lg:flex-row gap-2 pt-4">
+            <div className="flex flex-wrap gap-2 pt-4">
               <Badge>Projet personnel</Badge>
               <Badge>Projet professionnel</Badge>
               <Badge>Projet scolaire</Badge>

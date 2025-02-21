@@ -3,9 +3,9 @@ import { RetroGrid } from "@/components/ui/retro-grid";
 
 const BlockContact = () => {
     return (
-        <section id="contact" className="py-8 lg:py-16 flex items-center justify-center">
+        <section id="contact" className="py-20 flex items-center justify-center">
             <div className="px-4 lg:px-16 w-full flex items-center justify-center">
-                <div className="relative overflow-hidden flex flex-col items-center rounded-lg w-full p-8 py-16 gap-12 text-center lg:rounded-full lg:px-16 bg-secondary-dark">
+                <div className="relative overflow-hidden flex flex-col items-center rounded-2xl w-full p-8 py-16 gap-12 text-center lg:rounded-full lg:px-16 bg-secondary-dark">
                     <h3 className="max-w-2xl text-5xl font-medium md:text-7xl text-white font-outfit z-10">
                         Restons en <span className="font-grandslang">contact</span>
                     </h3>

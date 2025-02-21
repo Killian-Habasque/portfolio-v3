@@ -9,7 +9,7 @@ export const BlockList: React.FC<BlockListProps> = ({ title, text, items, colspa
     const colspanClass = colspan === 1 ? 'col-span-1' : 'col-span-1 lg:col-span-2';
 
     return (
-        <div className={`${colspanClass} w-full rounded-2xl p-6 font-outfit flex flex-col justify-center`}>
+        <div className={`${colspanClass} w-full rounded-2xl lg:p-4 font-outfit flex flex-col justify-center`}>
             {title && (
                 <h2 className="tracking-normal text-3xl md:text-5xl font-bold tracking-tighter leading-none mb-3 tracking-tight text-secondary-dark">
                     {title}
