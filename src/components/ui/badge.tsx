@@ -16,7 +16,7 @@ function Badge({ className, variant = "primary", ...props }: BadgeProps) {
   return (
     <div
       className={classNames(
-        "inline-flex items-center rounded-md border px-3 py-1 text-sm gap-1 font-outfit font-medium tracking-wide transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+        "w-fit inline-flex items-center rounded-md border px-3 py-1 text-sm gap-1 font-outfit font-medium tracking-wide transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
         badgeVariantClasses[variant],
         className
       )}

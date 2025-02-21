@@ -74,24 +74,24 @@ const HeroFrontpage: React.FC<Props> = () => {
     };
 
     return (
-        <div className="p-2 h-[100vh] pt-20">
+        <div className="p-4 h-[100vh] pt-20">
             <div
-                className="relative flex h-full w-full flex-col justify-center rounded-2xl p-8"
+                className="relative flex h-full w-full flex-col justify-center rounded-2xl p-0 lg:p-8"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
             >
-                <div className="flex justify-between h-full">
-                    <div className="flex items-center h-full">
+                <div className="flex flex-col-reverse justify-between h-full lg:flex-row">
+                    <div className="flex items-center pb-32 lg:pb-16 lg:h-full">
                         <WelcomeExample />
                     </div>
                     <motion.div
-                        className="h-full grid grid-cols-1 md:grid-cols-2 gap-6 h-full w-full max-w-4xl"
+                        className="w-full-8 lg:w-full -mx-8 lg:-mx-0 h-full grid grid-cols-2 gap-2 lg:gap-6 py-16 lg:py-0 h-full max-w-4xl"
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
                     >
                         <motion.div
-                            className="group relative h-full w-full rounded-full ml-16 relative overflow-hidden z-10 bg-secondary-dark"
+                            className="group relative h-full w-full rounded-full ml-8 lg:ml-16 relative overflow-hidden z-10 bg-secondary-dark"
                             variants={itemVariants}
                             style={{ y: portraitY }}
                         >
@@ -104,7 +104,7 @@ const HeroFrontpage: React.FC<Props> = () => {
                                     damping: 12,
                                     delay: 2
                                 }}
-                                className="absolute h-full w-full z-10"
+                                className="absolute h-full w-full z-10 hidden lg:block"
                             >
                                 <CurvedText text="Ouvert aux opportunités !" className="absolute -bottom-8" radius={175} />
                             </motion.div>

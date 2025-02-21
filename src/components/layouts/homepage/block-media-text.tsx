@@ -72,7 +72,7 @@ function BlockMediaText() {
     };
 
     return (
-        <section ref={ref} id="presentation" className="w-full py-40">
+        <section ref={ref} id="presentation" className="w-full py-20 px-4 lg:px-0 lg:py-40">
             <div className="container mx-auto">
                 <motion.div 
                     className="grid grid-cols-1 gap-16 items-center lg:grid-cols-5"
@@ -82,7 +82,7 @@ function BlockMediaText() {
                     viewport={{ once: true, margin: "-300px" }}
                 >
                     <motion.div 
-                        className="col-span-2 flex gap-8 flex-col"
+                        className="col-span-1 lg:col-span-2 flex gap-8 flex-col"
                         variants={textVariants}
                     >
                         <div className="flex gap-4 flex-col">
@@ -111,7 +111,7 @@ function BlockMediaText() {
                             </Button>
                         </motion.div>
                     </motion.div>
-                    <div className="col-span-3 grid grid-cols-3 h-full gap-8 items-center">
+                    <div className="col-span-1 lg:col-span-3 grid grid-cols-3 h-full gap-8 items-center">
                         <motion.div 
                             className="relative col-span-1 rounded-full overflow-hidden mb-20 aspect-[8/16]"
                             variants={imageVariants}

@@ -3,17 +3,17 @@ import { RetroGrid } from "@/components/ui/retro-grid";
 
 const BlockContact = () => {
     return (
-        <section id="contact" className="py-16 flex items-center justify-center">
-            <div className="px-16 w-full flex items-center justify-center">
-                <div className="relative overflow-hidden flex flex-col items-center rounded-lg bg-accent w-full p-8 gap-12 text-center md:rounded-full lg:p-16 bg-secondary-dark">
-                    <h3 className="max-w-2xl text-2xl font-medium md:text-7xl text-white font-outfit z-10">
+        <section id="contact" className="py-8 lg:py-16 flex items-center justify-center">
+            <div className="px-4 lg:px-16 w-full flex items-center justify-center">
+                <div className="relative overflow-hidden flex flex-col items-center rounded-lg w-full p-8 py-16 gap-12 text-center lg:rounded-full lg:px-16 bg-secondary-dark">
+                    <h3 className="max-w-2xl text-5xl font-medium md:text-7xl text-white font-outfit z-10">
                         Restons en <span className="font-grandslang">contact</span>
                     </h3>
                     <p className="max-w-2xl lg:text-lg text-white font-outfit z-10">
                         N&apos;hésitez pas à me contacter pour échanger sur un projet ou une collaboration.
                         Vous pouvez me joindre via email, téléphone ou sur mes réseaux.
                     </p>
-                    <div className="flex gap-8 w-full max-w-2xl z-10">
+                    <div className="flex flex-col lg:flex-row gap-8 w-full max-w-2xl z-10">
                         <ul className="w-full lg:text-lg text-white font-outfit text-start">
                             <li className="flex gap-2 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
@@ -28,7 +28,7 @@ const BlockContact = () => {
                                 </svg>
                                 06 82 58 65 59</li>
                         </ul>
-                        <div className="flex w-full justify-center gap-2 ">
+                        <div className="flex flex-col lg:flex-row w-full justify-center gap-2 ">
                             <Button variant="outline" className="w-full sm:w-auto" target="_blank" link="https://www.linkedin.com/in/killian-habasque-041841220/">
                                 <svg width="20px" height="15px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                     <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

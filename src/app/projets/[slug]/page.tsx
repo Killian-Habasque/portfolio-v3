@@ -56,25 +56,25 @@ export default async function ProjectPage({ params }: PageProps) {
 
   return (
     <>
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto px-4">
         <Breadcrumb breadcrumbs={breadcrumbs} />
 
         <section>
-          <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 lg:max-w-7xl lg:px-8">
+          <div className="mx-auto max-w-2xl py-12 sm:px-6 lg:max-w-7xl lg:px-8">
 
             <div className="flex justify-center flex-col items-center mb-6 font-outfit">
-              <div className='flex gap-2 items-center text-secondary-dark'>
+              <div className='flex flex-col lg:flex-row gap-2 items-center text-secondary-dark mb-3'>
                 {formattedProject.date ? (
-                  <>
+                  <div className='flex gap-2'>
                     Année de réalisation :  <span className='font-semibold'><Date dateString={formattedProject.date} /></span>
-                    •
-                  </>
+                    <span className='hidden lg:block'>•</span>
+                  </div>
                 ) : ''}
                 {formattedProject.type ? (
                   <Badge>{formattedProject.type}</Badge>
                 ) : ''}
               </div>
-              <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-none md:leading-none mb-3 text-center md:text-left font-bold tracking-tight text-secondary-dark">
+              <h1 className="text-5xl lg:text-9xl font-bold tracking-tighter leading-none md:leading-none mb-3 text-center md:text-left font-bold tracking-tight text-secondary-dark">
                 {formattedProject.title}
               </h1>
               {formattedProject.externalLink ? (
@@ -118,7 +118,7 @@ export default async function ProjectPage({ params }: PageProps) {
               className="text-lg leading-relaxed mb-4 font-outfit text-secondary-dark"
               dangerouslySetInnerHTML={{ __html: formattedProject.text }}
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
               {formattedProject.blocks && formattedProject.blocks.map(block => {
                 const blockContent = block.content as BlockTextProps | BlockImageProps | BlockListProps | null;
                 return <BlockAdapter key={block.id} type={block.type} content={blockContent} />;

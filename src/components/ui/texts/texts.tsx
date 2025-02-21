@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 function WelcomeExample() {
   return (
     <div className="flex flex-col">
-      <div className="text-secondary-dark left-0 xs:text-2xl text-2xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-8xl flex flex-col items-start justify-center font-outfit tracking-wide text-secondary-dark">
+      <div className="text-secondary-dark left-0 text-6xl lg:text-7xl xl:text-8xl flex flex-col items-start justify-center font-outfit tracking-wide text-secondary-dark">
         <VerticalCutReveal
           splitBy="characters"
           staggerDuration={0.025}
@@ -31,7 +31,7 @@ function WelcomeExample() {
             damping: 21,
             delay: 1,
           }}
-          className="pl-[8px] font-grandslang"
+          className="pl-[0.25rem] font-grandslang"
         >
           {`Habasque`}
         </VerticalCutReveal>

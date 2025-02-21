@@ -12,7 +12,7 @@ export interface BlockImageProps {
 
 export const BlockImage: React.FC<BlockImageProps> = ({ image, colspan = 2 }) => {
     const [isImageOpen, setIsImageOpen] = useState(false);
-    const colspanClass = colspan === 1 ? 'col-span-1' : 'col-span-2';
+    const colspanClass = colspan === 1 ? 'col-span-1' : 'col-span-1 lg:col-span-2';
     
     return (
         <>

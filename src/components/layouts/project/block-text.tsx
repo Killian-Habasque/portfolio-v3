@@ -5,7 +5,7 @@ export interface BlockTextProps {
 }
 
 export const BlockText: React.FC<BlockTextProps> = ({ title, text, colspan = 2 }) => {
-    const colspanClass = colspan === 1 ? 'col-span-1' : 'col-span-2';
+    const colspanClass = colspan === 1 ? 'col-span-1' : 'col-span-1 lg:col-span-2';
 
     return (
         <div className={`${colspanClass} w-full rounded-2xl p-6 font-outfit flex flex-col justify-center`}>

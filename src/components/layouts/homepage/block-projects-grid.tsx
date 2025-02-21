@@ -42,7 +42,7 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
   };
 
   return (
-    <div className="w-full container mx-auto">
+    <div className="w-full container mx-auto px-4 lg:px-0">
       <div className="flex flex-col gap-10">
         <div className="flex gap-4 flex-col items-start">
           <div className="flex gap-2 flex-col">
@@ -51,7 +51,7 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
               de
               <span className="font-grandslang pl-4">projets</span>
             </h2>
-            <div className="flex gap-2 pt-4">
+            <div className="flex flex-col lg:flex-row gap-2 pt-4">
               <Badge>Projet personnel</Badge>
               <Badge>Projet professionnel</Badge>
               <Badge>Projet scolaire</Badge>
@@ -77,14 +77,17 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
           ))}
         </motion.div>
       </div>
-      <div className="flex gap-2 items-center justify-center my-20">
+      <div className="flex flex-col lg:flex-row gap-2 items-center justify-center my-20">
         <p className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide">
-          
-          Retrouvez l&apos;ensemble de mes projets</p>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-        </svg>
-        <Link href={"/projets"} className="underline font-bold tracking-wide">En dévourir plus</Link>
+          Retrouvez l&apos;ensemble de mes projets
+        </p>
+        <div className="flex gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+          </svg>
+          <Link href={"/projets"} className="underline font-bold tracking-wide">En dévourir plus</Link>
+        </div>
+
       </div>
     </div>
   );

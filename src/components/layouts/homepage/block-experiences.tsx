@@ -93,7 +93,7 @@ export function BlockExperience() {
   };
 
   return (
-    <section id="experiences" className="py-40">
+    <section id="experiences" className="py-20 lg:py-40">
       <div className="container mx-auto px-4 flex justify-center flex-col">
         <motion.div
           className="mx-auto pb-16 max-w-4xl w-full"
@@ -127,13 +127,13 @@ export function BlockExperience() {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="relative flex items-start gap-4 p-6 rounded-2xl shadow-sm group bg-white"
+              className="relative flex flex-col lg:flew-row items-start gap-4 p-6 rounded-2xl shadow-sm group bg-white"
             >
               {index !== experienceData.length - 1 && (
-                <div className="absolute left-[-33px] top-4 w-[2px] h-[calc(100%+24px)] bg-primary" />
+                <div className="hidden lg:block absolute left-[-33px] top-4 w-[2px] h-[calc(100%+24px)] bg-primary" />
               )}
 
-              <div className="absolute left-[-32px] top-4 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-[--background] bg-primary-dark z-10 " />
+              <div className="hidden lg:block absolute left-[-32px] top-4 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-[--background] bg-primary-dark z-10 " />
 
 
               <div className="w-full max-w-xs flex flex-col gap-4">

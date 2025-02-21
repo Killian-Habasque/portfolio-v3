@@ -131,7 +131,7 @@ export function BlockMarquee() {
     const arr3 = [Logos.firebase, Logos.supabase, Logos.docker, Logos.wordpress,  Logos.strapi, Logos.figma]
 
     return (
-        <section id="technologies" className="pb-20 pt-40">
+        <section id="technologies" className="pb-20 pt-20 lg:pt-40">
 
             <h2 className="text-5xl md:text-6xl tracking-wid text-center font-outfit text-secondary-dark font-medium">
                 Techologies

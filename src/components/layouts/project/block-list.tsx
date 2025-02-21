@@ -6,7 +6,7 @@ export interface BlockListProps {
 }
 
 export const BlockList: React.FC<BlockListProps> = ({ title, text, items, colspan = 2 }) => {
-    const colspanClass = colspan === 1 ? 'col-span-1' : 'col-span-2';
+    const colspanClass = colspan === 1 ? 'col-span-1' : 'col-span-1 lg:col-span-2';
 
     return (
         <div className={`${colspanClass} w-full rounded-2xl p-6 font-outfit flex flex-col justify-center`}>
@@ -18,7 +18,7 @@ export const BlockList: React.FC<BlockListProps> = ({ title, text, items, colspa
             {text && (
                 <p className="text-lg leading-relaxed text-secondary pb-2">{text}</p>
             )}
-            <ul className="list-disc list-inside text-lg leading-[2.5] text-secondary">
+            <ul className="list-disc list-inside text-lg leading-[2] text-secondary">
                 {items.map((item, index) => (
                     <li key={index}>{item}</li>
                 ))}
