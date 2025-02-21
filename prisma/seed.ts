@@ -18,6 +18,7 @@ async function main() {
           id: uuidv4(),
           name: tech.name,
           slug: tech.slug,
+          imgLink: tech.imgLink ?? null,
         },
       })
     )

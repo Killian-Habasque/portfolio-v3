@@ -12,9 +12,13 @@ export default async function ProjectsPage() {
             externalLink: true,
             videoLink: true,
             text: true,
+            date: true,
             technologies: {
                 select: { name: true },
             },
+        },
+        orderBy: {
+            date: 'desc',
         },
     });
 

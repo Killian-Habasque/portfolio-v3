@@ -2,10 +2,11 @@
     "technologies": [
         {
             "name": "React",
-            "slug": "react"
+            "slug": "react",
+            "imgLink": "/technologies/react.png"
         },
         {
-            "name": "Next.js",
+            "name": "Nextjs",
             "slug": "nextjs"
         },
         {
@@ -31,6 +32,34 @@
         {
             "name": "Firebase",
             "slug": "firebase"
+        },
+        {
+            "name": "Wordpress",
+            "slug": "wordpress"
+        },
+        {
+            "name": "GraphQL",
+            "slug": "graphql"
+        },
+        {
+            "name": "MongoDb",
+            "slug": "mongodb"
+        },
+        {
+            "name": "Mysql",
+            "slug": "mysql"
+        },
+        {
+            "name": "Docker",
+            "slug": "docker"
+        },
+        {
+            "name": "Gitlab",
+            "slug": "gitlab"
+        },
+        {
+            "name": "Strapi",
+            "slug": "strapi"
         }
     ],
     "projects": [
@@ -46,7 +75,6 @@
             "externalLink": "https://yatzee.fr",
             "technologies": [
                 "javascript",
-                "react",
                 "threejs",
                 "express",
                 "firebase"
@@ -162,7 +190,11 @@
             "type": "Projet scolaire",
             "order": 3,
             "date": "2025",
-            "imgLink": "/projects/suboptimize/suboptimize.png"
+            "imgLink": "/projects/suboptimize/suboptimize.png",
+            "technologies": [
+                "react",
+                "firebase"
+            ]
         },
         {
             "title": "Siège ergonomique",
@@ -172,7 +204,12 @@
             "order": 4,
             "date": "2024",
             "imgLink": "/projects/siege-ergonomique/siege-ergonomique.png",
-            "externalLink": "https://siege-ergonomique.com"
+            "externalLink": "https://siege-ergonomique.com",
+            "technologies": [
+                "nextjs",
+                "wordpress",
+                "graphql"
+            ]
         },
         {
             "title": "Doo ERP",
@@ -181,7 +218,16 @@
             "type": "Projet professionnel",
             "order": 2,
             "date": "2023",
-            "imgLink": "/projects/doo-erp/doo-erp.png"
+            "imgLink": "/projects/doo-erp/doo-erp.png",
+            "technologies": [
+                "react",
+                "laravel",
+                "graphql",
+                "mysql",
+                "mongodb",
+                "docker",
+                "gitlab"
+            ]
         },
         {
             "title": "Blog de doowup",
@@ -191,7 +237,14 @@
             "order": 6,
             "date": "2023",
             "imgLink": "/projects/blog-doowup/blog-doowup.png",
-            "externalLink": "https://doowup.fr/blog"
+            "externalLink": "https://doowup.fr/blog",
+            "technologies": [
+                "nextjs",
+                "strapi",
+                "mysql",
+                "docker",
+                "gitlab"
+            ]
         },
         {
             "title": "La petite production",
@@ -202,16 +255,23 @@
             "date": "2023",
             "imgLink": "/projects/lapetiteproduction/lapetiteproduction.png",
             "videoLink": "/projects/lapetiteproduction/lapetiteproduction.mp4",
-            "externalLink": "https://lapetiteproduction.com"
+            "externalLink": "https://lapetiteproduction.com",
+            "technologies": [
+                "wordpress",
+                "react"
+            ]
         },
         {
             "title": "Portfolio v2",
             "slug": "portfolio-v2",
             "text": "Verion 2 de mon portfolio",
             "type": "Projet personnel",
-            "date": "2019",
+            "date": "2022",
             "imgLink": "/projects/portfolio-v2/portfolio-v2.png",
-            "externalLink": "https://killian-habasque.fr"
+            "externalLink": "https://killian-habasque.fr",
+            "technologies": [
+                "javascript"
+            ]
         },
         {
             "title": "Porsche kar",
@@ -221,7 +281,10 @@
             "date": "2022",
             "imgLink": "/projects/porsche-kar/porsche-kar.png",
             "videoLink": "/projects/porsche-kar/porsche-kar.mp4",
-            "externalLink": "https://porsche-kar.vercel.app"
+            "externalLink": "https://porsche-kar.vercel.app",
+            "technologies": [
+                "javascript"
+            ]
         },
         {
             "title": "Monders",

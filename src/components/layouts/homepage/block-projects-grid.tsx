@@ -57,7 +57,7 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
               <Badge>Projet scolaire</Badge>
             </div>
             <p className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide">
-              Managing a small business today is already tough. sdggdgds gs dsg d gddsds
+              Découvrez ci-dessous quelques-uns de mes projets les plus significatifs :
             </p>
           </div>
         </div>
@@ -78,11 +78,13 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
         </motion.div>
       </div>
       <div className="flex gap-2 items-center justify-center my-20">
-        <p className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide">Managing a small business today is already tough.</p>
+        <p className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide">
+          
+          Retrouvez l&apos;ensemble de mes projets</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
         </svg>
-        <Link href={"/projets"} className="underline">View all projects</Link>
+        <Link href={"/projets"} className="underline font-bold tracking-wide">En dévourir plus</Link>
       </div>
     </div>
   );

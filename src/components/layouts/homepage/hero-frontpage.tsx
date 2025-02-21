@@ -7,6 +7,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { WelcomeExample } from "../../ui/texts/texts";
 import { ButtonScrollTop } from "../../ui/button-scroll-top";
+import CurvedText from "@/components/ui/CurvedText";
 
 type Props = {
     children?: React.ReactNode;
@@ -23,7 +24,7 @@ const HeroFrontpage: React.FC<Props> = () => {
         const rect = e.currentTarget.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width;
         const y = (e.clientY - rect.top) / rect.height;
-        setMousePosition({ x: x * 2, y: y * 1.5});
+        setMousePosition({ x: x * 2, y: y * 1.5 });
     }, []);
 
     const itemVariants = {
@@ -94,6 +95,19 @@ const HeroFrontpage: React.FC<Props> = () => {
                             variants={itemVariants}
                             style={{ y: portraitY }}
                         >
+                            <motion.div
+                                initial={{ opacity: 0, y: 200 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 120, 
+                                    damping: 12,
+                                    delay: 2
+                                }}
+                                className="absolute h-full w-full z-10"
+                            >
+                                <CurvedText text="Ouvert aux opportunités !" className="absolute -bottom-8" radius={175} />
+                            </motion.div>
                             <Image
                                 src={`/about/photo_3-4_face.jpg`}
                                 alt={`Cover Image`}
@@ -107,6 +121,7 @@ const HeroFrontpage: React.FC<Props> = () => {
                             variants={itemVariants2}
                             style={{ y: modelY }}
                         >
+
                             <RetroGrid />
                             <Model3DLogo mousePosition={mousePosition} />
                         </motion.div>
