@@ -126,7 +126,7 @@ const Logos = {
 
 
 export function BlockMarquee() {
-    const arr = [Logos.javascript, Logos.nextjs, Logos.react, Logos.nest, Logos.php, Logos.laravel, , Logos.symfony]
+    const arr = [Logos.javascript, Logos.nextjs, Logos.react, Logos.nest, Logos.php, Logos.laravel, Logos.symfony]
     const arr2 = [Logos.mongodb, Logos.mysql, Logos.postgres, Logos.git, Logos.graphql]
     const arr3 = [Logos.firebase, Logos.supabase, Logos.docker, Logos.wordpress,  Logos.strapi, Logos.figma]
 

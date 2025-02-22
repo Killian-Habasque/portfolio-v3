@@ -41,7 +41,6 @@ function ButtonScrollTop() {
                     duration: 0.3,
                     ease: "easeInOut"
                 }}
-                className="fixed bottom-6 left-8 flex z-50"
             >
                 <motion.a
                     href={isAtTop ? "#more" : "#top"}

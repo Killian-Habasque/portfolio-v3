@@ -11,6 +11,7 @@ import BlockAdapter from '@/components/adapters/blockAdapter';
 import { BlockTextProps } from '@/components/layouts/project/block-text';
 import { BlockListProps } from '@/components/layouts/project/block-list';
 import { BlockImageProps } from '@/components/layouts/project/block-image';
+import { BlockContact } from '@/components/layouts/homepage/block-contact';
 
 interface PageProps {
   params: Promise<{
@@ -125,8 +126,9 @@ export default async function ProjectPage({ params }: PageProps) {
               })}
             </div>
           </div>
-        </section >
+        </section>
       </div >
+      <BlockContact />
     </>
   );
 }

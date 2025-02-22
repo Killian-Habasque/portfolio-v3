@@ -18,7 +18,7 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-color: var(--color-secondary) white;
+  scrollbar-color: var(--color-secondary) transparent;
   scrollbar-width: thin;
 }
 

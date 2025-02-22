@@ -7,7 +7,8 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { WelcomeExample } from "../../ui/texts/texts";
 import { ButtonScrollTop } from "../../ui/button-scroll-top";
-import CurvedText from "@/components/ui/CurvedText";
+import CurvedText from "@/components/ui/texts/curved-text";
+import Magnet from "@/components/ui/magnet";
 
 type Props = {
     children?: React.ReactNode;
@@ -85,7 +86,7 @@ const HeroFrontpage: React.FC<Props> = () => {
                         <WelcomeExample />
                     </div>
                     <motion.div
-                        className="w-full-8 lg:w-full -mx-8 lg:-mx-0 h-full grid grid-cols-2 gap-2 lg:gap-6 py-16 lg:py-0 h-full lg:max-w-4xl"
+                        className="w-full-8 lg:w-full -mx-8 lg:-mx-0 h-full grid grid-cols-2 gap-2 lg:gap-6 py-16 lg:py-0 h-full lg:max-w-4xl 2xl:max-w-5xl"
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
@@ -100,13 +101,13 @@ const HeroFrontpage: React.FC<Props> = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{
                                     type: "spring",
-                                    stiffness: 120, 
+                                    stiffness: 120,
                                     damping: 12,
                                     delay: 2
                                 }}
                                 className="absolute h-full w-full z-10 hidden lg:block"
                             >
-                                <CurvedText text="#OpenToWork" className="absolute -bottom-10" radius={175} />
+                                <CurvedText text="#OpenToWork" className="-bottom-8" radius={175} />
                             </motion.div>
                             <Image
                                 src={`/about/photo_3-4_face.jpg`}
@@ -127,7 +128,11 @@ const HeroFrontpage: React.FC<Props> = () => {
                         </motion.div>
                     </motion.div>
                 </div>
-                <ButtonScrollTop />
+                <div className="fixed bottom-6 left-8 flex z-50">
+                    <Magnet padding={50} disabled={false} magnetStrength={7}>
+                         <ButtonScrollTop />
+                    </Magnet>
+                </div>
             </div>
         </div>
     );

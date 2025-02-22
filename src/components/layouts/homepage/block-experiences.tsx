@@ -61,11 +61,11 @@ export function BlockExperience() {
   const titleVariants = {
     hidden: {
       opacity: 0,
-      x: -50,
+      y: 50,
     },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         type: "spring",
         duration: 1,
@@ -127,7 +127,7 @@ export function BlockExperience() {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="relative flex flex-col lg:flew-row items-start gap-4 p-6 rounded-2xl shadow-sm group bg-white"
+              className="relative flex flex-col lg:flex-row items-start gap-4 p-6 rounded-2xl shadow-sm group bg-white"
             >
               {index !== experienceData.length - 1 && (
                 <div className="hidden lg:block absolute left-[-33px] top-4 w-[2px] h-[calc(100%+24px)] bg-primary" />

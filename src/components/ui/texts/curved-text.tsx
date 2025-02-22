@@ -14,7 +14,7 @@ const CurvedText: React.FC<CurvedTextProps> = ({ text, radius, className }) => {
       width={radius * 2}
       height={radius}
       viewBox={`0 0 ${radius * 2} ${radius}`}
-      className={`absolute bottom-0 left-1/2 transform -translate-x-1/2  ${className}`}
+      className={`absolute left-1/2 transform -translate-x-1/2  ${className}`}
     >
       <path
         id={pathId}

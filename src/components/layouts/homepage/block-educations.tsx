@@ -68,11 +68,11 @@ export function BlockEducation() {
   const titleVariants = {
     hidden: {
       opacity: 0,
-      x: -50,
+      y: 50,
     },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         type: "spring",
         duration: 1,
@@ -137,7 +137,7 @@ export function BlockEducation() {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="relative flex flex-col lg:flew-row items-start gap-6 p-6 bg-[--background] rounded-2xl shadow-sm group"
+              className="relative flex flex-col lg:flex-row items-start gap-6 p-6 bg-[--background] rounded-2xl shadow-sm group"
             >
               {index !== educationData.length - 1 && (
                 <div className="hidden lg:block absolute left-[-33px] top-4 w-[2px] h-[calc(100%+24px)] bg-primary" />
