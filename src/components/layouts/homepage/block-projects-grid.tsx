@@ -95,28 +95,28 @@ function BlockProjectsGrid({ preview = false }: BlockProjectsGridProps) {
             <motion.div variants={fadeUpVariants} custom={0.4} className="flex flex-wrap gap-2 pt-4">
               <Badge 
                 onClick={() => handleBadgeClick("")} 
-                variant={selectedType === "" ? "secondary" : "primary"} 
+                variant={selectedType === "" ? "primary" : "outline"} 
                 className="cursor-pointer"
               >
                 Tout
               </Badge>
               <Badge 
                 onClick={() => handleBadgeClick("Projet personnel")} 
-                variant={selectedType === "Projet personnel" ? "secondary" : "primary"} 
+                variant={selectedType === "Projet personnel" ? "primary" : "outline"} 
                 className="cursor-pointer"
               >
                 Projet personnel
               </Badge>
               <Badge 
                 onClick={() => handleBadgeClick("Projet professionnel")} 
-                variant={selectedType === "Projet professionnel" ? "secondary" : "primary"} 
+                variant={selectedType === "Projet professionnel" ? "primary" : "outline"} 
                 className="cursor-pointer"
               >
                 Projet professionnel
               </Badge>
               <Badge 
                 onClick={() => handleBadgeClick("Projet scolaire")} 
-                variant={selectedType === "Projet scolaire" ? "secondary" : "primary"} 
+                variant={selectedType === "Projet scolaire" ? "primary" : "outline"} 
                 className="cursor-pointer"
               >
                 Projet scolaire

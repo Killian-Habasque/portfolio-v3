@@ -39,7 +39,6 @@ export default async function ProjectPage({ params }: PageProps) {
   if (!project) {
     notFound();
   }
-
   const formattedProject = {
     ...project,
     blocks: project.blocks.map(block => ({
@@ -84,6 +83,17 @@ export default async function ProjectPage({ params }: PageProps) {
               ) : ''}
             </div>
 
+            <nav className="flex flex-wrap gap-2 justify-center mb-6">
+              {formattedProject.technologies && formattedProject.technologies.map(tech => (
+                <span key={tech.id}>
+                  <Badge variant='outline'>
+                    {tech.imgLink ? <Image width={20} height={20}  className="w-4 h-4 object-contain" src={tech.imgLink} alt={tech.name} /> : ''}
+                    {tech.name}
+                  </Badge>
+                </span>
+              ))}
+            </nav>
+
             <div className="relative">
               {formattedProject.videoLink ? (
                 <HeroVideoDialog
@@ -105,17 +115,8 @@ export default async function ProjectPage({ params }: PageProps) {
                 </div>
               )}
             </div>
-            <div className="mb-6">
-              <nav className="flex flex-wrap gap-2 mt-4">
-                {formattedProject.technologies && formattedProject.technologies.map(tech => (
-                  <span key={tech.id}>
-                    <Badge variant='secondary'>{tech.name}</Badge>
-                  </span>
-                ))}
-              </nav>
-            </div>
             <div
-              className="text-lg leading-relaxed mb-4 font-outfit text-secondary-dark"
+              className="text-xl leading-relaxed my-6 font-outfit text-secondary"
               dangerouslySetInnerHTML={{ __html: formattedProject.text }}
             />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 gap-y-12 mt-24">

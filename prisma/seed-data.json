@@ -7,19 +7,23 @@
         },
         {
             "name": "Nextjs",
-            "slug": "nextjs"
+            "slug": "nextjs",
+            "imgLink": "/technologies/nextjs.png"
         },
         {
             "name": "Laravel",
-            "slug": "laravel"
+            "slug": "laravel",
+            "imgLink": "/technologies/laravel.png"
         },
         {
             "name": "PHP",
-            "slug": "php"
+            "slug": "php",
+            "imgLink": "/technologies/php.png"
         },
         {
             "name": "Javascript",
-            "slug": "javascript"
+            "slug": "javascript",
+            "imgLink": "/technologies/javascript.png"
         },
         {
             "name": "Three js",
@@ -31,27 +35,33 @@
         },
         {
             "name": "Firebase",
-            "slug": "firebase"
+            "slug": "firebase",
+            "imgLink": "/technologies/firebase.png"
         },
         {
             "name": "Wordpress",
-            "slug": "wordpress"
+            "slug": "wordpress",
+            "imgLink": "/technologies/wordpress.png"
         },
         {
             "name": "GraphQL",
-            "slug": "graphql"
+            "slug": "graphql",
+            "imgLink": "/technologies/graphql.png"
         },
         {
             "name": "MongoDb",
-            "slug": "mongodb"
+            "slug": "mongodb",
+            "imgLink": "/technologies/mongodb.png"
         },
         {
             "name": "Mysql",
-            "slug": "mysql"
+            "slug": "mysql",
+            "imgLink": "/technologies/mysql.png"
         },
         {
             "name": "Docker",
-            "slug": "docker"
+            "slug": "docker",
+            "imgLink": "/technologies/docker.png"
         },
         {
             "name": "Gitlab",
@@ -59,11 +69,13 @@
         },
         {
             "name": "Strapi",
-            "slug": "strapi"
+            "slug": "strapi",
+            "imgLink": "/technologies/strapi.png"
         },
         {
             "name": "Symfony",
-            "slug": "symfony"
+            "slug": "symfony",
+            "imgLink": "/technologies/symfony.png"
         }
     ],
     "projects": [
@@ -326,6 +338,7 @@
             "text": "La plateforme des 7 arts en podcast",
             "type": "Projet scolaire",
             "date": "2021",
+            "order": 5,
             "imgLink": "/projects/balado/balado.png",
             "videoLink": "/projects/balado/balado.mp4",
             "technologies": [
