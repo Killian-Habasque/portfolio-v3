@@ -6,7 +6,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-export function Header() {
+interface Project {
+  id: string;
+  title: string;
+  slug: string;
+  text: string;
+  imgLink?: string | null;
+  videoLink?: string | null;
+  externalLink?: string | null;
+  technologies: { name: string }[];
+}
+
+interface HeaderProps {
+  projects: Project[];
+}
+
+export function Header({ projects }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -144,13 +159,13 @@ export function Header() {
 
       {/* Desktop menu */}
       <div className="hidden lg:block w-full">
-        <Navbar className="h-16 top-2 right-4" />
+        <Navbar className="h-16 top-2 right-4" projects={projects} />
       </div>
     </div>
   );
 }
 
-function Navbar({ className }: { className?: string }) {
+const Navbar = ({ className, projects }: { className?: string; projects: Project[] }) => {
   const [active, setActive] = useState<string | null>(null);
   return (
     <motion.div
@@ -169,31 +184,36 @@ function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         <div className="relative h-full w-full flex items-center rounded-full border border-transparent border-white/[0.2] bg-secondary-dark shadow-input flex justify-center space-x-16 px-8 py-2 font-outfit">
           <MenuItem setActive={setActive} active={active} item="Projets">
-            <div className="text-sm grid grid-cols-2 gap-10 p-4">
-              <ProductItem
-                title="Yatzee"
-                href="/projets/yatzee"
-                src="/projects/yatzee/yatzee.png"
-                description="Prepare for tech interviews like never before."
-              />
-              <ProductItem
-                title="Doo erp"
-                href="/projets/doo-erp"
-                src="/projects/doo-erp/doo-erp.png"
-                description="Production ready Tailwind css components for your next project"
-              />
-              <ProductItem
-                title="Suboptimize"
-                href="/projets/suboptimize"
-                src="/projects/suboptimize/suboptimize.png"
-                description="Never write from scratch again. Go from idea to blog in minutes."
-              />
-              <ProductItem
-                title="Sière ergonomique"
-                href="/projets/siege-ergonomique"
-                src="/projects/siege-ergonomique/siege-ergonomique.png"
-                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-              />
+            <div className="text-sm grid grid-cols-2 gap-8 p-4">
+              {projects.slice(0, 4).map((project) => (
+                <ProductItem
+                  key={project.id}
+                  title={project.title}
+                  href={`/projets/${project.slug}`}
+                  src={project.imgLink || "/placeholder.png"}
+                  description={project.text}
+                />
+              ))}
+              <div className="col-span-2 w-full flex gap-2 justify-center">
+                <p className="font-outfit text-secondary-light font-light tracking-wide">
+                  Retrouvez l&apos;ensemble de mes projets
+                </p>
+                <div className="flex gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="white"
+                    className="size-6"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                  </svg>
+                  <Link href={"/projets"} className="underline font-bold text-white tracking-wide">
+                    En découvrir plus
+                  </Link>
+                </div>
+              </div>
             </div>
           </MenuItem>
           <MenuItem setActive={setActive} active={active} item="À propos">

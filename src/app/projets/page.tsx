@@ -1,3 +1,4 @@
+import { Header } from '@/components/layouts/header';
 import { BlockProjectsGrid } from '@/components/layouts/homepage/block-projects-grid';
 import Breadcrumb from '@/components/ui/breadcrumb';
 import prisma from '@/lib/db';
@@ -29,6 +30,7 @@ export default async function ProjectsPage() {
 
     return (
         <>
+            <Header projects={projects} />
             <div className="container mx-auto px-4">
                 <Breadcrumb breadcrumbs={breadcrumbs} />
             </div>

@@ -75,18 +75,18 @@ const HeroFrontpage: React.FC<Props> = () => {
     };
 
     return (
-        <div className="p-4 h-[100vh] pt-20">
+        <div className="p-4 h-[100dvh] pt-20">
             <div
                 className="relative flex h-full w-full flex-col justify-center rounded-2xl p-0 lg:p-8 items-center"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
             >
-                <div className="flex flex-col-reverse justify-between h-full lg:flex-row max-w-md lg:max-w-full w-full lg:auto">
-                    <div className="flex items-center pb-32 lg:pb-16 lg:h-full">
+                <div className="flex flex-col-reverse justify-end lg:justify-between h-full lg:flex-row max-w-md lg:max-w-full w-full lg:auto">
+                    <div className="flex items-center py-8 pb-24 lg:pb-0 lg:py-0 lg:h-full">
                         <WelcomeExample />
                     </div>
                     <motion.div
-                        className="w-full-8 lg:w-full -mx-8 lg:-mx-0 h-full grid grid-cols-2 gap-2 lg:gap-6 py-16 lg:py-0 h-full lg:max-w-4xl 2xl:max-w-5xl"
+                        className="w-full-8 lg:w-full -mx-8 lg:-mx-0 h-full max-h-96 lg:max-h-full grid grid-cols-2 gap-2 lg:gap-6 lg:py-0 lg:max-w-4xl 2xl:max-w-5xl"
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"

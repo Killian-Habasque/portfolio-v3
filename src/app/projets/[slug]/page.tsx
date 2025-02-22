@@ -12,6 +12,7 @@ import { BlockTextProps } from '@/components/layouts/project/block-text';
 import { BlockListProps } from '@/components/layouts/project/block-list';
 import { BlockImageProps } from '@/components/layouts/project/block-image';
 import { BlockContact } from '@/components/layouts/homepage/block-contact';
+import { Header } from '@/components/layouts/header';
 
 interface PageProps {
   params: Promise<{
@@ -36,7 +37,24 @@ export default async function ProjectPage({ params }: PageProps) {
       },
     },
   });
-
+  const projects = await prisma.project.findMany({
+    select: {
+        id: true,
+        title: true,
+        slug: true,
+        imgLink: true,
+        externalLink: true,
+        videoLink: true,
+        text: true,
+        date: true,
+        technologies: {
+            select: { name: true },
+        },
+    },
+    orderBy: {
+        date: 'desc',
+    },
+});
   if (!project) {
     notFound();
   }
@@ -57,6 +75,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
   return (
     <>
+      <Header projects={projects} />
       <div className="container mx-auto px-4">
         <Breadcrumb breadcrumbs={breadcrumbs} />
 

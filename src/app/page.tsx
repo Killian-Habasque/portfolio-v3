@@ -7,6 +7,7 @@ import { BlockEducation } from "../components/layouts/homepage/block-educations"
 import { BlockMarquee } from "@/components/layouts/homepage/block-technologies";
 import { BlockExperience } from "@/components/layouts/homepage/block-experiences";
 import { BlockContact } from "@/components/layouts/homepage/block-contact";
+import { Header } from "@/components/layouts/header";
 
 export default async function Home() {
   const projects = await prisma.project.findMany({
@@ -34,14 +35,14 @@ export default async function Home() {
   });
   return (
     <div id="root" className="overflow-hidden">
+      <Header projects={projects} />
       <HeroFrontpage />
       <BlockIntro />
-      <BlockProjectsGrid items={projects} />
+      <BlockProjectsGrid items={projects.slice(0, 6)} />
       <BlockMediaText />
       <BlockEducation />
       <BlockMarquee />
       <BlockExperience />
-      {/* <BlockIntro /> */}
       <BlockContact />
     </div>
   );

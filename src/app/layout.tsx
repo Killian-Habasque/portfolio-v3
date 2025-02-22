@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { BgNoise } from "../components/ui/bg-noise";
-import { Header } from "@/components/layouts/header";
 import TransitionLayout from "./transition-layout";
 import { Footer } from "@/components/layouts/footer";
 
@@ -21,7 +20,6 @@ export default function RootLayout({
         <TransitionLayout>
           <main key="app">
             <BgNoise />
-            <Header />
             {children}
             <Footer />
           </main>
