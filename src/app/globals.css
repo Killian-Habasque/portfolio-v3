@@ -21,6 +21,12 @@ html {
   scrollbar-color: var(--color-secondary) transparent;
   scrollbar-width: thin;
 }
+body {
+  background: var(--background);
+}
+main {
+  overflow: hidden;
+}
 
 @layer utilities {
   .w-full-8 {

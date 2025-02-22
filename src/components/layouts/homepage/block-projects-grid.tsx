@@ -5,23 +5,16 @@ import { useRef } from "react";
 import { Card } from "../../ui/card";
 import { Badge } from "../../ui/badge";
 import Link from "next/link";
+import { useProjects } from "@/contexts/project-context";
 
 interface BlockProjectsGridProps {
-  items: ProjectPreview[];
+  preview?: boolean;
 }
 
-interface ProjectPreview {
-  id: string;
-  title: string;
-  slug: string;
-  text: string;
-  imgLink?: string | null;
-  videoLink?: string | null;
-  externalLink?: string | null;
-  technologies: { name: string }[];
-}
+function BlockProjectsGrid({ preview = false }: BlockProjectsGridProps) {
+  const { projects, orderedProjects } = useProjects();
 
-function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
+  const projectItems = preview ? orderedProjects : projects;
   const sectionRef = useRef(null);
   const gridRef = useRef(null);
 
@@ -68,17 +61,18 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
           className="flex gap-4 flex-col items-start"
         >
           <motion.div variants={fadeUpVariants} custom={0.2} className="flex gap-2 flex-col">
-            <h2 className="text-5xl md:text-8xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium">
-              Exemple <br />
-              de <span className="font-grandslang pl-4">projets</span>
-            </h2>
+            {preview ? (
+              <h2 className="text-5xl md:text-8xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium">
+                Exemple <br />
+                de <span className="font-grandslang pl-4">projets</span>
+              </h2>
+            ) : (
+              <h2 className="text-5xl md:text-8xl tracking-wid max-w-2xl font-outfit text-secondary-dark font-medium">
+                L&apos;ensemble <br />de mes <span className="font-grandslang pl-4">projets</span>
+              </h2>
+            )}
           </motion.div>
 
-          <motion.div variants={fadeUpVariants} custom={0.4} className="flex flex-wrap gap-2 pt-4">
-            <Badge>Projet personnel</Badge>
-            <Badge>Projet professionnel</Badge>
-            <Badge>Projet scolaire</Badge>
-          </motion.div>
 
           <motion.p
             variants={fadeUpVariants}
@@ -87,9 +81,14 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
           >
             Découvrez ci-dessous quelques-uns de mes projets les plus significatifs :
           </motion.p>
+
+          <motion.div variants={fadeUpVariants} custom={0.4} className="flex flex-wrap gap-2 pt-4">
+            <Badge>Projet personnel</Badge>
+            <Badge>Projet professionnel</Badge>
+            <Badge>Projet scolaire</Badge>
+          </motion.div>
         </motion.div>
 
-        {/* Grille des projets */}
         <motion.div
           ref={gridRef}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -97,34 +96,35 @@ function BlockProjectsGrid({ items }: BlockProjectsGridProps) {
           animate={isInViewGrid ? "visible" : "hidden"}
           variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
         >
-          {items.map((card, index) => (
+          {projectItems.map((card, index) => (
             <motion.div key={index} custom={index} variants={cardVariants}>
-              <Card {...card} />
+              <Card {...card} preview={preview} />
             </motion.div>
           ))}
         </motion.div>
       </div>
-
-      <div className="flex flex-col lg:flex-row gap-2 items-center justify-center my-20">
-        <p className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide">
-          Retrouvez l&apos;ensemble de mes projets
-        </p>
-        <div className="flex gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-          </svg>
-          <Link href={"/projets"} className="underline font-bold tracking-wide">
-            En découvrir plus
-          </Link>
+      {preview ? (
+        <div className="flex flex-col lg:flex-row gap-2 items-center justify-center my-20">
+          <p className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide">
+            Retrouvez l&apos;ensemble de mes projets
+          </p>
+          <div className="flex gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+            <Link href={"/projets"} className="underline font-bold tracking-wide">
+              En découvrir plus
+            </Link>
+          </div>
         </div>
-      </div>
+      ) : ''}
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { classNames } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { useProjects } from "@/contexts/project-context";
 
 interface Project {
   id: string;
@@ -17,11 +18,8 @@ interface Project {
   technologies: { name: string }[];
 }
 
-interface HeaderProps {
-  projects: Project[];
-}
-
-export function Header({ projects }: HeaderProps) {
+export function Header() {
+  const { orderedProjects } = useProjects();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -159,7 +157,7 @@ export function Header({ projects }: HeaderProps) {
 
       {/* Desktop menu */}
       <div className="hidden lg:block w-full">
-        <Navbar className="h-16 top-2 right-4" projects={projects} />
+        <Navbar className="h-16 top-2 right-4" projects={orderedProjects} />
       </div>
     </div>
   );

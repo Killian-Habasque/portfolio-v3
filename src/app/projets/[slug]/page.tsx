@@ -12,7 +12,6 @@ import { BlockTextProps } from '@/components/layouts/project/block-text';
 import { BlockListProps } from '@/components/layouts/project/block-list';
 import { BlockImageProps } from '@/components/layouts/project/block-image';
 import { BlockContact } from '@/components/layouts/homepage/block-contact';
-import { Header } from '@/components/layouts/header';
 
 interface PageProps {
   params: Promise<{
@@ -37,24 +36,6 @@ export default async function ProjectPage({ params }: PageProps) {
       },
     },
   });
-  const projects = await prisma.project.findMany({
-    select: {
-        id: true,
-        title: true,
-        slug: true,
-        imgLink: true,
-        externalLink: true,
-        videoLink: true,
-        text: true,
-        date: true,
-        technologies: {
-            select: { name: true },
-        },
-    },
-    orderBy: {
-        date: 'desc',
-    },
-});
   if (!project) {
     notFound();
   }
@@ -75,7 +56,6 @@ export default async function ProjectPage({ params }: PageProps) {
 
   return (
     <>
-      <Header projects={projects} />
       <div className="container mx-auto px-4">
         <Breadcrumb breadcrumbs={breadcrumbs} />
 
@@ -114,7 +94,7 @@ export default async function ProjectPage({ params }: PageProps) {
                   thumbnailAlt={`Cover Image for ${formattedProject.title}`}
                 />
               ) : (
-                <div className="relative overflow-hidden rounded-2xl aspect-[16/9] border-2">
+                <div className="relative overflow-hidden rounded-3xl aspect-[16/9] border-2">
                   <Image
                     src={`${formattedProject.imgLink}`}
                     alt={`Cover Image for ${formattedProject.title}`}
@@ -138,7 +118,7 @@ export default async function ProjectPage({ params }: PageProps) {
               className="text-lg leading-relaxed mb-4 font-outfit text-secondary-dark"
               dangerouslySetInnerHTML={{ __html: formattedProject.text }}
             />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 gap-y-12 mt-24">
               {formattedProject.blocks && formattedProject.blocks.map(block => {
                 const blockContent = block.content as BlockTextProps | BlockImageProps | BlockListProps | null;
                 return <BlockAdapter key={block.id} type={block.type} content={blockContent} />;
@@ -150,16 +130,4 @@ export default async function ProjectPage({ params }: PageProps) {
       <BlockContact />
     </>
   );
-}
-
-export async function generateStaticParams() {
-  const projects = await prisma.project.findMany({
-    select: {
-      slug: true,
-    },
-  });
-
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
 }

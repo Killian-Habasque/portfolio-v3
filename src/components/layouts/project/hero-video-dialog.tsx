@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-// import { Play, XIcon } from "lucide-react"
 import React from 'react'
 import Image from 'next/image'
 
@@ -91,10 +90,10 @@ export function HeroVideoDialog({
           alt={thumbnailAlt}
           width={1920}
           height={1080}
-          className="w-full transition-all duration-200 group-hover:brightness-[0.9] ease-out rounded-2xl shadow-lg border"
+          className="w-full transition-all duration-200 group-hover:brightness-[0.9] ease-out rounded-2xl shadow-mg border"
         />
         <div className="absolute inset-0 flex items-center justify-center group-hover:scale-100 scale-[0.9] transition-all duration-200 ease-out rounded-2xl">
-          <div className="bg-black/50 flex items-center justify-center rounded-full backdrop-blur-md size-28 shadow-lg">
+          <div className="bg-black/50 flex items-center justify-center rounded-full backdrop-blur-md size-28 shadow-mg">
             <div
               className={`flex items-center justify-center bg-gradient-to-b from-black/40 to-black/50 shadow-md rounded-full size-20 transition-all ease-out duration-200 relative group-hover:scale-[1.2] scale-100`}
             >

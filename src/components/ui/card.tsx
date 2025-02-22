@@ -2,17 +2,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef } from "react";
 import ExternalLink from "./externalLink";
+import { Badge } from "./badge";
 
 type CardProps = {
+    preview?: boolean;
     title: string;
     slug: string;
     text: string;
+    type: string;
     imgLink?: string | null;
     videoLink?: string | null;
     externalLink?: string | null;
 };
 
-export function Card({ title, text, slug = "#", imgLink, videoLink, externalLink }: CardProps) {
+export function Card({ preview, title, text, slug = "#", type, imgLink, videoLink, externalLink }: CardProps) {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const [, setIsHovered] = useState(false);
 
@@ -71,6 +74,7 @@ export function Card({ title, text, slug = "#", imgLink, videoLink, externalLink
                 </div>
                 <div className="flex px-4 items-center">
                     <div className="w-full">
+                        {type && !preview && <Badge className="!py-1 !px-3 mb-2 !text-xs">{type}</Badge>}
                         {title && <h3 className="font-outfit text-xl text-secondary-dark pb-2">{title}</h3>}
                         {text && <p className="font-outfit text-secondary-light font-light text-md tracking-wide pr-4">{text}</p>}
                     </div>
