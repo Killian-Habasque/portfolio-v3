@@ -60,6 +60,10 @@
         {
             "name": "Strapi",
             "slug": "strapi"
+        },
+        {
+            "name": "Symfony",
+            "slug": "symfony"
         }
     ],
     "projects": [
@@ -90,7 +94,7 @@
                 {
                     "type": "TEXT",
                     "content": {
-                        "titre": "Contexte du projet",
+                        "title": "Contexte du projet",
                         "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide.",
                         "colspan": 1
                     }
@@ -160,7 +164,7 @@
                 {
                     "type": "LIST",
                     "content": {
-                        "titre": "Règles du jeu",
+                        "title": "Règles du jeu",
                         "text": "Le Yatzee repose sur des combinaisons spécifiques permettant de marquer des points :",
                         "items": [
                             "Total des chiffres (1 à 6) : Somme des dés du chiffre choisi.",
@@ -177,7 +181,7 @@
                 {
                     "type": "TEXT",
                     "content": {
-                        "titre": "Optimisation et axes d’amélioration",
+                        "title": "Optimisation et axes d’amélioration",
                         "text": "Ce projet a été développé en JavaScript natif, ce qui a permis une meilleure compréhension des concepts fondamentaux, mais présente certaines limites en termes d’optimisation et d’architecture. L’utilisation de React pour la gestion de l’état et des composants interactifs aurait amélioré la structure et la scalabilité de l’application."
                     }
                 }
@@ -204,11 +208,41 @@
             "order": 4,
             "date": "2024",
             "imgLink": "/projects/siege-ergonomique/siege-ergonomique.png",
+            "videoLink": "/projects/siege-ergonomique/siege-ergonomique.mp4",
             "externalLink": "https://siege-ergonomique.com",
             "technologies": [
                 "nextjs",
                 "wordpress",
                 "graphql"
+            ],
+            "blocks": [
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/siege-ergonomique/siege-ergonomique-1.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Optimisation et axes d’amélioration",
+                        "text": "Ce projet a été développé en JavaScript natif, ce qui a permis une meilleure compréhension des concepts fondamentaux, mais présente certaines limites en termes d’optimisation et d’architecture. L’utilisation de React pour la gestion de l’état et des composants interactifs aurait amélioré la structure et la scalabilité de l’application."
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Symfony shop",
+            "slug": "symfony-shop",
+            "text": "Site e-commerce fait en Symfony",
+            "type": "Projet scolaire",
+            "date": "2024",
+            "imgLink": "/projects/symfony-shop/symfony.avif",
+            "videoLink": "/projects/symfony-shop/symfony-shop.mp4",
+            "technologies": [
+                "php",
+                "symfony"
             ]
         },
         {
@@ -237,6 +271,7 @@
             "order": 6,
             "date": "2023",
             "imgLink": "/projects/blog-doowup/blog-doowup.png",
+            "videoLink": "/projects/blog-doowup/blog-doowup.mp4",
             "externalLink": "https://doowup.fr/blog",
             "technologies": [
                 "nextjs",
@@ -247,27 +282,13 @@
             ]
         },
         {
-            "title": "La petite production",
-            "slug": "la-petite-production",
-            "text": "Site web d'une agence de production",
-            "type": "Projet professionnel",
-            "order": 5,
-            "date": "2023",
-            "imgLink": "/projects/lapetiteproduction/lapetiteproduction.png",
-            "videoLink": "/projects/lapetiteproduction/lapetiteproduction.mp4",
-            "externalLink": "https://lapetiteproduction.com",
-            "technologies": [
-                "wordpress",
-                "react"
-            ]
-        },
-        {
             "title": "Portfolio v2",
             "slug": "portfolio-v2",
             "text": "Verion 2 de mon portfolio",
             "type": "Projet personnel",
             "date": "2022",
             "imgLink": "/projects/portfolio-v2/portfolio-v2.png",
+            "videoLink": "/projects/portfolio-v2/portfolio-v2.mp4",
             "externalLink": "https://killian-habasque.fr",
             "technologies": [
                 "javascript"

@@ -1,5 +1,6 @@
 "use client";
 
+import { MapPinIcon } from "@heroicons/react/16/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -170,9 +171,7 @@ export function BlockEducation() {
               <div className="text-right">
                 <p className="text-secondary font-outfit">{education.period}</p>
                 <p className="text-secondary-light mt-1 font-outfit flex gap-1 items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4">
-                    <path fillRule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clipRule="evenodd" />
-                  </svg>
+                  <MapPinIcon className="size-4" />
                   {education.location}
                 </p>
               </div>

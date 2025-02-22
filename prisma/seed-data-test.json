@@ -1,0 +1,15 @@
+        {
+            "title": "La petite production",
+            "slug": "la-petite-production",
+            "text": "Site web d'une agence de production",
+            "type": "Projet professionnel",
+            "order": 5,
+            "date": "2023",
+            "imgLink": "/projects/lapetiteproduction/lapetiteproduction.png",
+            "videoLink": "/projects/lapetiteproduction/lapetiteproduction.mp4",
+            "externalLink": "https://lapetiteproduction.com",
+            "technologies": [
+                "wordpress",
+                "react"
+            ]
+        }

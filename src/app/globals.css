@@ -43,7 +43,7 @@ main {
     background-image: url('/bg-noise.png');
     background-position: center;
     animation: BgNoise 1s steps(2) infinite;
-    opacity: .75;
+    opacity: .5;
   }
 
   @keyframes BgNoise {

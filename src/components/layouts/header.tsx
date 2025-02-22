@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useProjects } from "@/contexts/project-context";
+import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 
 interface Project {
   id: string;
@@ -196,18 +197,9 @@ const Navbar = ({ className, projects }: { className?: string; projects: Project
                 <p className="font-outfit text-secondary-light font-light tracking-wide">
                   Retrouvez l&apos;ensemble de mes projets
                 </p>
-                <div className="flex gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="white"
-                    className="size-6"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                  </svg>
-                  <Link href={"/projets"} className="underline font-bold text-white tracking-wide">
+                <div className="flex gap-2 items-center">
+                  <ArrowLongRightIcon className="size-5 text-white" />
+                  <Link href={"/projets"} className="underline font-bold text-white tracking-wide font-outfit">
                     En découvrir plus
                   </Link>
                 </div>
