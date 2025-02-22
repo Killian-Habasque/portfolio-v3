@@ -18,13 +18,23 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-color: var(--color-secondary) white;
+  scrollbar-color: var(--color-secondary) transparent;
   scrollbar-width: thin;
+}
+body {
+  background: var(--background);
+}
+main {
+  overflow: hidden;
 }
 
 @layer utilities {
+  .w-full-8 {
+    width: calc(100% + 2rem);
+  }
+
   .bg-noise {
-    @apply fixed inset-0 z-[100] pointer-events-none overflow-hidden scale-[1.2];
+    @apply fixed inset-0 z-[10] pointer-events-none overflow-hidden scale-[1.2];
   }
 
   .bg-noise::before {
@@ -33,21 +43,53 @@ html {
     background-image: url('/bg-noise.png');
     background-position: center;
     animation: BgNoise 1s steps(2) infinite;
-    opacity: .75;
+    opacity: .5;
   }
 
   @keyframes BgNoise {
-    0% { transform: translate3d(0, 9rem, 0); }
-    10% { transform: translate3d(-1rem, -4rem, 0); }
-    20% { transform: translate3d(-8rem, 2rem, 0); }
-    30% { transform: translate3d(9rem, -9rem, 0); }
-    40% { transform: translate3d(-2rem, 7rem, 0); }
-    50% { transform: translate3d(-9rem, -4rem, 0); }
-    60% { transform: translate3d(2rem, 6rem, 0); }
-    70% { transform: translate3d(7rem, -8rem, 0); }
-    80% { transform: translate3d(-9rem, 1rem, 0); }
-    90% { transform: translate3d(6rem, -5rem, 0); }
-    100% { transform: translate3d(-7rem, 0, 0); }
+    0% {
+      transform: translate3d(0, 9rem, 0);
+    }
+
+    10% {
+      transform: translate3d(-1rem, -4rem, 0);
+    }
+
+    20% {
+      transform: translate3d(-8rem, 2rem, 0);
+    }
+
+    30% {
+      transform: translate3d(9rem, -9rem, 0);
+    }
+
+    40% {
+      transform: translate3d(-2rem, 7rem, 0);
+    }
+
+    50% {
+      transform: translate3d(-9rem, -4rem, 0);
+    }
+
+    60% {
+      transform: translate3d(2rem, 6rem, 0);
+    }
+
+    70% {
+      transform: translate3d(7rem, -8rem, 0);
+    }
+
+    80% {
+      transform: translate3d(-9rem, 1rem, 0);
+    }
+
+    90% {
+      transform: translate3d(6rem, -5rem, 0);
+    }
+
+    100% {
+      transform: translate3d(-7rem, 0, 0);
+    }
   }
 }
 
@@ -64,10 +106,10 @@ canvas {
   font-family: 'GrandSlang';
   src: url('/fonts/grandslang/GrandSlang-Roman.eot');
   src: url('/fonts/grandslang/GrandSlang-Roman.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/grandslang/GrandSlang-Roman.woff2') format('woff2'),
-       url('/fonts/grandslang/GrandSlang-Roman.woff') format('woff'),
-       url('/fonts/grandslang/GrandSlang-Roman.ttf') format('truetype'),
-       url('/fonts/grandslang/GrandSlang-Roman.svg#GrandSlang-Roman') format('svg');
+    url('/fonts/grandslang/GrandSlang-Roman.woff2') format('woff2'),
+    url('/fonts/grandslang/GrandSlang-Roman.woff') format('woff'),
+    url('/fonts/grandslang/GrandSlang-Roman.ttf') format('truetype'),
+    url('/fonts/grandslang/GrandSlang-Roman.svg#GrandSlang-Roman') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

@@ -21,17 +21,17 @@ export function Marquee({
     return (
         <div
             className={classNames(
-                "w-full overflow-hidden sm:mt-24 mt-10 z-10",
+                "w-full overflow-hidden sm:mt-24 z-10 flex justify-center",
                 className
             )}
             {...props}
         >
-            <div className="relative flex max-w-[90vw] overflow-hidden py-5">
+            <div className="relative flex max-w-4xl overflow-hidden">
                 <div
                     className={classNames(
                         "flex w-max animate-marquee",
-                        pauseOnHover && "hover:[animation-play-state:paused]",
-                        direction === "right" && "animate-marquee-reverse"
+                        pauseOnHover ? "hover:[animation-play-state:paused]" : "",
+                        direction === "right" ? "animate-marqueereverse" : ""
                     )}
                     style={{ "--duration": `${speed}s` } as React.CSSProperties}
                 >

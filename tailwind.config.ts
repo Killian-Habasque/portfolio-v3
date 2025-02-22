@@ -29,7 +29,8 @@ export default {
       },
       animation: {
         grid: "grid 15s linear infinite",
-        marquee: 'marquee var(--duration, 30s) linear infinite'
+        marquee: 'marquee var(--duration, 30s) linear infinite',
+        marqueereverse: 'marquee var(--duration, 30s) linear infinite reverse'
       },
       keyframes: {
         grid: {
@@ -37,8 +38,8 @@ export default {
           "100%": { transform: "translateY(0)" },
         },
         marquee: {
-          to: { transform: 'translateX(-50%)' }
-        }
+          to: { transform: 'translateX(-50%)' },
+        },
       },
     },
   },

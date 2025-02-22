@@ -7,6 +7,8 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { WelcomeExample } from "../../ui/texts/texts";
 import { ButtonScrollTop } from "../../ui/button-scroll-top";
+import CurvedText from "@/components/ui/texts/curved-text";
+import Magnet from "@/components/ui/magnet";
 
 type Props = {
     children?: React.ReactNode;
@@ -23,7 +25,7 @@ const HeroFrontpage: React.FC<Props> = () => {
         const rect = e.currentTarget.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width;
         const y = (e.clientY - rect.top) / rect.height;
-        setMousePosition({ x: x, y: y });
+        setMousePosition({ x: x * 2, y: y * 1.5 });
     }, []);
 
     const itemVariants = {
@@ -73,27 +75,40 @@ const HeroFrontpage: React.FC<Props> = () => {
     };
 
     return (
-        <div className="p-2 h-[100vh] pt-20">
+        <div className="p-4 h-[100dvh] pt-20">
             <div
-                className="relative flex h-full w-full flex-col justify-center rounded-2xl p-8"
+                className="relative flex h-full w-full flex-col justify-center rounded-2xl p-0 lg:p-8 items-center"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
             >
-                <div className="flex justify-between h-full">
-                    <div className="flex items-center h-full">
+                <div className="flex flex-col-reverse justify-end lg:justify-between h-full lg:flex-row max-w-md lg:max-w-full w-full lg:auto">
+                    <div className="flex items-center py-8 pb-24 lg:pb-0 lg:py-0 lg:h-full">
                         <WelcomeExample />
                     </div>
                     <motion.div
-                        className="h-full grid grid-cols-1 md:grid-cols-2 gap-6 h-full w-full max-w-4xl"
+                        className="w-full-8 lg:w-full -mx-8 lg:-mx-0 h-full max-h-96 lg:max-h-full grid grid-cols-2 gap-2 lg:gap-6 lg:py-0 lg:max-w-4xl 2xl:max-w-5xl"
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
                     >
                         <motion.div
-                            className="group relative h-full w-full rounded-full ml-16 relative overflow-hidden z-10 bg-secondary-dark"
+                            className="group relative h-full w-full rounded-full ml-8 lg:ml-16 relative overflow-hidden z-10 bg-secondary-dark"
                             variants={itemVariants}
                             style={{ y: portraitY }}
                         >
+                            <motion.div
+                                initial={{ opacity: 0, y: 200 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 120,
+                                    damping: 12,
+                                    delay: 2
+                                }}
+                                className="absolute h-full w-full z-10 hidden lg:block"
+                            >
+                                <CurvedText text="#OpenToWork" className="-bottom-8" radius={175} />
+                            </motion.div>
                             <Image
                                 src={`/about/photo_3-4_face.jpg`}
                                 alt={`Cover Image`}
@@ -107,12 +122,17 @@ const HeroFrontpage: React.FC<Props> = () => {
                             variants={itemVariants2}
                             style={{ y: modelY }}
                         >
+
                             <RetroGrid />
                             <Model3DLogo mousePosition={mousePosition} />
                         </motion.div>
                     </motion.div>
                 </div>
-                <ButtonScrollTop />
+                <div className="fixed bottom-6 left-8 flex z-50">
+                    <Magnet padding={50} disabled={false} magnetStrength={7}>
+                         <ButtonScrollTop />
+                    </Magnet>
+                </div>
             </div>
         </div>
     );

@@ -1,5 +1,6 @@
 "use client";
 
+import { MapPinIcon } from "@heroicons/react/16/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -68,11 +69,11 @@ export function BlockEducation() {
   const titleVariants = {
     hidden: {
       opacity: 0,
-      x: -50,
+      y: 50,
     },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         type: "spring",
         duration: 1,
@@ -100,17 +101,17 @@ export function BlockEducation() {
   };
 
   return (
-    <section id="educations" className="py-40 bg-white">
+    <section id="educations" className="py-20 lg:py-40 bg-white">
       <div className="container mx-auto px-4 flex justify-center flex-col">
         <motion.div
-          className="mx-auto pb-20 max-w-4xl w-full"
+          className="mx-auto pb-16 max-w-4xl w-full"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-5xl md:text-7xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium max-w-4xl"
+            className="text-5xl md:text-6xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium max-w-4xl"
             variants={titleVariants}
           >
             {/* Mes <br></br> */}
@@ -119,11 +120,10 @@ export function BlockEducation() {
             {/* </span> */}
           </motion.h2>
           <motion.p
-            className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide max-w-sm pt-4 pl-[8px]"
+            className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide max-w-2xl pt-4"
             variants={titleVariants}
           >
-            I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-            a timeline of my journey.
+            Voici une chronologie de mes différentes formations.
           </motion.p>
         </motion.div>
 
@@ -138,13 +138,13 @@ export function BlockEducation() {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="relative flex items-start gap-6 p-6 bg-[--background] rounded-2xl shadow-sm group"
+              className="relative flex flex-col lg:flex-row items-start gap-6 p-6 bg-[--background] rounded-2xl shadow-sm group"
             >
               {index !== educationData.length - 1 && (
-                <div className="absolute left-[-33px] top-4 w-[2px] h-[calc(100%+24px)] bg-primary" />
+                <div className="hidden lg:block absolute left-[-33px] top-4 w-[2px] h-[calc(100%+24px)] bg-primary" />
               )}
 
-              <div className="absolute left-[-32px] top-4 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white bg-primary-dark z-10 " />
+              <div className="hidden lg:block absolute left-[-32px] top-4 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white bg-primary-dark z-10 " />
 
               <div className="w-14 h-14 flex-shrink-0 shadow-md rounded-xl bg-white transition-transform duration-300 group-hover:scale-110">
                 <Image
@@ -171,9 +171,7 @@ export function BlockEducation() {
               <div className="text-right">
                 <p className="text-secondary font-outfit">{education.period}</p>
                 <p className="text-secondary-light mt-1 font-outfit flex gap-1 items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4">
-                    <path fillRule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clipRule="evenodd" />
-                  </svg>
+                  <MapPinIcon className="size-4" />
                   {education.location}
                 </p>
               </div>

@@ -1,5 +1,6 @@
 "use client";
 
+// import CircularText from "@/components/ui/CircularText";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -13,7 +14,7 @@ export const BlockIntro = () => {
     const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
 
     const containerVariants = {
-        hidden: { 
+        hidden: {
             opacity: 0,
         },
         visible: {
@@ -28,7 +29,7 @@ export const BlockIntro = () => {
     };
 
     const itemVariants = {
-        hidden: { 
+        hidden: {
             opacity: 0,
             y: 30
         },
@@ -37,32 +38,41 @@ export const BlockIntro = () => {
             y: 0,
             transition: {
                 duration: 0.8,
-                ease: [0.215, 0.610, 0.355, 1.000] 
+                ease: [0.215, 0.610, 0.355, 1.000]
             }
         }
     };
 
     return (
-        <div ref={ref} id="more" className="w-full flex justify-end py-40 lg:py-60">
-            <motion.div 
-                className="flex flex-col px-8 max-w-4xl gap-8"
+        <div ref={ref} id="more" className="w-full flex justify-end py-20 lg:py-60">
+            {/* <div className="relative flex w-[230px] h-[230px] bg-secondary-dark justify-content items-center rounded-full">
+                <CircularText
+                    text="TEST*TEST*TEST*"
+                    onHover="speedUp"
+                    spinDuration={20}
+                    className="z-10"
+                />
+            </div> */}
+
+            <motion.div
+                className="flex flex-col px-4 lg:px-16 max-w-4xl gap-8 w-full"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 style={{ y }}
             >
-                <motion.p 
+                <motion.p
                     className="font-outfit text-2xl text-secondary-dark"
                     variants={itemVariants}
                 >
-                    Logoden biniou degemer mat an penn ar bed bodet, bann eta lamp beajourien linenn kleñved evidomp kerkent egile.
+                    Bienvenue sur mon portfolio ! Vous trouverez ici un aperçu de mon parcours et de mes réalisations en développement web.
                 </motion.p>
-                <motion.p 
+                <motion.p
                     className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide"
                     variants={itemVariants}
                 >
-                    Logoden biniou degemer mat an penn ar bed bodet, bann eta lamp beajourien linenn kleñved evidomp kerkent egile, hep elgez bodañ hol bro melen da. Komz mat outi ennañ botez ilin dreist sadorn drezomp, kazetenn war labous boultrenn Mellag.
+                    Spécialisé en fullstack, j’interviens sur la création d’applications, l’optimisation de sites e-commerce et la personnalisation de CMS comme WordPress. Toujours en quête d’innovation, j’aime relever de nouveaux défis pour développer des projets modernes et évolutifs.
                 </motion.p>
             </motion.div>
         </div>

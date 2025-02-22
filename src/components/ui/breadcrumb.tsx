@@ -18,7 +18,7 @@ export default function Breadcrumb({ breadcrumbs }: BreadcrumbProps) {
   const router = useRouter();
 
   return (
-    <nav aria-label="Breadcrumb" className="flex gap-4 mb-6 pt-24 font-outfit">
+    <nav aria-label="Breadcrumb" className="flex flex-col lg:flex-row gap-4 mb-6 pt-24 font-outfit">
       <button onClick={() => router.back()} className="flex gap-2 items-center text-sm cursor-pointer">
         <Badge variant="outline"><ArrowLeftEndOnRectangleIcon className="w-4 h-4" />RETOUR</Badge>
       </button>
