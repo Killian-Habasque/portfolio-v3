@@ -291,12 +291,49 @@
                 "mysql",
                 "docker",
                 "gitlab"
+            ],
+            "blocks": [
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide."
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/blog-doowup/blog-doowup-1.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/blog-doowup/blog-doowup-2.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/blog-doowup/blog-doowup-3.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/blog-doowup/blog-doowup-4.png",
+                        "colspan": 1
+                    }
+                }
             ]
         },
         {
             "title": "Portfolio v2",
             "slug": "portfolio-v2",
-            "text": "Verion 2 de mon portfolio",
+            "text": "Version 2 de mon portfolio",
             "type": "Projet personnel",
             "date": "2022",
             "imgLink": "/projects/portfolio-v2/portfolio-v2.png",
@@ -304,6 +341,39 @@
             "externalLink": "https://killian-habasque.fr",
             "technologies": [
                 "javascript"
+            ],
+            "blocks": [
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide."
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/portfolio-v2/portfolio-v2-1.png"
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/portfolio-v2/portfolio-v2-2.png"
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/portfolio-v2/portfolio-v2-3.png"
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/portfolio-v2/portfolio-v2-4.png"
+                    }
+                }
             ]
         },
         {
@@ -313,10 +383,67 @@
             "type": "Projet personnel",
             "date": "2022",
             "imgLink": "/projects/porsche-kar/porsche-kar.png",
-            "videoLink": "/projects/porsche-kar/porsche-kar.mp4",
+            "videoLink": "/projects/porsche-kar/porsche.mp4",
             "externalLink": "https://porsche-kar.vercel.app",
             "technologies": [
                 "javascript"
+            ],
+            "blocks": [
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide."
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/porsche-kar/porsche-kar-1.png"
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/porsche-kar/porsche-kar-2.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide.",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/porsche-kar/porsche-kar-3.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/porsche-kar/porsche-kar-4.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide."
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/porsche-kar/porsche-kar-5.png"
+                    }
+                }
             ]
         },
         {
@@ -330,6 +457,45 @@
             "technologies": [
                 "php",
                 "javascript"
+            ],
+            "blocks": [
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/monders/monders-1.png"
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/monders/monders-2.png"
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Présentation du projet",
+                        "text": "Balado est une plateforme innovante qui centralise et met en avant des podcasts dédiés aux sept arts : l'architecture, la sculpture, les arts visuels, la musique, la littérature, les arts de la scène et le cinéma. Chaque jour, un art est mis à l'honneur à travers un podcast sélectionné, permettant aux utilisateurs de découvrir et d’approfondir leurs connaissances dans ces domaines."
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/monders/monders-3.png"
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/monders/monders-4.png"
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/monders/monders-5.png"
+                    }
+                }
             ]
         },
         {
