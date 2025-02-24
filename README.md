@@ -40,3 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Prisma : https://medium.com/@claudio-dev/setting-up-and-seeding-an-sqlite-database-in-a-next-js-14-fullstack-project-using-prisma-cc5f5f678b19
 
 
+Error postgres : https://github.com/prisma/prisma/issues/11643
