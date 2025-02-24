@@ -3,30 +3,29 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "./generated/client"
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL") 
 }
 
 model Project {
-  id            String        @id @default(uuid())
-  title         String
-  slug          String        @unique
-  text          String
-  date          String
-  type          String
-  imgLink       String?
-  videoLink     String?
-  externalLink  String?
-  order         Int?
-  technologies  Technology[]
-  blocks        Block[]
+  id           String       @id @default(uuid())
+  title        String
+  slug         String       @unique
+  text         String
+  date         String
+  type         String
+  imgLink      String?
+  videoLink    String?
+  externalLink String?
+  order        Int?
+  technologies Technology[]
+  blocks       Block[]
 }
 
-model Technology { 
+model Technology {
   id       String    @id @default(uuid())
   name     String
   slug     String    @unique
