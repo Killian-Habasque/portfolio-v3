@@ -74,11 +74,11 @@ function BlockProjectsGrid({ preview = false }: BlockProjectsGridProps) {
             {preview ? (
               <h2 className="text-5xl md:text-8xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium">
                 Exemple <br />
-                de <span className="font-grandslang pl-4">projets</span>
+                de<span className="font-grandslang pl-4">projets</span>
               </h2>
             ) : (
               <h2 className="text-5xl md:text-8xl tracking-wid max-w-2xl font-outfit text-secondary-dark font-medium">
-                L&apos;ensemble <br />de mes <span className="font-grandslang pl-4">projets</span>
+                L&apos;ensemble <br />de mes<span className="font-grandslang pl-4">projets</span>
               </h2>
             )}
           </motion.div>

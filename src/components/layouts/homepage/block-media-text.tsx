@@ -5,6 +5,7 @@ import { Button } from "../../ui/button";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
+import Magnet from "@/components/ui/magnet";
 
 function BlockMediaText() {
     const [animationComplete, setAnimationComplete] = useState(false);
@@ -64,26 +65,26 @@ function BlockMediaText() {
     return (
         <section ref={ref} id="presentation" className="w-full py-20 px-4 lg:px-0 lg:py-40 block">
             <div className="container mx-auto">
-                <motion.div 
+                <motion.div
                     className="grid grid-cols-1 gap-16 items-center lg:grid-cols-5"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false, margin: "-100px" }}
                 >
-                    <motion.div 
+                    <motion.div
                         className="col-span-1 lg:col-span-2 flex gap-8 flex-col"
                         variants={textVariants}
                     >
                         <div className="flex gap-4 flex-col">
-                            <motion.h1 
+                            <motion.h1
                                 className="text-5xl md:text-8xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium"
                                 variants={textVariants}
                             >
                                 Qui<br></br>
                                 <span className="font-grandslang ">suis</span>-je ?
                             </motion.h1>
-                            <motion.p 
+                            <motion.p
                                 className="font-outfit text-secondary-light leading-[2] font-light text-md tracking-wide pt-4"
                                 variants={textVariants}
                             >
@@ -91,19 +92,21 @@ function BlockMediaText() {
                             </motion.p>
                         </div>
 
-                        <motion.div 
+                        <motion.div
                             className="flex flex-row gap-4"
                             variants={textVariants}
                         >
-                            <Button variant="primary" link="/projets">
-                                Voir tous les projets
-                                <ArrowRightIcon />
-                            </Button>
+                            <Magnet padding={50} disabled={false} magnetStrength={7}>
+                                <Button variant="primary" link="/projets">
+                                    Voir tous les projets
+                                    <ArrowRightIcon />
+                                </Button>
+                            </Magnet>
                         </motion.div>
                     </motion.div>
 
                     <div className="col-span-1 lg:col-span-3 grid grid-cols-3 h-full gap-4 lg:gap-8 items-center">
-                        <motion.div 
+                        <motion.div
                             className="relative col-span-1 rounded-full overflow-hidden mb-20 min-h-[200px] aspect-[8/16]"
                             variants={imageVariants}
                             style={{ y: animationComplete ? y1 : 0 }}
@@ -113,12 +116,12 @@ function BlockMediaText() {
                                     src="/about/photo_face.jpg"
                                     alt=""
                                     fill
-                                    className="sepia-[.50] w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                                    className="sepia-[.25] w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                                 />
                             </div>
                         </motion.div>
 
-                        <motion.div 
+                        <motion.div
                             className="relative col-span-2 rounded-3xl overflow-hidden mt-20 min-h-[200px] aspect-square"
                             variants={imageVariants}
                             style={{ y: animationComplete ? y2 : 0 }}
