@@ -7,7 +7,7 @@ interface CurvedTextProps {
 }
 
 const CurvedText: React.FC<CurvedTextProps> = ({ text, radius, className }) => {
-  const pathId = `curvedTextPath-${Math.random()}`;
+  const pathId = `curvedTextPath`;
 
   return (
     <svg
