@@ -5,6 +5,7 @@ import TransitionLayout from "./transition-layout";
 import { Footer } from "@/components/layouts/footer";
 import ProjectsProvider from '../providers/project-provider';
 import { Header } from "@/components/layouts/header";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "Killian HABASQUE | Portfolio",
@@ -30,6 +31,7 @@ export default async function RootLayout({
           </TransitionLayout>
         </ProjectsProvider>
       </body>
+      {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId="G-QLT7GQ0LT0" />}
     </html>
   );
 }

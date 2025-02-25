@@ -1,4 +1,5 @@
 import { classNames } from "@/lib/utils";
+import Link from "next/link";
 
 const buttonVariantClasses = {
   primary: "bg-primary-dark text-black hover:bg-primary hover",
@@ -15,9 +16,22 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLAnchorElemen
 }
 
 function Button({ className, link, variant = "primary", children, ...props }: ButtonProps) {
-  return (
+  const buttonContent = (
+    <span className="flex items-center gap-2 [&>svg]:w-4 [&>svg]:h-4">
+      {children}
+    </span>
+  );
+
+  return link ? (
+    <Link href={link} className={classNames(
+      "inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-md font-outfit transition-transform duration-300 ease-in-out hover:scale-105 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+      buttonVariantClasses[variant],
+      className
+    )} {...props}>
+      {buttonContent}
+    </Link>
+  ) : (
     <a
-      {...(!!link && { href: link })}
       className={classNames(
         "inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-md font-outfit transition-transform duration-300 ease-in-out hover:scale-105 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
         buttonVariantClasses[variant],
@@ -25,9 +39,7 @@ function Button({ className, link, variant = "primary", children, ...props }: Bu
       )}
       {...props}
     >
-      <span className="flex items-center gap-2 [&>svg]:w-4 [&>svg]:h-4">
-        {children}
-      </span>
+      {buttonContent}
     </a>
   );
 }

@@ -5,7 +5,7 @@ const badgeVariantClasses = {
   secondary: "border-[0.5px] border-secondary-light bg-secondary-light text-white",
   destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
   outline: "text-foreground",
-  dark: "bg-secondary-dark text-white",
+  dark: "border-secondary-dark bg-secondary-dark text-white hover:bg-secondary-dark/80",
 };
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
