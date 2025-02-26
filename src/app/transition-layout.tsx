@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function TransitionLayout({
   children,
@@ -11,9 +11,13 @@ export default function TransitionLayout({
 }) {
   const pathname = usePathname()
   const [isReverse, setIsReverse] = useState(false)
+  const prevPathnameRef = useRef<string | null>(null)
 
   useEffect(() => {
-    setIsReverse(prev => !prev)
+    if (prevPathnameRef.current !== pathname) {
+      setIsReverse(prev => !prev)
+      prevPathnameRef.current = pathname
+    }
   }, [pathname])
 
   const variants = {

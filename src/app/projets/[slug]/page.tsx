@@ -1,7 +1,7 @@
 import prisma from '@/lib/db';
 import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/ui/breadcrumb';
-import { HeroProject } from '@/components/layouts/project/HeroProject';
+import { HeroProject } from '@/components/layouts/project/hero-project';
 import BlockAdapter from '@/components/adapters/blockAdapter';
 import { BlockTextProps } from '@/components/layouts/project/block-text';
 import { BlockListProps } from '@/components/layouts/project/block-list';

@@ -215,7 +215,7 @@
         {
             "title": "Siège ergonomique",
             "slug": "siege-ergonomique",
-            "text": "Réalisation d'un blog optimisé en Nextjs/ Wordpress graphql",
+            "text": "Un blog optimisé pour le SEO et le SSR",
             "type": "Projet personnel",
             "order": 4,
             "date": "2024",
@@ -229,17 +229,70 @@
             ],
             "blocks": [
                 {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "Siège Ergonomique est un projet personnel ayant pour objectif de se perfectionner dans le SEO et d’optimiser le rendu SSR (Server-Side Rendering) pour améliorer les performances et l’indexation sur les moteurs de recherche. Il s’agit d’un blog spécialisé sur les chaises ergonomiques, proposant des guides détaillés et des comparatifs, avec une monétisation via le partenariat Amazon."
+                    }
+                },
+                {
                     "type": "IMAGE",
                     "content": {
-                        "image": "/projects/siege-ergonomique/siege-ergonomique-1.png",
+                        "image": "/projects/siege-ergonomique/siege-ergonomique-1.png"
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/siege-ergonomique/siege-ergonomique-2.png",
                         "colspan": 1
                     }
                 },
                 {
                     "type": "TEXT",
                     "content": {
-                        "title": "Optimisation et axes d’amélioration",
-                        "text": "Ce projet a été développé en JavaScript natif, ce qui a permis une meilleure compréhension des concepts fondamentaux, mais présente certaines limites en termes d’optimisation et d’architecture. L’utilisation de React pour la gestion de l’état et des composants interactifs aurait amélioré la structure et la scalabilité de l’application."
+                        "title": "Présentation du projet",
+                        "text": "Le site combine un back-end sous WordPress, enrichi avec ACF et GraphQL, et un front-end développé en Next.js pour assurer un rendu dynamique, rapide et bien optimisé pour le référencement.",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Technologies utilisées",
+                        "items": [
+                            "WordPress + ACF : Gestion des articles et des contenus personnalisés.",
+                            "GraphQL : API flexible pour récupérer efficacement les données du back-end.",
+                            "Next.js : Rendu SSR pour améliorer la vitesse et le SEO..",
+                            "Stripe API : Intégration d’un paiement en ligne sécurisé.",
+                            "Docker/ Render : Conteneurisation du projet et déploiement."
+                        ]
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/siege-ergonomique/siege-ergonomique-3.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/siege-ergonomique/siege-ergonomique-4.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Technologies utilisées",
+                        "items": [
+                            "🔍 Optimisation SEO avancée : Balises bien structurées, schema.org, chargement rapide.",
+                            "🚀 Rendu SSR avec Next.js : Améliore la vitesse de chargement et le référencement naturel.",
+                            "📖 Gestion de contenu flexible : WordPress + ACF pour une mise à jour facile et accessible des articles",
+                            "📊 Architecture optimisée : API GraphQL pour récupérer uniquement les données nécessaires."
+                        ]
                     }
                 }
             ]
@@ -247,7 +300,7 @@
         {
             "title": "Symfony shop",
             "slug": "symfony-shop",
-            "text": "Site e-commerce fait en Symfony",
+            "text": "Un e-commerce complet avec gestion des commandes et paiements",
             "type": "Projet scolaire",
             "date": "2024",
             "imgLink": "/projects/symfony-shop/symfony.avif",
@@ -255,6 +308,103 @@
             "technologies": [
                 "php",
                 "symfony"
+            ],
+            "blocks": [
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "Symfony Shop est un projet scolaire, réalisé à deux personnes, ayant pour objectif de découvrir et maîtriser Symfony et ses principales fonctionnalités. Pour cela, nous avons développé une boutique en ligne complète, intégrant la gestion des produits, un parcours d’achat fluide, une validation de commande et un paiement sécurisé via Stripe API."
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/symfony-shop/symfony.avif"
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Présentation du projet",
+                        "text": "L’application permet aux utilisateurs de parcourir des produits, d’ajouter des articles à leur panier et de finaliser leur commande avec un paiement sécurisé. Une interface d’administration a également été développée pour gérer les produits via un CRUD. Je me suis principalement occupé de la gestion des commandes, du panier et du paiement."
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Technologies utilisées",
+                        "items": [
+                            "Symfony : Gestion du back-end, routage et logique métier.",
+                            "Twig : Moteur de templating utilisé pour le rendu des pages côté front.",
+                            "Sessions Symfony : Gestion des paniers et des commandes utilisateur.",
+                            "Stripe API : Intégration d’un paiement en ligne sécurisé.",
+                            "Docker/ Render : Conteneurisation du projet et déploiement."
+                        ]
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/symfony-shop/symfony-1.avif",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/symfony-shop/symfony-2.avif",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/symfony-shop/symfony-3.avif",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/symfony-shop/symfony-4.avif",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Objectif",
+                        "text": "L’objectif était de mettre en pratique les fonctionnalités essentielles de Symfony tout en concevant un projet concret et fonctionnel. Ce projet a permis d’explorer les formulaires Symfony, la gestion des sessions, l’authentification et les interactions avec une API externe (Stripe)."
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Fonctionnalités clés",
+                        "items": [
+                            "🛍 Gestion des produits : Ajout, modification et suppression des articles via une interface admin.",
+                            "🛒 Parcours d’achat complet : Sélection des produits, ajout au panier et validation de commande.",
+                            "💳 Paiement sécurisé avec Stripe API : Processus de paiement fluide et sécurisé.",
+                            "📦 Gestion des commandes : Enregistrement des commandes et historique pour l’utilisateur.",
+                            "⚙️ Interface d’administration avec CRUD : Gestion des produits et suivi des transactions."
+                        ]
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/symfony-shop/symfony-5.avif",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/symfony-shop/symfony-6.avif",
+                        "colspan": 1
+                    }
+                }
             ]
         },
         {
@@ -273,6 +423,57 @@
                 "mongodb",
                 "docker",
                 "gitlab"
+            ],
+            "blocks": [
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "Doo-ERP est un ERP interne, développé en collaboration avec trois personnes, conçu pour suivre et gérer les projets clients liés au développement web et aux sites internet. L’objectif était de centraliser et d’optimiser la gestion des projets, des utilisateurs, des rôles, du suivi des heures travaillées, des comptes rendus, du ticketing et de la gestion des mots de passe."
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Présentation du projet",
+                        "text": "L’ERP permet un suivi détaillé des projets en cours, avec un système de gestion des utilisateurs et des rôles, tout en intégrant un module de compte rendu stocké sous forme de documents. Une gestion sécurisée des mots de passe a été mise en place pour garantir la protection des comptes utilisateurs. L’architecture moderne et modulaire assure un accès rapide aux données et une gestion fluide des différentes interactions. Dans ce projet, je me suis principalement occupé de la gestion des projets, des utilisateurs, des rôles et des comptes rendus."
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Technologies utilisées",
+                        "items": [
+                            "React : Frontend interactif et dynamique pour une expérience utilisateur fluide.",
+                            "Laravel : Gestion du backend et des API, avec Eloquent pour l’accès aux données.",
+                            "GraphQL (Lighthouse) : API flexible et optimisée pour récupérer uniquement les données nécessaires.",
+                            "MySQL : Stockage des données principales avec un modèle relationnel structuré.",
+                            "MongoDB : Stockage des comptes rendus sous forme de documents pour une plus grande flexibilité.",
+                            "Docker : Conteneurisation de l’application pour assurer un déploiement uniforme sur toutes les machines.",
+                            "GitLab CI/CD : Automatisation du déploiement à chaque modification, garantissant des mises à jour fluides et sécurisées."
+                        ]
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Objectif",
+                        "text": "L’objectif était de créer un ERP performant et évolutif, capable de gérer efficacement les projets, les utilisateurs et le suivi des tâches, tout en exploitant une architecture moderne et scalable pour assurer sa pérennité."
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Fonctionnalités clés",
+                        "items": [
+                            "📂 Gestion des projets : Suivi des tâches, état d’avancement et répartition des ressources.",
+                            "👥 Gestion des utilisateurs et des rôles : Attribution de permissions spécifiques pour sécuriser l’accès aux données.",
+                            "🔐 Gestion des mots de passe : Stockage sécurisé avec hachage, réinitialisation et récupération.",
+                            "📝 Compte rendu & stockage : Utilisation de MongoDB pour stocker des rapports flexibles et détaillés.",
+                            "⏳ Suivi des heures travaillées : Enregistrement du temps passé sur chaque tâche."
+                        ]
+                    }
+                }
             ]
         },
         {
@@ -297,13 +498,33 @@
                     "type": "TEXT",
                     "content": {
                         "title": "Contexte du projet",
-                        "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide."
+                        "text": "Pour le site Doowup, je me suis occupé exclusivement de la partie blog, qui fonctionne indépendamment du site principal développé en PHP. L’objectif était de concevoir un blog performant et optimisé, capable d’offrir une expérience fluide et rapide, tout en étant bien référencé sur les moteurs de recherche."
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Technologies utilisées",
+                        "items": [
+                            "Next.js : Rendu SSR pour des performances accrues et un SEO optimisé.",
+                            "Strapi : CMS headless pour la gestion des articles et du contenu.",
+                            "MySQL : Stockage des données et gestion des relations entre les contenus.",
+                            "Docker : Conteneurisation du projet pour un déploiement fiable et scalable.",
+                            "GitLab CI/CD : Automatisation du déploiement à chaque modification du code ou du contenu."
+                        ]
                     }
                 },
                 {
                     "type": "IMAGE",
                     "content": {
-                        "image": "/projects/blog-doowup/blog-doowup-1.png",
+                        "image": "/projects/blog-doowup/blog-doowup-1.png"
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Présentation du projet",
+                        "text": "Le choix s’est porté sur Next.js, permettant un rendu SSR (Server-Side Rendering) pour une meilleure performance et une indexation SEO optimale. Pour la gestion du contenu, Strapi a été utilisé en backend, couplé à MySQL pour le stockage des données. Afin d'assurer une gestion efficace du déploiement, une infrastructure Docker a été mise en place sur un VPS, accompagnée d'une pipeline GitLab CI/CD pour automatiser les mises à jour du code et du contenu.",
                         "colspan": 1
                     }
                 },
@@ -327,6 +548,26 @@
                         "image": "/projects/blog-doowup/blog-doowup-4.png",
                         "colspan": 1
                     }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Objectif",
+                        "text": "L’objectif principal était d’avoir un blog rapide, évolutif et optimisé pour le référencement, tout en mettant en place une infrastructure robuste et automatisée."
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Fonctionnalités clés",
+                        "items": [
+                            "🚀 Optimisation des performances grâce au rendu SSR et aux bonnes pratiques Next.js.",
+                            "🔍 Travail approfondi sur le SEO (titres, schemas JSON-LD, performances et indexation).",
+                            "⚙️ Déploiement automatisé via GitLab CI/CD pour synchroniser facilement le code et le contenu.",
+                            "🏗 Infrastructure scalable avec Docker, facilitant la gestion et la montée en charge.",
+                            "📄 Gestion fluide des articles via Strapi, avec une API headless flexible et performante."
+                        ]
+                    }
                 }
             ]
         },
@@ -347,13 +588,23 @@
                     "type": "TEXT",
                     "content": {
                         "title": "Contexte du projet",
-                        "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide."
+                        "text": "Ce portfolio, conçu en 2019, avait pour but de proposer une présentation claire et épurée de mon travail tout en expérimentant des animations dynamiques pour enrichir l’expérience utilisateur. À travers un design minimaliste et moderne, l’objectif était de mettre en avant mes compétences et projets de manière fluide et interactive. Ce site a depuis été remplacé par une version plus récente intégrant des technologies modernes comme nextjs et de la 3D avec threejs."
                     }
                 },
                 {
                     "type": "IMAGE",
                     "content": {
                         "image": "/projects/portfolio-v2/portfolio-v2-1.png"
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Technologies utilisées",
+                        "items": [
+                            "JavaScript : Gestion des interactions utilisateur et animations.",
+                            "GSAP : Animation fluide des éléments pour une expérience immersive."
+                        ]
                     }
                 },
                 {
@@ -393,7 +644,7 @@
                     "type": "TEXT",
                     "content": {
                         "title": "Contexte du projet",
-                        "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide."
+                        "text": "Ce projet est une initiative personnelle visant à mettre en valeur le concept-car Porsche 968 L’Art, fruit de la collaboration entre Porsche et Arthur Kar. L’objectif était de concevoir une expérience web immersive pour présenter cette voiture unique tout en perfectionnant mes compétences en intégration web et animations JavaScript."
                     }
                 },
                 {
@@ -412,8 +663,8 @@
                 {
                     "type": "TEXT",
                     "content": {
-                        "title": "Contexte du projet",
-                        "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide.",
+                        "title": "Présentation du projet",
+                        "text": "Le site offre une présentation détaillée du design, de l’histoire et des caractéristiques de la Porsche 968 L’Art, en mettant l’accent sur une navigation fluide et un visuel impactant. L’interface combine un design épuré avec des animations dynamiques, permettant une immersion complète dans l’univers du véhicule.",
                         "colspan": 1
                     }
                 },
@@ -432,10 +683,14 @@
                     }
                 },
                 {
-                    "type": "TEXT",
+                    "type": "LIST",
                     "content": {
-                        "title": "Contexte du projet",
-                        "text": "Ce projet a été réalisé dans le cadre de ma première année de mastère en développement web. L’objectif était de renforcer mes compétences en algorithmie JavaScript, tout en explorant la modélisation et l’animation 3D avec Three.js. Le défi principal consistait à reproduire fidèlement la mécanique du jeu de Yams (ou Yatzee) tout en offrant une expérience visuelle et interactive fluide."
+                        "title": "Technologies utilisées",
+                        "items": [
+                            "JavaScript : Animations fluides et interactions dynamiques pour enrichir l’expérience utilisateur.",
+                            "GSAP/ Locomotive scroll : Gestion des animations et effets de transition.",
+                            "Netlify : Hébergement et déploiement du projet."
+                        ]
                     }
                 },
                 {
@@ -449,7 +704,7 @@
         {
             "title": "Monders",
             "slug": "monders",
-            "text": "Expérience web qui présente les différentes merveilles du monde",
+            "text": "Une expérience ludique autour des 7 merveilles du monde",
             "type": "Projet scolaire",
             "date": "2021",
             "imgLink": "/projects/monders/monders.png",
@@ -460,22 +715,54 @@
             ],
             "blocks": [
                 {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "Monders a été conçu dans le cadre de ma formation DUT Métiers du multimédia et de l'internet et s'inscrit dans une démarche éducative et interactive. L'objectif était de développer un site web immersif permettant aux utilisateurs de découvrir les 7 merveilles du monde moderne de manière ludique et progressive. Grâce à une expérience gamifiée, les visiteurs doivent compléter des quiz pour débloquer la merveille suivante, ce qui favorise l'apprentissage tout en rendant la navigation engageante et motivante."
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Technologies utilisées",
+                        "items": [
+                            "PHP : Gestion des utilisateurs et des données liées aux merveilles (stockage, progression).",
+                            "JavaScript : Implémentation des quiz interactifs et des animations dynamiques.",
+                            "HTML / SCSS : Structuration et mise en forme du contenu pour une expérience fluide et moderne.",
+                            "Github : Versionning du code",
+                            "Gestion de projet : Utilisation d’outils comme Notion et Google Drive pour organiser les tâches et suivre les avancées."
+                        ]
+                    }
+                },
+                {
                     "type": "IMAGE",
                     "content": {
                         "image": "/projects/monders/monders-1.png"
                     }
                 },
                 {
-                    "type": "IMAGE",
-                    "content": {
-                        "image": "/projects/monders/monders-2.png"
-                    }
-                },
-                {
                     "type": "TEXT",
                     "content": {
                         "title": "Présentation du projet",
-                        "text": "Balado est une plateforme innovante qui centralise et met en avant des podcasts dédiés aux sept arts : l'architecture, la sculpture, les arts visuels, la musique, la littérature, les arts de la scène et le cinéma. Chaque jour, un art est mis à l'honneur à travers un podcast sélectionné, permettant aux utilisateurs de découvrir et d’approfondir leurs connaissances dans ces domaines."
+                        "text": "Monders propose un parcours interactif où chaque jour, une merveille est mise en avant. L'utilisateur peut en apprendre davantage à travers des contenus pédagogiques et tester ses connaissances via un quiz final."
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Fonctionnalités clés",
+                        "items": [
+                            "📜 Découverte des merveilles du monde à travers des contenus interactifs.",
+                            "🧩 Quiz de validation permettant de débloquer la merveille suivante.",
+                            "👍 Système de notation pour recueillir des avis et améliorer l’expérience utilisateur.",
+                            "📊 Suivi de progression personnalisé grâce à un compte utilisateur."
+                        ]
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/monders/monders-2.png"
                     }
                 },
                 {
@@ -487,13 +774,15 @@
                 {
                     "type": "IMAGE",
                     "content": {
-                        "image": "/projects/monders/monders-4.png"
+                        "image": "/projects/monders/monders-4.png",
+                        "colspan": 1
                     }
                 },
                 {
                     "type": "IMAGE",
                     "content": {
-                        "image": "/projects/monders/monders-5.png"
+                        "image": "/projects/monders/monders-5.png",
+                        "colspan": 1
                     }
                 }
             ]

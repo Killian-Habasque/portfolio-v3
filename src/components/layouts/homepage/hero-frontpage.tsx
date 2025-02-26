@@ -5,7 +5,7 @@ import Model3DLogo from "@/components/ui/model";
 import { useCallback, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { WelcomeExample } from "../../ui/texts/texts";
+import { WelcomeText } from "../../ui/texts/texts";
 import { ButtonScrollTop } from "../../ui/button-scroll-top";
 import CurvedText from "@/components/ui/texts/curved-text";
 import Magnet from "@/components/ui/magnet";
@@ -83,7 +83,10 @@ const HeroFrontpage: React.FC<Props> = () => {
             >
                 <div className="flex flex-col-reverse justify-end lg:justify-between h-full lg:flex-row max-w-md lg:max-w-full w-full lg:auto">
                     <div className="flex items-center py-8 pb-24 lg:pb-0 lg:py-0 lg:h-full">
-                        <WelcomeExample />
+                        <h1 className="sr-only">Killian Habasque</h1>
+                        <h2 className="sr-only">Développeur web</h2>
+                        <h2 className="sr-only">Portoflio 2025</h2>
+                        <WelcomeText />
                     </div>
                     <motion.div
                         className="w-full-8 lg:w-full -mx-8 lg:-mx-0 h-full max-h-96 lg:max-h-full grid grid-cols-2 gap-2 lg:gap-6 lg:py-0 lg:max-w-4xl 2xl:max-w-5xl"

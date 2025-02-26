@@ -77,13 +77,13 @@ function BlockMediaText() {
                         variants={textVariants}
                     >
                         <div className="flex gap-4 flex-col">
-                            <motion.h1
+                            <motion.h2
                                 className="text-5xl md:text-8xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium"
                                 variants={textVariants}
                             >
                                 Qui<br></br>
                                 <span className="font-grandslang ">suis</span>-je ?
-                            </motion.h1>
+                            </motion.h2>
                             <motion.p
                                 className="font-outfit text-secondary-light leading-[2] font-light text-md tracking-wide pt-4"
                                 variants={textVariants}

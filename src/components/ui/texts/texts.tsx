@@ -3,7 +3,7 @@
 import { VerticalCutReveal } from "./letter-vertical-cut-reaveal"
 import { motion } from "framer-motion"
 
-function WelcomeExample() {
+function WelcomeText() {
   return (
     <div className="flex flex-col">
       <div className="text-secondary-dark left-0 text-6xl lg:text-7xl xl:text-8xl flex flex-col items-start justify-center font-outfit tracking-wide text-secondary-dark">
@@ -54,7 +54,7 @@ function WelcomeExample() {
           {`Développeur web`}
         </VerticalCutReveal>
 
-        <motion.span 
+        <motion.span
           className="w-full h-[1px] bg-secondary"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
@@ -216,7 +216,7 @@ function LongTextExample() {
 }
 
 export {
-  WelcomeExample,
+  WelcomeText,
   LinesSplitExample,
   WordsSplitExample,
   StaggerDirectionsExample,
