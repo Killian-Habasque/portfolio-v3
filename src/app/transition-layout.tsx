@@ -10,7 +10,7 @@ export default function TransitionLayout({
   children: React.ReactNode
 }) {
   const pathname = usePathname()
-  const [isReverse, setIsReverse] = useState(false)
+  const [isReverse, setIsReverse] = useState(true)
   const prevPathnameRef = useRef<string | null>(null)
 
   useEffect(() => {

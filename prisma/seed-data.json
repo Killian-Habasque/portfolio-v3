@@ -210,6 +210,70 @@
             "technologies": [
                 "react",
                 "firebase"
+            ],
+            "blocks": [
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "SubOptimize est mon projet de fin d’année scolaire, développé dans le cadre de la validation de mon mastère. Ce projet a pour but de centraliser et optimiser la gestion des abonnements en permettant aux utilisateurs de suivre leurs dépenses, d’identifier les abonnements inutilisés, et de bénéficier d’offres alternatives plus avantageuses. Dans ce projet, je suis en charge de toute la gestion du projet, allant de la réalisation des maquettes et wireframes au développement complet de l’application."
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/suboptimize/suboptimize-1.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Présentation du projet",
+                        "text": "SubOptimize permet aux utilisateurs de gérer leurs abonnements. Grâce à un calendrier des échéances, des alertes personnalisées et un suivi détaillé des coûts, l’application offre une vue d’ensemble des abonnements actifs et aide les utilisateurs à optimiser leurs dépenses. L’intégration d’un système de notification et de suggestions d’offres permet également de repérer des alternatives plus économiques.",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Technologies utilisées",
+                        "items": [
+                            "React : Frontend intéractif et dynamique",
+                            "Typescript : Typage fort pour une meilleure maintenabilité du code.",
+                            "Firebase : Gestion de l’authentification, de la base de données et du stockage en temps réel.",
+                            "Tailwind CSS : Framework CSS pour un design rapide, homogène et moderne."
+                        ]
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Objectif",
+                        "text": "L’objectif est de proposer une solution simple et efficace pour aider les utilisateurs à suivre, analyser et optimiser leurs abonnements, en centralisant toutes les informations et en automatisant les alertes et recommandations.",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/suboptimize/suboptimize-2.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Fonctionnalités clés",
+                        "items": [
+                            "📅 Gestion des abonnements : Ajout, suivi et catégorisation des abonnements.",
+                            "🔔 Alerte des échéances : Notifications pour éviter les renouvellements non désirés.",
+                            "📊 Analyse des dépenses : Visualisation des coûts mensuels et annuels.",
+                            "🏷️ Offres et promotions : Notifications sur les nouvelles offres adaptées aux préférences de l’utilisateur.",
+                            "📌 Échange communautaire : Classement et votes sur les meilleures offres disponibles."
+                        ]
+                    }
+                }
             ]
         },
         {
@@ -634,7 +698,7 @@
             "type": "Projet personnel",
             "date": "2022",
             "imgLink": "/projects/porsche-kar/porsche-kar.png",
-            "videoLink": "/projects/porsche-kar/porsche.mp4",
+            "videoLink": "/projects/porsche-kar/porsche-kar.mp4",
             "externalLink": "https://porsche-kar.vercel.app",
             "technologies": [
                 "javascript"

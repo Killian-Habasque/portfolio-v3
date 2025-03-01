@@ -138,3 +138,14 @@ canvas {
   font-style: normal;
   font-display: swap;
 }
+
+#marquee::before {
+  background: linear-gradient(90deg,var(--background),transparent 10%,transparent 90%,var(--background));
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}

@@ -22,7 +22,7 @@ export const BlockImage: React.FC<BlockImageProps> = ({ image, colspan = 2 }) =>
             >
                 <Image 
                     src={image} 
-                    alt="Project Image" 
+                    alt={`Image du projet ${image}`}
                     fill
                     unoptimized
                     className="object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-90"
@@ -58,7 +58,7 @@ export const BlockImage: React.FC<BlockImageProps> = ({ image, colspan = 2 }) =>
                                 </motion.button>
                                 <Image
                                     src={image}
-                                    alt="Project Image"
+                                    alt={`Image du projet ${image}`}
                                     className="max-h-[85vh] w-auto h-auto"
                                     width={1920}
                                     height={1080}

@@ -69,7 +69,7 @@ export function BlockEducation() {
   const titleVariants = {
     hidden: {
       opacity: 0,
-      y: 50,
+      y: 25,
     },
     visible: {
       opacity: 1,
@@ -86,7 +86,7 @@ export function BlockEducation() {
   const cardVariants = {
     hidden: {
       opacity: 0,
-      y: 150,
+      y: 50,
     },
     visible: {
       opacity: 1,
@@ -108,7 +108,7 @@ export function BlockEducation() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false, margin: "-100px" }}
         >
           <motion.h2
             className="text-5xl md:text-6xl tracking-wid max-w-xl font-outfit text-secondary-dark font-medium max-w-4xl"
@@ -132,7 +132,7 @@ export function BlockEducation() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false, margin: "-100px" }}
         >
           {educationData.map((education, index) => (
             <motion.div
