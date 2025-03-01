@@ -114,7 +114,7 @@ function BlockMediaText() {
                             <div className="relative w-full h-full">
                                 <Image
                                     src="/about/photo_face.jpg"
-                                    alt=""
+                                    alt="Killian Habasque photo de face"
                                     fill
                                     className="sepia-[.25] w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                                 />
@@ -129,7 +129,7 @@ function BlockMediaText() {
                             <div className="relative w-full h-full">
                                 <Image
                                     src="/about/photo_paysage_dos.jpg"
-                                    alt=""
+                                    alt="Killian Habasque photo de dos"
                                     fill
                                     className="sepia-[.25] w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                                 />

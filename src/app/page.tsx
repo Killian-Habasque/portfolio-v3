@@ -5,7 +5,7 @@ import { BlockIntro } from "@/components/layouts/homepage/block-intro";
 import { BlockMediaText } from "@/components/layouts/homepage/block-media-text";
 import { BlockProjectsGrid } from "@/components/layouts/homepage/block-projects-grid";
 import HeroFrontpage from "@/components/layouts/homepage/hero-frontpage";
-// import { BlockMarquee } from "@/components/layouts/homepage/block-technologies";
+import { BlockMarquee } from "@/components/layouts/homepage/block-technologies";
 
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <BlockProjectsGrid preview={true} />
       <BlockMediaText />
       <BlockEducation />
-      {/* <BlockMarquee /> */}
+      <BlockMarquee />
       <BlockExperience />
       <BlockContact />
     </>

@@ -73,7 +73,7 @@ export function HeroVideoDialog({
   animationStyle = "from-center",
   videoSrc,
   thumbnailSrc,
-  thumbnailAlt = "Video thumbnail",
+  thumbnailAlt = "Image de présenation video",
   className,
 }: HeroVideoProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false)

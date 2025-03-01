@@ -146,13 +146,13 @@ export function HeroProject({
             animationStyle="from-center"
             videoSrc={`${formattedProject.videoLink}`}
             thumbnailSrc={`${formattedProject.imgLink}`}
-            thumbnailAlt={`Cover Image for ${formattedProject.title}`}
+            thumbnailAlt={`Image de ${formattedProject.title}`}
           />
         ) : (
           <div className="relative overflow-hidden rounded-3xl aspect-[16/9] border-2">
             <Image
               src={`${formattedProject.imgLink}`}
-              alt={`Cover Image for ${formattedProject.title}`}
+              alt={`Image de ${formattedProject.title}`}
               fill
               className="object-cover"
               priority

@@ -39,7 +39,7 @@ export function Header() {
           }}
         >
           <Link href="/" className="flex items-center h-16">
-            <Image width={25} height={40} alt="" src="/logo.svg" />
+            <Image width={25} height={40} alt="Logo Killian Habasque" src="/logo.svg" />
           </Link>
         </motion.div>
       </div>

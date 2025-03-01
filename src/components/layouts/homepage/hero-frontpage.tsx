@@ -114,7 +114,7 @@ const HeroFrontpage: React.FC<Props> = () => {
                             </motion.div>
                             <Image
                                 src={`/about/photo_3-4_face.jpg`}
-                                alt={`Cover Image`}
+                                alt={`Killian Habasque photo 3/4 face`}
                                 fill
                                 className="sepia-[.25] h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                                 priority

@@ -1,5 +1,8 @@
+"use client"
 import { Marquee } from "@/components/ui/marquee"
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const Logos = {
     figma: () => (
@@ -127,45 +130,113 @@ const Logos = {
 
 export function BlockMarquee() {
     const arr = [Logos.javascript, Logos.nextjs, Logos.react, Logos.nest, Logos.php, Logos.laravel, Logos.symfony]
-    const arr2 = [Logos.mongodb, Logos.mysql, Logos.postgres, Logos.git, Logos.graphql]
-    const arr3 = [Logos.firebase, Logos.supabase, Logos.docker, Logos.wordpress,  Logos.strapi, Logos.figma]
+    const arr2 = [Logos.mongodb, Logos.mysql, Logos.wordpress, Logos.docker, Logos.postgres, Logos.git, Logos.graphql]
+    // const arr3 = [Logos.firebase, Logos.supabase, Logos.docker, Logos.wordpress,  Logos.strapi, Logos.figma]
+
+    const ref = useRef<HTMLDivElement>(null);
+
+    const containerVariants = {
+        hidden: { opacity: 0, y: 25 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut",
+                staggerChildren: 0.4,
+            },
+        },
+    };
+
+    const titleVariants = {
+        hidden: {
+            opacity: 0,
+            y: 25,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                duration: 1,
+                bounce: 0.2,
+                damping: 25,
+            },
+        },
+    }
 
     return (
-        <section id="technologies" className="pb-20 pt-20 lg:pt-40">
+        <section id="technologies" className="pb-20 pt-20 px-4 lg:pt-40 flex flex-col gap-16" ref={ref}>
+            <motion.div
+                className="mx-auto max-w-4xl w-full"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, margin: "-100px" }}
+            >
+                <motion.h2
+                    className="text-5xl md:text-6xl tracking-wid text-left lg:text-center font-outfit text-secondary-dark font-medium"
+                    variants={titleVariants}
+                >
+                    Technologies
+                </motion.h2>
+            </motion.div>
 
-            <h2 className="text-5xl md:text-6xl tracking-wid text-center font-outfit text-secondary-dark font-medium">
-                Techologies
-            </h2>
-            <Marquee pauseOnHover>
-                {arr.map((Logo, index) => (
-                    <div
-                        key={index}
-                        className="relative h-full w-fit mx-[4rem] flex items-center justify-start"
-                    >
-                        <Logo />
-                    </div>
-                ))}
-            </Marquee>
-            <Marquee direction="right" pauseOnHover>
-                {arr2.map((Logo, index) => (
-                    <div
-                        key={index}
-                        className="relative h-full w-fit mx-[4rem] flex items-center justify-start"
-                    >
-                        <Logo />
-                    </div>
-                ))}
-            </Marquee>
-            <Marquee pauseOnHover>
-                {arr3.map((Logo, index) => (
-                    <div
-                        key={index}
-                        className="relative h-full w-fit mx-[4rem] flex items-center justify-start"
-                    >
-                        <Logo />
-                    </div>
-                ))}
-            </Marquee>
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                className="w-full"
+                viewport={{ once: false, margin: "-100px" }}
+            >
+                <Marquee pauseOnHover>
+                    {arr.map((Logo, index) => (
+                        <div
+                            key={index}
+                            className="relative h-full w-fit mx-[4rem] flex items-center justify-start"
+                        >
+                            <Logo />
+                        </div>
+                    ))}
+                </Marquee>
+            </motion.div>
+
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                className="w-full"
+                viewport={{ once: false, margin: "-100px" }}
+            >
+                <Marquee direction="right" pauseOnHover>
+                    {arr2.map((Logo, index) => (
+                        <div
+                            key={index}
+                            className="relative h-full w-fit mx-[4rem] flex items-center justify-start"
+                        >
+                            <Logo />
+                        </div>
+                    ))}
+                </Marquee>
+            </motion.div>
+
+
+            <motion.div
+                className="mx-auto max-w-4xl w-full"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, margin: "-100px" }}
+            >
+                <motion.p
+                    className="font-outfit text-secondary-light text-left lg:text-center font-light text-lg tracking-wide pt-4 max-w-3xl mx-auto"
+                    variants={titleVariants}
+                >
+                    Voici quelques exemples de technologies et frameworks que j&apos;ai utilisés dans mes projets scolaires, professionnels et personnels.
+
+                    Toujours en quête d&apos;apprentissage, je reste entièrement ouvert à l&apos;exploration de nouveaux outils et m&apos;adapte rapidement aux environnements techniques et aux besoins des projets.
+                </motion.p>
+            </motion.div>
         </section>
     )
 }

@@ -93,30 +93,30 @@ function BlockProjectsGrid({ preview = false }: BlockProjectsGridProps) {
           </motion.p>
           {!preview ? (
             <motion.div variants={fadeUpVariants} custom={0.4} className="flex flex-wrap gap-2 pt-4">
-              <Badge 
-                onClick={() => handleBadgeClick("")} 
-                variant={selectedType === "" ? "primary" : "outline"} 
+              <Badge
+                onClick={() => handleBadgeClick("")}
+                variant={selectedType === "" ? "primary" : "outline"}
                 className="cursor-pointer"
               >
                 Tout
               </Badge>
-              <Badge 
-                onClick={() => handleBadgeClick("Projet personnel")} 
-                variant={selectedType === "Projet personnel" ? "primary" : "outline"} 
+              <Badge
+                onClick={() => handleBadgeClick("Projet personnel")}
+                variant={selectedType === "Projet personnel" ? "primary" : "outline"}
                 className="cursor-pointer"
               >
                 Projet personnel
               </Badge>
-              <Badge 
-                onClick={() => handleBadgeClick("Projet professionnel")} 
-                variant={selectedType === "Projet professionnel" ? "primary" : "outline"} 
+              <Badge
+                onClick={() => handleBadgeClick("Projet professionnel")}
+                variant={selectedType === "Projet professionnel" ? "primary" : "outline"}
                 className="cursor-pointer"
               >
                 Projet professionnel
               </Badge>
-              <Badge 
-                onClick={() => handleBadgeClick("Projet scolaire")} 
-                variant={selectedType === "Projet scolaire" ? "primary" : "outline"} 
+              <Badge
+                onClick={() => handleBadgeClick("Projet scolaire")}
+                variant={selectedType === "Projet scolaire" ? "primary" : "outline"}
                 className="cursor-pointer"
               >
                 Projet scolaire
@@ -138,20 +138,29 @@ function BlockProjectsGrid({ preview = false }: BlockProjectsGridProps) {
             </motion.div>
           ))}
         </motion.div>
+        {preview ? (
+          <motion.div
+            initial="hidden"
+            animate={isInViewGrid ? "visible" : "hidden"}
+            variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+          >
+            <motion.div variants={fadeUpVariants} custom={0.2}>
+              <div className="flex flex-col lg:flex-row gap-2 items-center justify-center my-20">
+                <p className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide">
+                  Retrouvez l&apos;ensemble de mes projets
+                </p>
+                <div className="flex gap-2 items-center">
+                  <ArrowLongRightIcon className="size-5" />
+                  <Link href={"/projets"} className="underline font-bold tracking-wide font-outfit">
+                    En découvrir plus
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        ) : ''}
       </div>
-      {preview ? (
-        <div className="flex flex-col lg:flex-row gap-2 items-center justify-center my-20">
-          <p className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide">
-            Retrouvez l&apos;ensemble de mes projets
-          </p>
-          <div className="flex gap-2 items-center">
-            <ArrowLongRightIcon className="size-5"/>
-            <Link href={"/projets"} className="underline font-bold tracking-wide font-outfit">
-              En découvrir plus
-            </Link>
-          </div>
-        </div>
-      ) : ''}
+
     </div>
   );
 }

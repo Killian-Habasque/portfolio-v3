@@ -45,7 +45,7 @@ export function Card({ preview, title, text, slug = "#", type, imgLink, videoLin
                     {imgLink && (
                         <Image
                             src={`${imgLink}`}
-                            alt={`Cover Image for ${title}`}
+                            alt={`Image de présenation : ${title}`}
                             fill
                             className="object-cover"
                         />
@@ -64,6 +64,7 @@ export function Card({ preview, title, text, slug = "#", type, imgLink, videoLin
                                 muted
                                 playsInline
                                 disablePictureInPicture
+                                preload="none"
                                 controlsList="nodownload nofullscreen noremoteplayback"
                             >
                                 <source src={`${videoLink}`} type="video/mp4" />
