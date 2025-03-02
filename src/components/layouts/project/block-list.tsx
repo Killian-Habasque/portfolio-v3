@@ -11,14 +11,14 @@ export const BlockList: React.FC<BlockListProps> = ({ title, text, items, colspa
     return (
         <div className={`${colspanClass} w-full rounded-2xl lg:p-4 font-outfit flex flex-col justify-center`}>
             {title && (
-                <h2 className="text-3xl md:text-5xl font-bold tracking-normal leading-none mb-6 text-secondary-dark">
+                <h2 className="text-2xl lg:text-5xl font-bold tracking-normal leading-none mb-6 text-secondary-dark">
                     {title}
                 </h2>
             )}
             {text && (
-                <p className="text-lg leading-relaxed text-secondary pb-2">{text}</p>
+                <p className="text-md lg:text-lg leading-relaxed text-secondary pb-2">{text}</p>
             )}
-            <ul className="list-disc list-inside text-lg leading-[1.75] text-secondary">
+            <ul className="list-disc list-inside text-md lg:text-lg leading-[1.75] text-secondary">
                 {items.map((item, index) => (
                     <li key={index}>{item}</li>
                 ))}

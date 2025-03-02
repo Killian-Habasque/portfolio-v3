@@ -59,7 +59,7 @@ const BlockContact = () => {
                         Restons en <span className="font-grandslang">contact</span>
                     </motion.h3>
                     <motion.p
-                        className="max-w-2xl lg:text-lg text-white font-outfit z-10"
+                        className="max-w-2xl text-md lg:text-lg text-white font-outfit z-10"
                         variants={{
                             ...textVariants,
                             visible: {
@@ -75,7 +75,7 @@ const BlockContact = () => {
                         Vous pouvez me joindre via email, téléphone ou sur mes réseaux.
                     </motion.p>
                     <div className="flex flex-col lg:flex-row gap-8 w-full max-w-2xl z-10">
-                        <ul className="w-full lg:text-lg text-white font-outfit text-start">
+                        <ul className="w-full text-sm lg:text-lg text-white font-outfit text-start">
                             <motion.li className="flex gap-2 items-center" variants={{
                                 ...textVariants,
                                 visible: {

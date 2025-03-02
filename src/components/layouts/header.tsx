@@ -71,13 +71,13 @@ export function Header() {
           >
             <div className="flex flex-col bg-black p-2 h-full rounded-3xl">
               <div className="flex flex-col bg-black items-center justify-center h-full space-y-8 border border-white/[0.2] text-white rounded-2xl">
-                <div className="flex flex-col space-y-4 text-sm text-center">
-                  <Link href="/projets" className="text-2xl font-outfit" onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="flex flex-col space-y-2 text-sm text-center">
+                  <Link href="/projets" className="text-xl font-outfit" onClick={() => setIsMobileMenuOpen(false)}>
                     Projets
                   </Link>
                 </div>
-                <div className="flex flex-col space-y-4 text-sm text-center">
-                  <Link href="/projets" className="text-2xl font-outfit" onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="flex flex-col space-y-2 text-sm text-center">
+                  <Link href="/projets" className="text-xl font-outfit" onClick={() => setIsMobileMenuOpen(false)}>
                     À propos
                   </Link>
                   <HoveredLink href="/#presentation" onClick={() => setIsMobileMenuOpen(false)}>Présentation</HoveredLink>
@@ -86,8 +86,8 @@ export function Header() {
                   <HoveredLink href="/#experiences" onClick={() => setIsMobileMenuOpen(false)}>Expériences</HoveredLink>
                   <HoveredLink href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</HoveredLink>
                 </div>
-                <div className="flex flex-col space-y-4 text-sm text-center">
-                  <Link href="/projets" className="text-2xl font-outfit" onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="flex flex-col space-y-2 text-sm text-center">
+                  <Link href="/projets" className="text-xl font-outfit" onClick={() => setIsMobileMenuOpen(false)}>
                     Réseaux
                   </Link>
                   <HoveredLink href="https://www.linkedin.com/in/killian-habasque-041841220/" target="_blank">

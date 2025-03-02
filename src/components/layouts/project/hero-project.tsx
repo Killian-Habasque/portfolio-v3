@@ -161,7 +161,7 @@ export function HeroProject({
         )}
       </div>
       <div
-        className="text-xl leading-relaxed my-6 font-outfit text-secondary"
+        className="text-md lg:text-xl leading-relaxed my-6 font-outfit text-secondary"
         dangerouslySetInnerHTML={{ __html: formattedProject.text }}
       />
     </motion.div >

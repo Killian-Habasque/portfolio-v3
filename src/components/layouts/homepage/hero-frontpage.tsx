@@ -89,13 +89,13 @@ const HeroFrontpage: React.FC<Props> = () => {
                         <WelcomeText />
                     </div>
                     <motion.div
-                        className="w-full-8 lg:w-full -mx-8 lg:-mx-0 h-full max-h-96 lg:max-h-full grid grid-cols-2 gap-2 lg:gap-6 lg:py-0 lg:max-w-4xl 2xl:max-w-5xl"
+                        className="flex items-center w-full-8 lg:w-full -mx-8 lg:-mx-0 h-full max-h-96 lg:max-h-full grid grid-cols-2 gap-2 lg:gap-6 lg:py-0 lg:max-w-4xl 2xl:max-w-5xl"
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
                     >
                         <motion.div
-                            className="group relative h-full w-full rounded-full ml-8 lg:ml-16 relative overflow-hidden z-10 bg-secondary-dark"
+                            className="aspect-[2/3] group relative w-full rounded-full ml-8 lg:ml-16 relative overflow-hidden z-10 bg-secondary-dark"
                             variants={itemVariants}
                             style={{ y: portraitY }}
                         >
@@ -121,7 +121,7 @@ const HeroFrontpage: React.FC<Props> = () => {
                             />
                         </motion.div>
                         <motion.div
-                            className="group relative h-full w-full rounded-full overflow-hidden bg-secondary-dark"
+                            className="aspect-[2/3] group relative w-full rounded-full overflow-hidden bg-secondary-dark"
                             variants={itemVariants2}
                             style={{ y: modelY }}
                         >

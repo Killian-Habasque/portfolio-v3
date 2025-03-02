@@ -87,7 +87,7 @@ function BlockProjectsGrid({ preview = false }: BlockProjectsGridProps) {
           <motion.p
             variants={fadeUpVariants}
             custom={0.6}
-            className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide"
+            className="font-outfit text-secondary-light leading-[2] font-light text-md lg:text-lg tracking-wide"
           >
             Découvrez ci-dessous quelques-uns de mes projets les plus significatifs :
           </motion.p>
@@ -146,7 +146,7 @@ function BlockProjectsGrid({ preview = false }: BlockProjectsGridProps) {
           >
             <motion.div variants={fadeUpVariants} custom={0.2}>
               <div className="flex flex-col lg:flex-row gap-2 items-center justify-center my-20">
-                <p className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide">
+                <p className="font-outfit text-secondary-light leading-[2] font-light text-md lg:text-lg tracking-wide">
                   Retrouvez l&apos;ensemble de mes projets
                 </p>
                 <div className="flex gap-2 items-center">

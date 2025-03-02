@@ -63,13 +63,13 @@ export const BlockIntro = () => {
                 style={{ y }}
             >
                 <motion.p
-                    className="font-outfit text-2xl text-secondary-dark"
+                    className="font-outfit text-lg lg:text-2xl text-secondary-dark"
                     variants={itemVariants}
                 >
                     Bienvenue sur mon portfolio ! Vous trouverez ici un aperçu de mon parcours et de mes réalisations en développement web.
                 </motion.p>
                 <motion.p
-                    className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide"
+                    className="font-outfit text-secondary-light leading-[2] font-light text-md lg:text-lg tracking-wide"
                     variants={itemVariants}
                 >
                     Spécialisé en fullstack, j’interviens sur la création d’applications, l’optimisation de sites e-commerce et la personnalisation de CMS comme WordPress. Toujours en quête d’innovation, j’aime relever de nouveaux défis pour développer des projets modernes et évolutifs.
