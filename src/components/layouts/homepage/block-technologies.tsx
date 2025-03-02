@@ -170,7 +170,7 @@ export function BlockMarquee() {
             <motion.div
                 className="mx-auto max-w-4xl w-full"
                 variants={containerVariants}
-                initial="hidden"
+                initial={typeof window !== "undefined" && window.location.hash === "#technologies" ? "visible" : "hidden"}
                 whileInView="visible"
                 viewport={{ once: false, margin: "-100px" }}
             >
@@ -184,7 +184,7 @@ export function BlockMarquee() {
 
             <motion.div
                 variants={containerVariants}
-                initial="hidden"
+                initial={typeof window !== "undefined" && window.location.hash === "#technologies" ? "visible" : "hidden"}
                 whileInView="visible"
                 className="w-full"
                 viewport={{ once: false, margin: "-100px" }}
@@ -203,7 +203,7 @@ export function BlockMarquee() {
 
             <motion.div
                 variants={containerVariants}
-                initial="hidden"
+                initial={typeof window !== "undefined" && window.location.hash === "#technologies" ? "visible" : "hidden"}
                 whileInView="visible"
                 className="w-full"
                 viewport={{ once: false, margin: "-100px" }}
@@ -224,7 +224,7 @@ export function BlockMarquee() {
             <motion.div
                 className="mx-auto max-w-4xl w-full"
                 variants={containerVariants}
-                initial="hidden"
+                initial={typeof window !== "undefined" && window.location.hash === "#technologies" ? "visible" : "hidden"}
                 whileInView="visible"
                 viewport={{ once: false, margin: "-100px" }}
             >

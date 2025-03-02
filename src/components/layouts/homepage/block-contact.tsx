@@ -39,7 +39,7 @@ const BlockContact = () => {
                 <motion.div
                     className="relative overflow-hidden flex flex-col items-center rounded-2xl w-full p-8 py-16 gap-12 text-center lg:rounded-full lg:px-16 bg-secondary-dark"
                     variants={containerVariants}
-                    initial="hidden"
+                    initial={typeof window !== "undefined" && window.location.hash === "#contact" ? "visible" : "hidden"}
                     whileInView="visible"
                     viewport={{ once: true }}
                 >

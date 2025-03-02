@@ -68,7 +68,7 @@ function BlockMediaText() {
                 <motion.div
                     className="grid grid-cols-1 gap-16 items-center lg:grid-cols-5"
                     variants={containerVariants}
-                    initial="hidden"
+                    initial={typeof window !== "undefined" && window.location.hash === "#presentation" ? "visible" : "hidden"}
                     whileInView="visible"
                     viewport={{ once: false, margin: "-100px" }}
                 >

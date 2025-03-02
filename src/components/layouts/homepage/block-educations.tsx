@@ -106,7 +106,7 @@ export function BlockEducation() {
         <motion.div
           className="mx-auto pb-16 max-w-4xl w-full"
           variants={containerVariants}
-          initial="hidden"
+          initial={typeof window !== "undefined" && window.location.hash === "#educations" ? "visible" : "hidden"}
           whileInView="visible"
           viewport={{ once: false, margin: "-100px" }}
         >
@@ -130,7 +130,7 @@ export function BlockEducation() {
         <motion.div
           className="relative space-y-6 max-w-4xl w-full mx-auto"
           variants={containerVariants}
-          initial="hidden"
+          initial={typeof window !== "undefined" && window.location.hash === "#educations" ? "visible" : "hidden"}
           whileInView="visible"
           viewport={{ once: false, margin: "-100px" }}
         >
