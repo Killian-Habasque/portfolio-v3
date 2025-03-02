@@ -44,7 +44,7 @@ export const BlockIntro = () => {
     };
 
     return (
-        <div ref={ref} id="more" className="w-full flex justify-end py-20 lg:py-60">
+        <div ref={ref} id="more" className="w-full flex justify-end pt-0 lg:pt-60 py-20 lg:py-60">
             {/* <div className="relative flex w-[230px] h-[230px] bg-secondary-dark justify-content items-center rounded-full">
                 <CircularText
                     text="TEST*TEST*TEST*"
@@ -55,7 +55,7 @@ export const BlockIntro = () => {
             </div> */}
 
             <motion.div
-                className="flex flex-col px-4 lg:px-16 max-w-4xl gap-8 w-full"
+                className="flex flex-col px-4 lg:px-16 lg:max-w-4xl 2xl:max-w-5xl gap-8 w-full"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -63,13 +63,13 @@ export const BlockIntro = () => {
                 style={{ y }}
             >
                 <motion.p
-                    className="font-outfit text-2xl text-secondary-dark"
+                    className="font-outfit text-lg lg:text-2xl text-secondary-dark"
                     variants={itemVariants}
                 >
                     Bienvenue sur mon portfolio ! Vous trouverez ici un aperçu de mon parcours et de mes réalisations en développement web.
                 </motion.p>
                 <motion.p
-                    className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide"
+                    className="font-outfit text-secondary-light leading-[2] font-light text-md lg:text-lg tracking-wide"
                     variants={itemVariants}
                 >
                     Spécialisé en fullstack, j’interviens sur la création d’applications, l’optimisation de sites e-commerce et la personnalisation de CMS comme WordPress. Toujours en quête d’innovation, j’aime relever de nouveaux défis pour développer des projets modernes et évolutifs.

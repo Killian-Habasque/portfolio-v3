@@ -26,7 +26,7 @@ export function Marquee({
             )}
             {...props}
         >
-            <div id="marquee" className="relative mt-8 flex max-w-4xl overflow-hidden">
+            <div id="marquee" className="relative mt-4 lg:mt-8 flex max-w-4xl overflow-hidden">
                 <div
                     className={classNames(
                         "flex w-max animate-marquee",

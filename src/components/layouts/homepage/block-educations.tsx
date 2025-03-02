@@ -106,7 +106,7 @@ export function BlockEducation() {
         <motion.div
           className="mx-auto pb-16 max-w-4xl w-full"
           variants={containerVariants}
-          initial="hidden"
+          initial={typeof window !== "undefined" && window.location.hash === "#educations" ? "visible" : "hidden"}
           whileInView="visible"
           viewport={{ once: false, margin: "-100px" }}
         >
@@ -120,7 +120,7 @@ export function BlockEducation() {
             {/* </span> */}
           </motion.h2>
           <motion.p
-            className="font-outfit text-secondary-light leading-[2] font-light text-lg tracking-wide max-w-2xl pt-4"
+            className="font-outfit text-secondary-light leading-[2] font-light text-md lg:text-lg tracking-wide max-w-2xl pt-4"
             variants={titleVariants}
           >
             Voici une chronologie de mes différentes formations.
@@ -130,7 +130,7 @@ export function BlockEducation() {
         <motion.div
           className="relative space-y-6 max-w-4xl w-full mx-auto"
           variants={containerVariants}
-          initial="hidden"
+          initial={typeof window !== "undefined" && window.location.hash === "#educations" ? "visible" : "hidden"}
           whileInView="visible"
           viewport={{ once: false, margin: "-100px" }}
         >
@@ -155,9 +155,9 @@ export function BlockEducation() {
                   className="w-full h-full object-contain p-2"
                 />
               </div>
-              <div className="flex-grow ">
-                <h3 className="text-xl text-secondary-dark tracking-wide font-outfit">{education.title}</h3>
-                <p className="text-primary-dark mt-1 font-outfit">{education.school}</p>
+              <div className="flex-grow">
+                <h3 className="text-md lg:text-xl text-secondary-dark tracking-wide font-outfit">{education.title}</h3>
+                <p className="text-sm lg:text-lg text-primary-dark mt-1 font-outfit">{education.school}</p>
                 {education.details && (
                   <ul className="mt-2 space-y-1 font-outfit">
                     {education.details.map((detail, idx) => (

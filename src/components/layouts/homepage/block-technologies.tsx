@@ -170,7 +170,7 @@ export function BlockMarquee() {
             <motion.div
                 className="mx-auto max-w-4xl w-full"
                 variants={containerVariants}
-                initial="hidden"
+                initial={typeof window !== "undefined" && window.location.hash === "#technologies" ? "visible" : "hidden"}
                 whileInView="visible"
                 viewport={{ once: false, margin: "-100px" }}
             >
@@ -184,7 +184,7 @@ export function BlockMarquee() {
 
             <motion.div
                 variants={containerVariants}
-                initial="hidden"
+                initial={typeof window !== "undefined" && window.location.hash === "#technologies" ? "visible" : "hidden"}
                 whileInView="visible"
                 className="w-full"
                 viewport={{ once: false, margin: "-100px" }}
@@ -193,7 +193,7 @@ export function BlockMarquee() {
                     {arr.map((Logo, index) => (
                         <div
                             key={index}
-                            className="relative h-full w-fit mx-[4rem] flex items-center justify-start"
+                            className="relative h-full w-fit mx-[1.5rem] lg:mx-[4rem] flex items-center justify-start"
                         >
                             <Logo />
                         </div>
@@ -203,7 +203,7 @@ export function BlockMarquee() {
 
             <motion.div
                 variants={containerVariants}
-                initial="hidden"
+                initial={typeof window !== "undefined" && window.location.hash === "#technologies" ? "visible" : "hidden"}
                 whileInView="visible"
                 className="w-full"
                 viewport={{ once: false, margin: "-100px" }}
@@ -212,7 +212,7 @@ export function BlockMarquee() {
                     {arr2.map((Logo, index) => (
                         <div
                             key={index}
-                            className="relative h-full w-fit mx-[4rem] flex items-center justify-start"
+                            className="relative h-full w-fit mx-[1.5rem] lg:mx-[4rem] flex items-center justify-start"
                         >
                             <Logo />
                         </div>
@@ -224,12 +224,12 @@ export function BlockMarquee() {
             <motion.div
                 className="mx-auto max-w-4xl w-full"
                 variants={containerVariants}
-                initial="hidden"
+                initial={typeof window !== "undefined" && window.location.hash === "#technologies" ? "visible" : "hidden"}
                 whileInView="visible"
                 viewport={{ once: false, margin: "-100px" }}
             >
                 <motion.p
-                    className="font-outfit text-secondary-light text-left lg:text-center font-light text-lg tracking-wide pt-4 max-w-3xl mx-auto"
+                    className="font-outfit text-secondary-light text-left lg:text-center font-light text-md lg:text-lg tracking-wide pt-4 max-w-3xl mx-auto"
                     variants={titleVariants}
                 >
                     Voici quelques exemples de technologies et frameworks que j&apos;ai utilisés dans mes projets scolaires, professionnels et personnels.

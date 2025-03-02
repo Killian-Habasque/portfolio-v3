@@ -643,7 +643,7 @@
             "date": "2022",
             "imgLink": "/projects/portfolio-v2/portfolio-v2.png",
             "videoLink": "/projects/portfolio-v2/portfolio-v2.mp4",
-            "externalLink": "https://killian-habasque.fr",
+            "externalLink": "https://portfolio-v2-killian-habasque.vercel.app/",
             "technologies": [
                 "javascript"
             ],

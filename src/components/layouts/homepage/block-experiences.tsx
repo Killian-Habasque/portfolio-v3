@@ -98,7 +98,7 @@ export function BlockExperience() {
         <motion.div
           className="mx-auto pb-16 max-w-4xl w-full"
           variants={containerVariants}
-          initial="hidden"
+          initial={typeof window !== "undefined" && window.location.hash === "#experiences" ? "visible" : "hidden"}
           whileInView="visible"
           viewport={{ once: false, margin: "-100px" }}
         >
@@ -109,7 +109,7 @@ export function BlockExperience() {
             Expériences
           </motion.h2>
           <motion.p
-            className="font-outfit text-secondary-light font-light text-lg tracking-wide max-w-2xl pt-4"
+            className="font-outfit text-secondary-light font-light text-md lg:text-lg tracking-wide max-w-2xl pt-4"
             variants={titleVariants}
           >
             Retrouvez ci-dessous mes différentes expériences en développement web, allant de la création d&apos;ERP et de sites e-commerce à l&apos;optimisation SEO et l&apos;administration de serveurs.
@@ -119,7 +119,7 @@ export function BlockExperience() {
         <motion.div
           className="relative space-y-6 max-w-4xl w-full mx-auto"
           variants={containerVariants}
-          initial="hidden"
+          initial={typeof window !== "undefined" && window.location.hash === "#experiences" ? "visible" : "hidden"}
           whileInView="visible"
           viewport={{ once: false, margin: "-100px" }}
         >
@@ -137,11 +137,13 @@ export function BlockExperience() {
 
 
               <div className="w-full max-w-xs flex flex-col gap-4">
-                <div className="flex gap-4 font-outfit">
+                <div className="flex gap-4 font-outfit flex-wrap text-xs lg:text-sm items-center">
                   <Badge>{experience.type}</Badge>
-                  <span className="font-bold text-secondary-dark tracking-wide">{experience.time}</span>
-                  •
-                  <span className="text-secondary-light">{experience.period}</span>
+                  <div className="flex gap-4">
+                    <span className="font-bold text-secondary-dark tracking-wide">{experience.time}</span>
+                    •
+                    <span className="text-secondary-light">{experience.period}</span>
+                  </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="w-16 h-16 flex-shrink-0 shadow-md rounded-xl bg-white transition-transform duration-300 group-hover:scale-110">
@@ -154,8 +156,8 @@ export function BlockExperience() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-secondary-light tracking-wide font-outfit">{experience.title}</h3>
-                    <p className="text-xl text-secondary-dark mt-1 font-outfit">{experience.company}</p>
+                    <h3 className="text-secondary-light tracking-wide font-outfit text-sm lg:text-md">{experience.title}</h3>
+                    <p className="text-lg lg:text-xl text-secondary-dark mt-1 font-outfit">{experience.company}</p>
                   </div>
                 </div>
               </div>
