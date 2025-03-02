@@ -18,7 +18,7 @@ export const BlockList: React.FC<BlockListProps> = ({ title, text, items, colspa
             {text && (
                 <p className="text-md lg:text-lg leading-relaxed text-secondary pb-2">{text}</p>
             )}
-            <ul className="list-disc list-inside text-md lg:text-lg leading-[1.75] text-secondary">
+            <ul className="list-disc list-inside text-md lg:text-lg leading-[2] lg:leading-[2] text-secondary">
                 {items.map((item, index) => (
                     <li key={index}>{item}</li>
                 ))}

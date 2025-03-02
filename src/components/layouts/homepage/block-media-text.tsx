@@ -63,7 +63,7 @@ function BlockMediaText() {
     };
 
     return (
-        <section ref={ref} id="presentation" className="w-full py-20 px-4 lg:px-0 lg:py-40 block">
+        <section ref={ref} id="presentation" className="w-full py-20 px-4 lg:py-40 block">
             <div className="container mx-auto">
                 <motion.div
                     className="grid grid-cols-1 gap-16 items-center lg:grid-cols-5"

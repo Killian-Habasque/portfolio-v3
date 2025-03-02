@@ -61,7 +61,7 @@ function BlockProjectsGrid({ preview = false }: BlockProjectsGridProps) {
   };
 
   return (
-    <div className="w-full container mx-auto px-4 lg:px-0">
+    <div className="w-full container mx-auto px-4">
       <div className="flex flex-col gap-10">
         <motion.div
           ref={sectionRef}

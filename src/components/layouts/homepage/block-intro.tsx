@@ -44,7 +44,7 @@ export const BlockIntro = () => {
     };
 
     return (
-        <div ref={ref} id="more" className="w-full flex justify-end py-20 lg:py-60">
+        <div ref={ref} id="more" className="w-full flex justify-end pt-0 lg:pt-60 py-20 lg:py-60">
             {/* <div className="relative flex w-[230px] h-[230px] bg-secondary-dark justify-content items-center rounded-full">
                 <CircularText
                     text="TEST*TEST*TEST*"
@@ -55,7 +55,7 @@ export const BlockIntro = () => {
             </div> */}
 
             <motion.div
-                className="flex flex-col px-4 lg:px-16 max-w-4xl gap-8 w-full"
+                className="flex flex-col px-4 lg:px-16 lg:max-w-4xl 2xl:max-w-5xl gap-8 w-full"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
