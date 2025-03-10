@@ -62,12 +62,12 @@ export function Footerbar({
             <ul className="list-none flex flex-wrap -my-1 -mx-2 lg:justify-end font-outfit">
               {mainLinks.map((link, i) => (
                 <li key={i} className="my-1 mx-2 shrink-0">
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-primary-dark underline-offset-4 hover:underline"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -79,6 +79,7 @@ export function Footerbar({
                   <a
                     href={link.href}
                     className="text-sm text-muted-foreground underline-offset-4 hover:underline"
+                    target="_blank"
                   >
                     {link.label}
                   </a>

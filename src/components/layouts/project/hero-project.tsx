@@ -1,12 +1,14 @@
 "use client";
 
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { classNames } from "@/lib/utils";
 import { Badge } from '@/components/ui/badge';
 import Date from '@/components/ui/date';
 import ExternalLink from '@/components/ui/externalLink';
 import { HeroVideoDialog } from "./hero-video-dialog";
+import Magnet from "@/components/ui/magnet";
+import { ButtonScrollTop } from "@/components/ui/button-scroll-top";
 
 interface HeroProjectProps {
   className?: string;
@@ -164,6 +166,11 @@ export function HeroProject({
         className="lg:px-4 text-md lg:text-xl leading-relaxed my-6 font-outfit text-secondary"
         dangerouslySetInnerHTML={{ __html: formattedProject.text }}
       />
+      <div className="fixed bottom-6 left-8 flex z-50">
+        <Magnet padding={50} disabled={false} magnetStrength={7}>
+          <ButtonScrollTop />
+        </Magnet>
+      </div>
     </motion.div >
   );
 } 

@@ -27,13 +27,12 @@ function Footer() {
                 ]}
                 mainLinks={[
                     { href: "/projets", label: "Projets" },
-                    { href: "/about", label: "À propos" },
-                    { href: "/blog", label: "Réseaux" },
-                    { href: "/contact", label: "Contact" },
+                    { href: "/#presentation", label: "À propos" },
+                    { href: "/#contact", label: "Contact" },
                 ]}
                 legalLinks={[
-                    { href: "/privacy", label: "killian.habasque.pro@gmail.com" },
-                    { href: "/terms", label: "CV" },
+                    { href: "mailto:killian.habasque.pro@gmail.com", label: "killian.habasque.pro@gmail.com" },
+                    { href: "/about/CV_Killian_Habasque.pdf", label: "CV" },
                 ]}
                 copyright={{
                     text: "© Killian Habasque",

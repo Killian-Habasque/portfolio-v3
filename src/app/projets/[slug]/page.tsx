@@ -64,7 +64,7 @@ export default async function ProjectPage({ params }: PageProps) {
             <HeroProject
               formattedProject={formattedProject}
             />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 gap-y-12 mt-24">
+            <div id="more" className="grid grid-cols-1 lg:grid-cols-2 gap-12 gap-y-12 mt-24">
               {project.blocks && project.blocks.map(block => {
                 const blockContent = block.content as BlockTextProps | BlockImageProps | BlockListProps | null;
                 return <BlockAdapter key={block.id} type={block.type} content={blockContent} />;

@@ -350,7 +350,7 @@
                 {
                     "type": "LIST",
                     "content": {
-                        "title": "Technologies utilisées",
+                        "title": "Fonctionnalités clés",
                         "items": [
                             "🔍 Optimisation SEO avancée : Balises bien structurées, schema.org, chargement rapide.",
                             "🚀 Rendu SSR avec Next.js : Améliore la vitesse de chargement et le référencement naturel.",
