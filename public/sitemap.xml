@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://killian-habasque.fr/</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/about/CV_Killian_Habasque.pdf</loc>
+  <lastmod>2025-03-25T11:21:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/projets/yatzee</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/projets/doo-erp</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/projets/suboptimize</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/projets/siege-ergonomique</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/projets/balado</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/projets/blog-doowup</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/projets</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/projets/symfony-shop</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/projets/portfolio-v2</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/projets/porsche-kar</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://killian-habasque.fr/projets/monders</loc>
+  <lastmod>2025-03-25T11:21:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
