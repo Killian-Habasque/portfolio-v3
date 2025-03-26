@@ -89,6 +89,7 @@
             "imgLink": "/projects/yatzee/yatzee.png",
             "videoLink": "/projects/yatzee/yatzee.mp4",
             "externalLink": "https://yatzee.fr",
+            "repoLink": "https://github.com/Killian-Habasque/yatzee",
             "technologies": [
                 "javascript",
                 "threejs",
@@ -207,6 +208,7 @@
             "order": 3,
             "date": "2025",
             "imgLink": "/projects/suboptimize/suboptimize.png",
+            "repoLink": "https://github.com/Killian-Habasque/suboptimize",
             "technologies": [
                 "react",
                 "firebase"
@@ -286,6 +288,7 @@
             "imgLink": "/projects/siege-ergonomique/siege-ergonomique.png",
             "videoLink": "/projects/siege-ergonomique/siege-ergonomique.mp4",
             "externalLink": "https://siege-ergonomique.com",
+            "repoLink": "https://github.com/Killian-Habasque/wordpress-nextjs",
             "technologies": [
                 "nextjs",
                 "wordpress",

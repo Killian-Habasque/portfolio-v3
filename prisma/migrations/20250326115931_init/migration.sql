@@ -12,6 +12,7 @@ CREATE TABLE "Project" (
     "imgLink" TEXT,
     "videoLink" TEXT,
     "externalLink" TEXT,
+    "repoLink" TEXT,
     "order" INTEGER,
 
     CONSTRAINT "Project_pkey" PRIMARY KEY ("id")

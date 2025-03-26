@@ -40,6 +40,7 @@ export default async function ProjectPage({ params }: PageProps) {
     text: project.text,
     title: project.title,
     externalLink: project.externalLink,
+    repoLink: project.repoLink,
     videoLink: project.videoLink,
     imgLink: project.imgLink,
     technologies: project.technologies.map(tech => ({

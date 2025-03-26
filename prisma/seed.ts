@@ -35,6 +35,7 @@ async function main() {
           imgLink: projectData.imgLink ?? null,
           videoLink: projectData.videoLink ?? null,
           externalLink: projectData.externalLink ?? null,
+          repoLink: projectData.repoLink ?? null,
           order: projectData.order ?? null,
           technologies: {
             connect: projectData.technologies

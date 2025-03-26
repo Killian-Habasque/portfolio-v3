@@ -6,8 +6,8 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL") 
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Project {
@@ -20,6 +20,7 @@ model Project {
   imgLink      String?
   videoLink    String?
   externalLink String?
+  repoLink     String?
   order        Int?
   technologies Technology[]
   blocks       Block[]

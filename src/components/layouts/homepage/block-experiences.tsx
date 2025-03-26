@@ -21,7 +21,7 @@ const experienceData: Experience[] = [
     company: "Doowup",
     time: "3 ans",
     period: "août 22 - sep. 25",
-    type: "Alternace",
+    type: "Alternance",
     details: [
       "Création d’applications internes : ERP, outils de prospection et de recrutement",
       "Développement de sites e-commerce et vitrines (CMS ou natif)",
