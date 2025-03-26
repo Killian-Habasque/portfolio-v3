@@ -131,7 +131,7 @@ const HeroFrontpage: React.FC<Props> = () => {
                         </motion.div>
                     </motion.div>
                 </div>
-                <div className="fixed bottom-6 left-8 flex z-50">
+                <div className="fixed bottom-6 left-6 lg:left-8 flex z-50">
                     <Magnet padding={50} disabled={false} magnetStrength={7}>
                          <ButtonScrollTop />
                     </Magnet>
