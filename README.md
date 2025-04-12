@@ -41,3 +41,10 @@ Prisma : https://medium.com/@claudio-dev/setting-up-and-seeding-an-sqlite-databa
 
 
 Error postgres : https://github.com/prisma/prisma/issues/11643
+
+
+
+- aller sur supabase et relancer le projet 
+- npx prisma generate 
+- npx prisma migrate deploy
+- npx prisma db seed

@@ -80,6 +80,96 @@
     ],
     "projects": [
         {
+            "title": "Waves car game",
+            "slug": "waves-car-game-threejs",
+            "text": "Jeu de voiture en threejs",
+            "type": "Projet scolaire",
+            "date": "2025",
+            "imgLink": "/projects/waves-car-game/waves-car-game.png",
+            "videoLink": "/projects/waves-car-game/waves-car-game.mp4",
+            "externalLink": "https://waves-car-game.vercel.app/",
+            "repoLink": "https://github.com/Killian-Habasque/waves-car-game-threejs",
+            "technologies": [
+                "javascript",
+                "threejs"
+            ],
+            "blocks": [
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/waves-car-game/waves-car-game-1.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "TEXT",
+                    "content": {
+                        "title": "Contexte du projet",
+                        "text": "Ce jeu a été réalisé lors de ma seconde année de Mastère Développement Web, dans le cadre du cours consacré à Three.js. L’objectif était de concevoir une expérience interactive en 3D en utilisant des technologies web modernes. J’ai choisi de créer un jeu de voiture en 3D où le joueur doit survivre le plus longtemps possible face à des vagues de véhicules adverses.",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Technologies utilisées",
+                        "items": [
+                            "JavaScript : Gère toute la logique du jeu, des règles aux interactions utilisateur.",
+                            "Three.js : Utilisé pour la modélisation et l’animation 3D des dés et du plateau.",
+                            "Cannon.js : Permet la gestion des collisions et de la physique des dés (gravité, rebonds, interactions)."
+                        ]
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/waves-car-game/waves-car-game-2.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/waves-car-game/waves-car-game-4.png",
+                        "colspan": 1
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Règles du jeu",
+                        "text": "Le but du jeu est simple mais demande adresse et réflexes :",
+                        "items": [
+                            "Vous devez rester à vitesse maximale pour gagner des points.",
+                            "Tous les 10 points, vous passez à la vague suivante.",
+                            "À chaque nouvelle vague, un bot supplémentaire (voiture ennemie) est ajouté.",
+                            "Toucher une bordure fait perdre 1 point.",
+                            "Toucher un adversaire fait perdre 5 points.",
+                            "Le score est cumulatif et ne se réinitialise pas entre les vagues."
+                        ]
+                    }
+                },
+                {
+                    "type": "IMAGE",
+                    "content": {
+                        "image": "/projects/waves-car-game/waves-car-game-3.png"
+                    }
+                },
+                {
+                    "type": "LIST",
+                    "content": {
+                        "title": "Fonctionnalités principales",
+                        "items": [
+                            "Ajout d’une map avec modélisation des bordures pour délimiter la zone de jeu.",
+                            "Direction du véhicule joueur avec roues tournantes animées.",
+                            "Système de bots adversaires avec des trajectoires prédéfinies pour chaque vague.",
+                            "Système de score dynamique basé sur les collisions et la survie."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
             "title": "Yatzee",
             "slug": "yatzee",
             "text": "Création d’une web application interactive pour jouer au jeu Yatzee",
